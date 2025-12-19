@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!--Menu item view-->
+    <declare-styleable name="MenuItemView">
+        <attr name="iconDrawable" format="reference" />
+        <attr name="labelText" format="string" />
+    </declare-styleable>
+
+</resources>

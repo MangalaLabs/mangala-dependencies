@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/noAppId"
+        android:title="@string/devSettingsScreenUserAgentNoAppId" />
+    <item android:id="@+id/noVersion"
+        android:title="@string/devSettingsScreenUserAgentNoVersion" />
+    <item android:id="@+id/chrome"
+        android:title="@string/devSettingsScreenUserAgentChrome" />
+    <item android:id="@+id/duckDuckGo"
+        android:title="@string/devSettingsScreenUserAgentMangala" />
+    <item android:id="@+id/firefox"
+        android:title="@string/devSettingsScreenUserAgentFirefox" />
+    <item android:id="@+id/webView"
+        android:title="@string/devSettingsScreenUserAgentWebView" />
+</menu>

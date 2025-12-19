@@ -1,0 +1,47 @@
+
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'maven-publish'
+}
+
+group = "com.mangala.wallet.browser"
+version = "1.0"
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        myLib(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/spotless.gradle"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlin {
+    jvmToolchain(17)
+}
+
+dependencies {
+    implementation libs.kotlin
+}
+

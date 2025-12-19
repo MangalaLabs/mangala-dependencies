@@ -1,0 +1,112 @@
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
+
+group = "com.mangala.wallet.browser"
+version = "1.0"
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+android {
+    lintOptions {
+        baseline file("lint-baseline.xml")
+    }
+}
+
+dependencies {
+    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:common:1.0"
+implementation "com.mangala.wallet.browser:common-ui:1.0"
+    implementation "com.mangala.wallet.browser:remote-messaging-api:1.0"
+    implementation "com.mangala.wallet.browser:remote-messaging-store:1.0"
+    implementation "com.mangala.wallet.browser:browser-api:1.0"
+    implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
+
+    implementation libs.kotlinx.coroutines.core
+//    androidTestImplementation (KotlinX.coroutines.test) {
+//        // https://github.com/Kotlin/kotlinx.coroutines/issues/2023
+//        // conflicts with mockito due to direct inclusion of byte buddy
+//        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+//    }
+
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+    implementation "com.squareup.moshi:moshi-adapters:1.15.0"
+//    implementation "com.google.dagger:dagger:2.42"
+    implementation libs.roomKtx
+    implementation libs.roomRunTime
+    implementation libs.roomRxJava
+
+    implementation libs.timber
+
+//    implementation "com.mangala.wallet.browser:common-test:1.0"
+//    testImplementation TestLibraries.threetenbp
+//    testImplementation Testing.junit4
+//    testImplementation Testing.mockito.kotlin
+//    testImplementation (KotlinX.coroutines.test) {
+//        // https://github.com/Kotlin/kotlinx.coroutines/issues/2023
+//        // conflicts with mockito due to direct inclusion of byte buddy
+//        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+//    }
+//
+//    androidimplementation "com.mangala.wallet.browser:common-test:1.0"
+//    androidTestImplementation AndroidX.archCore.testing
+//    androidTestImplementation AndroidX.test.runner
+//    androidTestImplementation AndroidX.test.rules
+//    androidTestImplementation CashApp.turbine
+//    androidTestImplementation "org.mockito:mockito-android:_"
+//    androidTestImplementation "org.mockito.kotlin:mockito-kotlin:_"
+}
+
+android {
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+//fulladleModuleConfig {
+//    maxTestShards.set(1)
+//}
+
+tasks.register('androidTestsBuild') {
+    dependsOn 'assembleDebugAndroidTest'
+}
+
+android {
+    namespace 'com.mangala.remote.messaging.impl'
+}

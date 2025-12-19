@@ -1,0 +1,208 @@
+/*
+ * Copyright (c) 2000-2021 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org)
+ * Copyright (c) 2023-2025 Mangala Wallet
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Modified from original source: https://github.com/bcgit/bc-java
+ */
+
+package org.spongycastle.math.ec.custom.sec//package org.spongycastle.math.ec.custom.sec
+//
+//import org.spongycastle.math.ec.ECFieldElement
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.add
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.addOne
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.fromBigInteger
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.multiply
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.negate
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.square
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.squareN
+//import org.spongycastle.math.ec.custom.sec.SecP160R2Field.subtract
+//import org.spongycastle.math.raw.Mod
+//import org.spongycastle.math.raw.Nat160
+//import org.spongycastle.util.Arrays
+//import java.math.BigInteger
+//
+//class SecP160R2FieldElement : ECFieldElement {
+//    @JvmField
+//    var x: IntArray
+//
+//    constructor(x: BigInteger?) {
+//        require(!(x == null || x.signum() < 0 || x.compareTo(Q) >= 0)) { "x value invalid for SecP160R2FieldElement" }
+//        this.x = fromBigInteger(x)
+//    }
+//
+//    constructor() {
+//        x = Nat160.create()
+//    }
+//
+//    constructor(x: IntArray) {
+//        this.x = x
+//    }
+//
+//    override fun isZero(): Boolean {
+//        return Nat160.isZero(x)
+//    }
+//
+//    override fun isOne(): Boolean {
+//        return Nat160.isOne(x)
+//    }
+//
+//    override fun testBitZero(): Boolean {
+//        return Nat160.getBit(x, 0) == 1
+//    }
+//
+//    override fun toBigInteger(): BigInteger {
+//        return Nat160.toBigInteger(x)
+//    }
+//
+//    override fun getFieldName(): String {
+//        return "SecP160R2Field"
+//    }
+//
+//    override fun getFieldSize(): Int {
+//        return Q.bitLength()
+//    }
+//
+//    override fun add(b: ECFieldElement): ECFieldElement {
+//        val z = Nat160.create()
+//        add(x, (b as SecP160R2FieldElement).x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun addOne(): ECFieldElement {
+//        val z = Nat160.create()
+//        addOne(x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun subtract(b: ECFieldElement): ECFieldElement {
+//        val z = Nat160.create()
+//        subtract(x, (b as SecP160R2FieldElement).x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun multiply(b: ECFieldElement): ECFieldElement {
+//        val z = Nat160.create()
+//        multiply(x, (b as SecP160R2FieldElement).x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun divide(b: ECFieldElement): ECFieldElement {
+////        return multiply(b.invert());
+//        val z = Nat160.create()
+//        Mod.invert(SecP160R2Field.P, (b as SecP160R2FieldElement).x, z)
+//        multiply(z, x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun negate(): ECFieldElement {
+//        val z = Nat160.create()
+//        negate(x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun square(): ECFieldElement {
+//        val z = Nat160.create()
+//        square(x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//
+//    override fun invert(): ECFieldElement {
+////        return new SecP160R2FieldElement(toBigInteger().modInverse(Q));
+//        val z = Nat160.create()
+//        Mod.invert(SecP160R2Field.P, x, z)
+//        return SecP160R2FieldElement(z)
+//    }
+//    // D.1.4 91
+//    /**
+//     * return a sqrt root - the routine verifies that the calculation returns the right value - if
+//     * none exists it returns null.
+//     */
+//    override fun sqrt(): ECFieldElement? {
+//        /*
+//         * Raise this element to the exponent 2^158 - 2^30 - 2^12 - 2^10 - 2^7 - 2^6 - 2^5 - 2^1 - 2^0
+//         *
+//         * Breaking up the exponent's binary representation into "repunits", we get: { 127 1s } { 1
+//         * 0s } { 17 1s } { 1 0s } { 1 1s } { 1 0s } { 2 1s } { 3 0s } { 3 1s } { 1 0s } { 1 1s }
+//         *
+//         * Therefore we need an addition chain containing 1, 2, 3, 17, 127 (the lengths of the repunits)
+//         * We use: [1], [2], [3], 4, 7, 14, [17], 31, 62, 124, [127]
+//         */
+//        val x1 = x
+//        if (Nat160.isZero(x1) || Nat160.isOne(x1)) {
+//            return this
+//        }
+//        val x2 = Nat160.create()
+//        square(x1, x2)
+//        multiply(x2, x1, x2)
+//        val x3 = Nat160.create()
+//        square(x2, x3)
+//        multiply(x3, x1, x3)
+//        val x4 = Nat160.create()
+//        square(x3, x4)
+//        multiply(x4, x1, x4)
+//        val x7 = Nat160.create()
+//        squareN(x4, 3, x7)
+//        multiply(x7, x3, x7)
+//        squareN(x7, 7, x4)
+//        multiply(x4, x7, x4)
+//        squareN(x4, 3, x7)
+//        multiply(x7, x3, x7)
+//        val x31 = Nat160.create()
+//        squareN(x7, 14, x31)
+//        multiply(x31, x4, x31)
+//        squareN(x31, 31, x4)
+//        multiply(x4, x31, x4)
+//        squareN(x4, 62, x31)
+//        multiply(x31, x4, x31)
+//        squareN(x31, 3, x4)
+//        multiply(x4, x3, x4)
+//        squareN(x4, 18, x4)
+//        multiply(x4, x7, x4)
+//        squareN(x4, 2, x4)
+//        multiply(x4, x1, x4)
+//        squareN(x4, 3, x4)
+//        multiply(x4, x2, x4)
+//        squareN(x4, 6, x4)
+//        multiply(x4, x3, x4)
+//        squareN(x4, 2, x4)
+//        multiply(x4, x1, x4)
+//        square(x4, x2)
+//        return if (Nat160.eq(x1, x2)) SecP160R2FieldElement(x4) else null
+//    }
+//
+//    override fun equals(other: Any?): Boolean {
+//        if (other === this) {
+//            return true
+//        }
+//        if (other !is SecP160R2FieldElement) {
+//            return false
+//        }
+//        return Nat160.eq(x, other.x)
+//    }
+//
+//    override fun hashCode(): Int {
+//        return Q.hashCode() xor Arrays.hashCode(x, 0, 5)
+//    }
+//
+//    companion object {
+//        val Q = SecP160R2Curve.q
+//    }
+//}

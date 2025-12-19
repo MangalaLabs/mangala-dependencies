@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/keyline_5"
+    android:paddingBottom="@dimen/keyline_5"
+    android:paddingStart="@dimen/keyline_4"
+    android:paddingEnd="@dimen/keyline_4">
+
+    <com.mangala.mobile.android.themepreview.ui.widget.LabelLinkView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:text="Single Line Item"
+        app:leadingIcon="@drawable/ic_baseline_list_24"
+        app:linkUrl="https://material.io/components/lists" />
+
+    <com.mangala.mobile.android.ui.view.SingleLineListItem
+        style="@style/Widget.Mangala.SingleLineListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLineItemDrawable="@drawable/logo_full"
+        app:singleLineItemTitle="This is the list title"/>
+
+</LinearLayout>

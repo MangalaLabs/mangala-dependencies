@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="modalCardTitleTextSize">20sp</dimen>
+    <dimen name="modalCardDescriptionTextSize">14sp</dimen>
+    <dimen name="modalCardEditTextSize">14sp</dimen>
+    <dimen name="modalCardHeaderElevation">4dp</dimen>
+    <dimen name="modalCardMajorButtonTextSize">15sp</dimen>
+
+    <dimen name="feedbackCardVerticalMargin">16dp</dimen>
+    <dimen name="feedbackFormFieldsMargin">16dp</dimen>
+    <dimen name="feedbackCardHorizontalMargin">16dp</dimen>
+    <dimen name="feedbackTitleMarginTop">30dp</dimen>
+
+    <dimen name="settingsItemHorizontalPadding">20dp</dimen>
+
+    <dimen name="systemSearchResultsElevation">4dp</dimen>
+
+    <dimen name="changeAppIconPadding">16dp</dimen>
+    <dimen name="changeAppIconListPadding">4dp</dimen>
+    <dimen name="changeAppIconSize">75dp</dimen>
+    <dimen name="homeTabDdgLogoTopMargin">100dp</dimen>
+
+    <dimen name="savedSiteGridItemFavicon">56dp</dimen>
+    <dimen name="savedSiteGridItemCornerRadiusFavicon">10dp</dimen>
+    <dimen name="searchWidgetFavoritesSideMargin">6dp</dimen>
+    <dimen name="searchWidgetPadding">16dp</dimen>
+    <dimen name="searchWidgetSearchBarSideMargin">16dp</dimen>
+    <dimen name="searchWidgetFavoriteItemContainerWidth">64dp</dimen>
+    <dimen name="searchWidgetFavoriteItemContainerHeight">78dp</dimen>
+    <dimen name="searchWidgetSearchBarHeight">46dp</dimen>
+    <dimen name="searchWidgetFavoritesTopMargin">16dp</dimen>
+    <dimen name="searchWidgetFavoritesVerticalSpacing">20dp</dimen>
+    <dimen name="searchWidgetFavoritesHorizontalSpacing">4dp</dimen>
+
+    <dimen name="component_label_horizontal_margin">@dimen/keyline_4</dimen>
+    <dimen name="elevation_default_top_app_bar">4dp</dimen>
+
+    <dimen name="messageCtaCloseButtonSize">40dp</dimen>
+    <dimen name="messageCtaIllustrationSize">64dp</dimen>
+</resources>

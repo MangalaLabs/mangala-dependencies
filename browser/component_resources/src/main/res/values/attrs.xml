@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <declare-styleable name="GlobalAttributesDeclaration">-->
+<!--        <attr name="title" format="string" />-->
+<!--        <attr name="description" format="string" />-->
+<!--        <attr name="value" format="string" />-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="FullTransactionInfoItemView">-->
+<!--        <attr name="infoTitle" format="string" />-->
+<!--        <attr name="infoValue" format="string" />-->
+<!--        <attr name="infoValueIcon" format="integer" />-->
+<!--    </declare-styleable>-->
+    <declare-styleable name="MarketFilterView">
+        <attr name="title" />
+        <attr name="value" />
+    </declare-styleable>
+    <declare-styleable name="MarketFilterSwitchView">
+        <attr name="title2" />
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+<!--    <declare-styleable name="MarketMetricLargeView">-->
+<!--        <attr name="title" />-->
+<!--        <attr name="value" />-->
+<!--    </declare-styleable>-->
+    <declare-styleable name="MarketMetricSmallView">
+        <attr name="title3" />
+        <attr name="value2" />
+    </declare-styleable>
+    <declare-styleable name="PriceGradientView">
+        <attr name="gradient" format="reference" />
+        <attr name="gradientSecond" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RateDiffView">
+        <attr name="negativeColor" format="color" />
+        <attr name="positiveColor" format="color" />
+    </declare-styleable>
+<!--    <declare-styleable name="SettingItemWithCheckmark">-->
+<!--        <attr name="title" />-->
+<!--        <attr name="subtitle" />-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="SwapCardView">-->
+<!--        <attr name="title" />-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="InputWithButtonsView">-->
+<!--        <attr name="title" />-->
+<!--        <attr name="description" />-->
+<!--        <attr name="android:inputType" />-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="AddressInputView">-->
+<!--        <attr name="title" />-->
+<!--        <attr name="description" />-->
+<!--    </declare-styleable>-->
+    <declare-styleable name="InputView2">
+        <attr name="android:inputType" />
+        <attr name="android:hint" />
+    </declare-styleable>
+    <declare-styleable name="PicassoRoundedImageView">
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+
+    <!--  Custom view themes/styles -->
+    <attr name="BallanceCoinNameColor" format="reference|color" />
+    <attr name="BallanceCoinAmountColor" format="reference|color" />
+    <attr name="TitleColor" format="reference|color" />
+    <attr name="TextDimmable" format="reference|color" />
+    <attr name="TextColorGreyLightToDark" format="reference|color" />
+    <attr name="TextColorBarsToDark" format="reference|color" />
+    <attr name="AboutBackgroundColor" format="reference|color" />
+    <attr name="TransactionItemBackgroundColor" format="reference|color" />
+    <attr name="BottomNavigationBackgroundColor" format="reference|color" />
+    <attr name="RippleColor" format="reference|color" />
+    <attr name="RoundRippleColor" format="reference|color" />
+    <attr name="BottomNavBackground" format="reference" />
+    <attr name="HudTextColor" format="reference|color" />
+    <attr name="TransactionDetailBackground" format="reference|color" />
+    <attr name="TransactionDetailValueTextColor" format="reference|color" />
+    <attr name="TransactionDetailBottomBarBackground" format="reference|color" />
+    <attr name="LightBackground" format="color" />
+    <attr name="BottomSendButtonColor" format="reference|color" />
+    <attr name="BottomSendButtonHighlightedColor" format="reference|color" />
+    <attr name="BottomSendImageButtonTint" format="reference|color" />
+    <attr name="BottomDialogTextColor" format="reference|color" />
+    <attr name="ConfirmationDialogBackground" format="reference|color" />
+    <attr name="AddressBackground" format="reference|color" />
+    <attr name="ProgressbarSpinnerColor" format="reference|color" />
+    <attr name="SwipeRefreshBackgroundColor" format="reference|color" />
+    <attr name="InputBackground" format="reference|color" />
+    <attr name="ConfirmationTextColor" format="reference|color" />
+    <attr name="AddCoinButtonPlaceholder" format="reference|color" />
+    <attr name="ShadingBottomGradient" format="reference" />
+    <attr name="SecondaryButtonStartGradient" format="reference|color" />
+    <attr name="SecondaryButtonEndGradient" format="reference|color" />
+    <attr name="MarketCircleGradient" format="reference" />
+    <attr name="SplashScreenBackground" format="reference" />
+
+    <!--  New themed gradient colors -->
+    <attr name="ColorGradientWhite" format="reference" />
+    <attr name="ColorWindowBackground" format="reference" />
+
+    <attr name="daxLogoTextColor" format="color" />
+    <attr name="headerDescriptionColor" format="color" />
+    <attr name="dialogBgColor" format="color" />
+    <attr name="toolbarIconColor" format="color" />
+    <attr name="toolbarTextColor" format="color" />
+    <attr name="toolbarBgColor" format="color" />
+    <attr name="toolbarBgBorderColor" format="color" />
+    <attr name="browserIconColorSelector" format="color" />
+    <attr name="browserMenuTextColor" format="color" />
+    <attr name="browserMenuTextColorDisabled" format="color" />
+    <attr name="omnibarRoundedFieldBackgroundColor" format="color" />
+    <attr name="omnibarTextColor" format="color" />
+    <attr name="omnibarHintColor" format="color" />
+    <attr name="omnibarLogoLetterTextColor" format="color" />
+    <attr name="autoCompleteTextColor" format="color" />
+    <attr name="autoCompleteSubtitleTextColor" format="color" />
+    <attr name="tabTitleTextColor" format="color" />
+    <attr name="tabTitleTextColorLegacy" format="color" />
+    <attr name="tabSubtitleTextColor" format="color" />
+    <attr name="tabSelectedBorderColor" format="color" />
+    <attr name="tabsFireTextColor" format="color" />
+    <attr name="tabCardBackgroundColor" format="color" />
+    <attr name="whitelistTextColor" format="color" />
+    <attr name="bookmarkIconColor" format="color" />
+    <attr name="websiteListFaviconBackground" format="color" />
+    <attr name="savedSiteEmptyTextColor" format="color" />
+    <attr name="settingsItemTextColor" format="color" />
+    <attr name="settingsItemTextColorDisabled" format="color" />
+    <attr name="settingsMinorTextColor" format="color" />
+    <attr name="settingsSwitchBackgroundColor" format="color" />
+    <attr name="sectionDividerColor" format="color" />
+    <attr name="buttonOutlinedBorderColor" format="color" />
+    <attr name="buttonOutlinedTextColor" format="color" />
+    <attr name="callToActionTitleColor" format="color" />
+    <attr name="callToActionSubtitleColor" format="color" />
+    <attr name="feedbackAnonymousFeedbackLabelColor" format="color" />
+    <attr name="feedbackListItemBackgroundColor" format="color" />
+    <attr name="feedbackListItemSeparatorColor" format="color" />
+    <attr name="feedbackEditTextBackgroundColor" format="color" />
+    <attr name="feedbackEditTextHintColor" format="color" />
+    <attr name="daxDialogBackgroundColor" format="color" />
+    <attr name="daxDialogSecondaryButtonTextColor" format="color" />
+    <attr name="daxDialogSecondaryButtonRippleColor" format="color" />
+    <attr name="brokenSiteSelectionTextColor" format="color" />
+    <attr name="brokenSiteOutlinedColor" format="color" />
+    <attr name="brokenSitesButtonDisabledBackgroundColor" format="color" />
+    <attr name="brokenSitesButtonDisabledTextColor" format="color" />
+    <attr name="brokenSitesButtonRippleColor" format="color" />
+    <attr name="topCallToActionDescriptionColor" format="color" />
+    <attr name="topCallToActionBackgroundColor" format="color" />
+    <attr name="privacyDashboardLogoLetterTextColor" format="color" />
+    <attr name="fireproofWebsiteTitleTextColor" format="color" />
+    <attr name="emailButtonRippleColor" format="color" />
+    <attr name="deviceShieldExcludedAppNameTextColor" format="color" />
+    <attr name="quickAccessItemTitleTextColor" format="color" />
+    <attr name="listItemImageBackground" format="color" />
+    <attr name="lightContainerBackground" format="color" />
+
+    <attr name="textAppearanceButton1" format="reference" />
+    <attr name="textAppearanceButton2" format="reference" />
+    <attr name="savedSiteEditTextUnderlineColor" format="color" />
+    <attr name="listItemBackgroundColor" format="color" />
+    <attr name="listItemSeparatorColor" format="color" />
+    <attr name="textInputOutlinedBoxColor" format="color" />
+    <attr name="textInputOutlinedBoxColorHighlight" format="color" />
+
+    <attr name="normalTextColor" format="color" />
+    <attr name="secondaryTextColor" format="color" />
+    <attr name="accentTextColor" format="color" />
+    <attr name="primaryIconColor" format="color" />
+    <attr name="primaryIconDisabledColor" format="color" />
+    <attr name="secondaryIconColor" format="color" />
+    <attr name="accentIconColor" format="color" />
+    <attr name="splitterColor" format="color" />
+
+    <attr name="secondaryButtonPressedColor" format="color" />
+    <attr name="primaryButtonDisabledColor" format="color" />
+
+    <attr name="dialogPrimaryButtonColor" format="color" />
+    <attr name="dialogSecondaryButtonColor" format="color" />
+
+    <attr name="overflowMenuDividerColor" format="color" />
+    <attr name="bottomShadowBackground" format="reference" />
+    <attr name="switcherButtonColor" format="color" />
+
+    <attr name="gravity">
+        <flag name="bottom" value="80" />
+        <flag name="center" value="17" />
+        <flag name="center_horizontal" value="1" />
+        <flag name="center_vertical" value="16" />
+        <flag name="clip_horizontal" value="8" />
+        <flag name="clip_vertical" value="128" />
+        <flag name="end" value="8388613" />
+        <flag name="fill" value="119" />
+        <flag name="fill_horizontal" value="7" />
+        <flag name="fill_vertical" value="112" />
+        <flag name="left" value="3" />
+        <flag name="right" value="5" />
+        <flag name="start" value="8388611" />
+        <flag name="top" value="48" />
+    </attr>
+
+    <declare-styleable name="SettingsItemView">
+        <attr name="settingIcon" format="integer" />
+        <attr name="settingTitle" format="integer" />
+        <attr name="settingSubtitle" format="integer" />
+        <attr name="settingType" format="string" />
+    </declare-styleable>
+    <!--    <declare-styleable name="NotificationView">-->
+    <!--        <attr name="backgroundColour" format="integer" />-->
+    <!--        <attr name="textColor" format="integer" />-->
+    <!--    </declare-styleable>-->
+    <declare-styleable name="ChainName" />
+    <declare-styleable name="InputAddressView" />
+    <declare-styleable name="InputAddress" />
+    <declare-styleable name="InputFiatView" />
+    <declare-styleable name="ERC721ImageView">
+        <attr name="webview_height" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="StandardHeader">
+        <attr name="headerText" format="string" />
+        <attr name="showSwitch" format="boolean" />
+        <attr name="showChain" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="TokenInfoCategoryView">
+        <attr name="title" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TokenInfoView">
+        <attr name="tokenInfoLabel" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="InputView">
+        <attr name="label" format="integer" />
+        <attr name="imeOptions" format="string" />
+        <attr name="lines" format="integer" />
+        <attr name="inputType" format="string" />
+        <attr name="minHeightValue" format="integer" />
+        <attr name="innerPadding" format="integer" />
+        <attr name="hint" format="string" />
+        <attr name="ens" format="boolean" />
+        <attr name="nocam" format="boolean" />
+        <attr name="show_header" format="boolean" />
+        <attr name="can_change_currency" format="boolean" />
+        <attr name="show_allFunds" format="boolean" />
+        <attr name="show_paste" format="boolean" />
+        <attr name="font_size" format="integer" />
+        <attr name="showChainName" format="boolean" />
+        <attr name="currencyMode" format="boolean" />
+        <attr name="invert" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CopyTextView">
+        <attr name="text" format="string" />
+        <attr name="showToast" format="boolean" />
+        <attr name="bold" format="boolean" />
+        <attr name="removePadding" format="boolean" />
+        <attr name="marginRight" format="dimension" />
+        <attr name="textColour" format="color" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+    <declare-styleable name="BarcodeScannerView">
+        <attr name="shouldScaleToFill" format="boolean" />
+        <attr name="laserEnabled" format="boolean" />
+        <attr name="laserColor" format="color" />
+        <attr name="borderColor" format="color" />
+        <attr name="maskColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderLength" format="dimension" />
+        <attr name="roundedCorner" format="boolean" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="squaredFinder" format="boolean" />
+        <attr name="borderAlpha" format="float" />
+        <attr name="finderOffset" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TokenIcon">
+        <attr name="square" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="DialogInfoItem">
+        <attr name="title" />
+        <attr name="text" />
+        <attr name="showActionText" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="TokenSelector">
+        <attr name="tsShowMaxButton" format="boolean" />
+        <attr name="tsShowLabel" format="boolean" />
+        <attr name="tsEditable" format="boolean" />
+        <attr name="tsLabelRes" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SimpleSheetWidget">
+        <attr name="swLabelRes" format="integer" />
+        <attr name="swValueRes" format="integer" />
+        <attr name="swCaptionRes" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="BottomSheetToolbarView">
+        <attr name="title"/>
+        <attr name="text"/>
+    </declare-styleable>
+    <attr name="seedWordStyle" format="reference" />
+    <attr name="whatsNewEntryStyle" format="reference" />
+    <attr name="colorSurfaceSecondary" format="reference" />
+    <attr name="colorSurfaceTertiary" format="reference" />
+    <attr name="colorSurfaceQuaternary" format="reference" />
+    <attr name="colorSurfaceQuinary" format="reference" />
+    <attr name="colorSurfaceDark" format="reference" />
+    <attr name="colorSurfaceSearch" format="reference" />
+    <attr name="colorIconBackgroundCompensate" format="reference" />
+
+
+    <declare-styleable name="NodeStatusInfo">
+        <attr name="android:icon"/>
+        <attr name="android:text"/>
+    </declare-styleable>
+</resources>

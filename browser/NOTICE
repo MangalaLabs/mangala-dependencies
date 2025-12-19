@@ -1,0 +1,49 @@
+Mangala Browser
+
+This software includes code derived from the following open source projects:
+
+================================================================================
+DuckDuckGo Android Browser
+================================================================================
+Copyright (c) DuckDuckGo, Inc.
+Licensed under the Apache License, Version 2.0
+https://github.com/duckduckgo/Android
+
+The browser module contains code derived from DuckDuckGo's Android browser,
+including privacy features, tracker blocking, and browser UI components.
+
+================================================================================
+AlphaWallet
+================================================================================
+Copyright (c) 2019-2023 AlphaWallet
+Licensed under the MIT License
+https://github.com/AlphaWallet/alpha-wallet-android
+
+The crypto/execute module contains code derived from AlphaWallet's Android
+wallet implementation, including Web3 functionality, token management,
+and blockchain interaction utilities.
+
+================================================================================
+TrustWallet Core
+================================================================================
+Copyright (c) Trust Wallet
+Licensed under the Apache License, Version 2.0
+https://github.com/trustwallet/wallet-core
+
+This software uses TrustWallet Core for cryptographic operations and
+blockchain primitives.
+
+================================================================================
+TrustWallet WalletConnect
+================================================================================
+Copyright (c) Trust Wallet
+Licensed under the Apache License, Version 2.0
+https://github.com/trustwallet/wallet-connect-kotlin
+
+This software uses TrustWallet's WalletConnect implementation for
+dApp connectivity.
+
+================================================================================
+
+For the full license texts, see the LICENSE files in the respective
+subdirectories or visit the project URLs listed above.

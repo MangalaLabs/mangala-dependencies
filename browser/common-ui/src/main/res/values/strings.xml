@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!--Main-->
+    <string name="tab_title_color_palette">Color Palette</string>
+    <string name="tab_title_typography">Typography</string>
+    <string name="tab_title_component_interactive">Interactive</string>
+    <string name="tab_title_component_cards">Cards</string>
+    <string name="tab_title_component_messaging">Messaging</string>
+    <string name="tab_title_component_list_items">List items</string>
+    <string name="tab_title_component_others">Others</string>
+    <string name="tab_title_component_system">System</string>
+
+    <!--Components-->
+    <string name="text_headline">Headline</string>
+    <string name="button_left_button_label">Left</string>
+    <string name="button_center_button_label">Center</string>
+    <string name="button_right_button_label">Right</string>
+    <string name="top_app_bar_label_title">Top app bar</string>
+    <string name="app_bar_menu_share">Share</string>
+    <string name="app_bar_menu_search">Search</string>
+    <string name="app_bar_menu_bookmark">Bookmark</string>
+    <string name="switch_label_title">Switch</string>
+    <string name="radio_button_label_title">Radio button</string>
+    <string name="checkbox_label_title">Checkbox</string>
+    <string name="snackbar_label_title">Snackbar</string>
+
+    <!-- Defaults Searchbar -->
+    <string name="searchbar_cleartextaction_content_description_default">Collapse</string>
+    <string name="searchbar_searchhint_default">Search</string>
+    <string name="searchbar_upaction_content_description_default">Navigate up</string>
+
+</resources>

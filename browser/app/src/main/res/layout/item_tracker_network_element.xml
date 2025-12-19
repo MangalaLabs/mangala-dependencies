@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingTop="3dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="4dp"
+    tools:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/host"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="-0.01"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/almostBlackDark"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="doubleclick.net" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="end"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/warmerGray"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/network_pill_facebook_inc"
+        tools:text="Advertising" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/dialogBgColor"
+    android:paddingTop="@dimen/keyline_2"
+    android:paddingBottom="@dimen/keyline_2"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/downloadMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/keyline_4"
+        android:paddingTop="@dimen/keyline_4"
+        android:paddingEnd="@dimen/keyline_4"
+        android:paddingBottom="@dimen/keyline_4"
+        android:textAppearance="@style/TextAppearance.Mangala.Body1"
+        android:textColor="?attr/callToActionSubtitleColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="sample-file.pdf" />
+
+    <TextView
+        android:id="@+id/continueDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="20dp"
+        android:paddingStart="@dimen/keyline_4"
+        android:paddingTop="@dimen/keyline_4"
+        android:paddingEnd="@dimen/keyline_4"
+        android:paddingBottom="@dimen/keyline_4"
+        android:text="@string/downloadConfirmationContinue"
+        android:textAppearance="@style/TextAppearance.Mangala.Body1"
+        app:drawableStartCompat="@drawable/ic_download_brownish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/downloadMessage" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="20dp"
+        android:paddingStart="18dp"
+        android:paddingTop="@dimen/keyline_4"
+        android:paddingEnd="@dimen/keyline_4"
+        android:paddingBottom="@dimen/keyline_4"
+        android:text="@string/fireCancel"
+        android:textAppearance="@style/TextAppearance.Mangala.Body1"
+        app:drawableStartCompat="@drawable/ic_cancel_brownish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/continueDownload" />
+</androidx.constraintlayout.widget.ConstraintLayout>

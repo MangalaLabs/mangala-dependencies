@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/keyline_4"
+    android:paddingTop="@dimen/keyline_5"
+    android:paddingEnd="@dimen/keyline_4"
+    android:paddingBottom="@dimen/keyline_5">
+
+    <com.mangala.mobile.android.ui.view.SectionHeaderTextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Line Item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mangala.mobile.android.ui.view.SingleLineListItem
+        android:id="@+id/singleLineListItemWithImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLineItemTitle="This is a List Item with Image"
+        app:singleLineItemDrawable="@drawable/ic_globe_gray_16dp"
+        app:singleLineItemImageVisible="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label"/>
+
+    <com.mangala.mobile.android.ui.view.SingleLineListItem
+        android:id="@+id/singleLineListItemWithoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLineItemTitle="This is a List Item without Image"
+            app:singleLineItemImageVisible="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singleLineListItemWithImage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

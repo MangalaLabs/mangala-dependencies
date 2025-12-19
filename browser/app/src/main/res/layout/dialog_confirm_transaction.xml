@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/_16sdp"
+    android:paddingStart="@dimen/_16sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/small_12"
+        android:contentDescription="@string/action_close"
+        android:src="@drawable/ic_close_dapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        app:tint="@android:color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_title"
+        style="@style/Text.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/dapp_verify_transaction"
+        app:layout_constraintEnd_toStartOf="@+id/image_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_dapp_name"
+        style="@style/Text.Headline.Highlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title"
+        android:text="exchange.biswap.org"
+        tools:text="exchange.biswap.org" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_dapp_amount"
+        style="@style/Text.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dapp_name"
+        android:text="0.123 BNB ~ $25"
+        tools:text="0.123 BNB ~ $25" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_from"
+        style="@style/Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/TransactionInfo_From"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dapp_amount" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_from_account_name"
+        style="@style/Text.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_from"
+        android:text="My wallet"
+        tools:text="My wallet" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_from_address"
+        style="@style/Text.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_from_account_name"
+        android:text="0x4a824e...a60b"
+        tools:text="0x4a824e...a60b" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_to"
+        style="@style/Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/TransactionInfo_To"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_from_address" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_to_address"
+        style="@style/Text.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_to"
+        android:text="0x4a824e...a60b"
+        tools:text="0x4a824e...a60b" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_on"
+        style="@style/Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/TransactionInfo_On"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_to_address" />
+
+    <com.alphawallet.app.widget.TokenIcon
+        android:id="@+id/network_icon"
+        android:layout_width="@dimen/token_icon_small"
+        android:layout_height="@dimen/token_icon_small"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_on" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_network_name"
+        style="@style/Text.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/network_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_on"
+        android:text="Ethereum"
+        tools:text="Ethereum" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_fee"
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_network_name"
+        android:text="Fee:"
+        tools:text="Fee:" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/background_radius_fee"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        app:layout_constraintStart_toEndOf="@+id/text_fee"
+        app:layout_constraintTop_toBottomOf="@+id/text_network_name">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_fee_number"
+            style="@style/Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:text="$0.57 -> "
+            tools:text="$0.57 -> " />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_left_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/text_fee_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/image_left_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_time"
+            style="@style/Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            app:layout_constraintStart_toEndOf="@+id/image_vehicle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:text="7 min"
+            tools:text="7 min" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_fee_bnb"
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_28sdp"
+        app:layout_constraintStart_toEndOf="@+id/constraint_fee"
+        app:layout_constraintTop_toBottomOf="@+id/text_network_name"
+        android:textColor="@color/black"
+        android:text="0.0021 BNB"
+        tools:text="0.0021 BNB" />
+
+    <com.alphawallet.app.widget.GasWidget2
+        android:id="@+id/gas_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraint_fee"
+        app:layout_constraintTop_toBottomOf="@+id/text_network_name"/>
+
+    <com.alphawallet.app.widget.GasWidget
+        android:id="@+id/gas_widget_legacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gas_widget"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_fee">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_decline"
+            style="@style/Button.Decline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Button_Decline"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="220dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_confirm"
+            style="@style/Button.Confirm"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/Button_Confirm"
+            app:cornerRadius="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

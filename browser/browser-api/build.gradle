@@ -1,0 +1,47 @@
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+dependencies {
+implementation "com.mangala.wallet.browser:common-ui:1.0"
+    implementation libs.kotlin
+    implementation libs.androidx.core.ktx
+    implementation libs.kotlinx.coroutines.core
+}
+
+android {
+    namespace 'com.mangala.browser.api'
+}

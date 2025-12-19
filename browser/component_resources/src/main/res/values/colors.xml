@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Colors-->
+    <color name="ripple_white">#b2ffffff</color>
+    <color name="ripple_black">#1f000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="yellow_d">#ffa800</color>
+    <color name="yellow_l">#f58400</color>
+    <color name="green_d">#05C46B</color>
+    <color name="green_l">#04AD5F</color>
+    <color name="red_d">#F43A4F</color>
+    <color name="red_l">#FF3D43</color>
+    <color name="issyk_blue">#1a60ff</color>
+
+    <color name="black">#000000</color>
+    <color name="steel_dark">#252933</color>
+    <color name="grey">#FF8F9190</color>
+    <color name="light_grey">#c8c7cc</color>
+    <color name="steel_light">#e1e1e5</color>
+    <color name="white">#ffffff</color>
+    <color name="white_pressed">#e3e4e8</color>
+    <color name="darkest">#0f1014</color>
+
+    <color name="dark">#13151a</color>
+    <color name="dark_80">#CC13151A</color>
+    <color name="light">#f0f0f0</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="black_50">#80000000</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="yellow_20">#33FFA800</color>
+    <color name="yellow_50">#80ffa800</color>
+    <color name="yellow_70">#E7BB41</color>
+    <color name="green_50">#8013D670</color>
+
+    <color name="grey_l">#8E8E93</color>
+    <color name="grey_50">#80808085</color>
+    <color name="grey_100">#F2F4F7</color>
+    <color name="steel_10">#1a6E7899</color>
+    <color name="steel_20">#336E7899</color>
+    <color name="steel_dark_pressed">#353842</color>
+    <color name="red_50">#80ff4820</color>
+
+    <color name="blue_l">#007AFF</color>
+
+    <!--Paired Colors-->
+    <color name="jacob">@color/blue_l</color>
+    <color name="remus">@color/green_l</color>
+    <color name="lucian">@color/red_l</color>
+    <color name="oz">@color/dark</color>
+    <color name="tyler">@color/light</color>
+    <color name="cassandra">@color/light_grey</color>
+    <color name="bran">@color/dark</color>
+
+    <color name="claude">@color/white</color>
+    <color name="leah">@color/steel_dark</color>
+    <color name="lawrence">@color/white</color>
+    <color name="lawrence_pressed">@color/steel_light</color>
+    <color name="elena">@color/light_grey</color>
+    <color name="jeremy">@color/steel_light</color>
+
+    <color name="andy">@color/steel_20</color>
+    <color name="nina">@color/black_50</color>
+    <color name="raina">@color/white_50</color>
+
+    <color name="tylerGradientStart">#fff0f0f0</color>
+    <color name="tylerGradientEnd">#00f0f0f0</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="brand">@color/azure</color>
+    <!-- ?colorOnPrimary -->
+    <color name="brand_inverse">@color/white</color>
+    <!-- ?colorAccent -->
+    <color name="accent">@color/brand</color>
+    <!-- ?colorError -->
+    <color name="error">@color/danger</color>
+    <!-- ?colorOnError -->
+    <color name="error_inverse">@color/white</color>
+    <!-- ?android:colorBackground -->
+    <color name="background">@color/white</color>
+    <!-- ?colorOnBackground -->
+    <color name="background_inverse">@color/black</color>
+    <!-- ?colorSurface -->
+    <color name="surface">@color/white</color>
+    <!-- ?colorSurfaceSecondary -->
+    <color name="surface_secondary">@color/alabaster</color>
+    <!-- ?colorSurfaceTertiary -->
+    <color name="surface_tertiary">@color/concrete</color>
+    <!-- ?colorSurfaceQuaternary -->
+    <color name="surface_quaternary">@color/mercury</color>
+    <!-- ?colorSurfaceQuinary -->
+    <color name="surface_quinary">@color/mercury</color>
+    <!-- ?colorOnSurface -->
+    <color name="surface_inverse">@color/black</color>
+    <!-- ?colorSurfaceDark -->
+    <color name="surface_dark">@color/mine</color>
+    <!-- ?colorBackgroundFloating -->
+    <color name="background_floating">@color/white</color>
+    <!-- ?colorControlNormal -->
+    <color name="control">@color/black</color>
+    <!-- ?colorControlActivated -->
+    <color name="control_activated">@color/accent</color>
+    <!-- ?colorControlHighlight -->
+    <color name="control_highlight">@color/accent</color>
+    <!-- ?android:textColorPrimary -->
+    <color name="text_primary">@color/black</color>
+    <!-- ?android:textColorPrimaryInverse -->
+    <color name="text_primary_inverse">@color/white</color>
+    <!-- ?android:textColorScondaryInverse -->
+    <color name="text_secondary">@color/dove</color>
+    <!-- ?android:textColorSecondary -->
+    <color name="text_secondary_inverse">@color/white</color>
+    <color name="surface_translucent">@color/translucent_light</color>
+    <!-- Required for placing behind icons in dark mode -->
+    <color name="dark_mode_icon_background_compensate">@color/transparent</color>
+    <color name="dark_mode_token_icon_background_compensate">@color/transparent</color>
+    <color name="surface_search">@color/white</color>
+
+    <!-- Colors common to old styles and new Design System  -->
+<!--    <color name="white">#FFFFFF</color>-->
+<!--    <color name="black">#000000</color>-->
+
+    <!-- Dark theme primary colors -->
+    <color name="darkThemePrimaryDark">@color/black</color>
+    <color name="darkThemePrimary">@color/newBlack</color>
+
+    <!-- Light theme primary colors -->
+    <color name="lightThemePrimaryDark">@color/whiteFive</color>
+    <color name="lightThemePrimary">@color/whiteFive</color>
+
+    <!-- Widget colors -->
+    <color name="divider">@color/subtleGrayTwo</color>
+    <color name="slightlyTransparentDivider">#1A000000</color>
+    <color name="webViewScrollbarTrackColor">#ff333333</color>
+    <color name="webViewScrollbarThumbColor">#ffababab</color>
+
+    <!-- Legacy -->
+    <color name="dimmed">#99000000</color>
+    <color name="whiteSemiTransparent">#d6ffffff</color>
+    <color name="whiteTwo">#e4e4e4</color>
+    <color name="whiteThree">#f5f5f5</color>
+    <color name="whiteFour">#f1f1f1</color>
+    <color name="whiteFive">#fafafa</color>
+    <color name="whiteEight">#D7D7D7</color>
+    <color name="midnight">#161616</color>
+    <color name="almostBlackDark">#222222</color>
+    <color name="almostBlack">#333333</color>
+    <color name="newBlack">#111111</color>
+
+    <color name="charcoalGrey">#383838</color>
+    <color name="charcoalGreyTwoSemiTransparent">#d6333339</color>
+    <color name="grayishBrown">#494949</color>
+    <color name="greyishBrownTwo">#444444</color>
+    <color name="midGray">#555</color>
+    <color name="grayish">#aaaaaa</color>
+    <color name="grayishTwo">#939393</color>
+    <color name="grayishThree">#ddd</color>
+    <color name="warmGray">#999999</color>
+    <color name="warGreyTwo">#888888</color>
+    <color name="warmerGray">#777777</color>
+<!--    <color name="silver">#c0c2c9</color>-->
+    <color name="silverGray">#E5E5E5</color>
+    <color name="paleBrownishGray">#d0d0d0</color>
+    <color name="brownishGray">#5c5c5c</color>
+    <color name="brownishGrayTwo">#666666</color>
+    <color name="pinkishGrayThree">#cccccc</color>
+    <color name="coolGray">#969799</color>
+    <color name="subtleGray">#f0f0f0</color>
+    <color name="subtleGrayTwo">#d8d8d8</color>
+    <color name="whiteSix">#e0e0e0</color>
+    <color name="pinkish_grey_two">#c0c0c0</color>
+    <color name="grayscale">#EEEEEE</color>
+    <color name="revised_cornflower">#332FF3</color>
+
+    <color name="marketing_red">#CE2929</color>
+
+    <color name="brickOrange">#d03a10</color>
+
+    <color name="powderBlue">#50bfff</color>
+    <color name="warmBlue">#3f66d5</color>
+    <color name="cornflowerBlue">#678fff</color>
+    <color name="cornflowerDark">#5078e9</color>
+    <color name="cornflowerBorder">#3969EF</color>
+    <color name="cornflowerDisabled">#A1BAFF</color>
+    <color name="cornflowerGreen">#6BBC5A</color>
+    <color name="skyBlue">#42bffe</color>
+    <color name="carolinaBlue">#94b0ff</color>
+
+    <color name="midGreen">#3fa140</color>
+    <color name="lightBlue">#E7EDFF</color>
+    <color name="lightYellow">#FFF2BF</color>
+
+    <color name="translucentDark">#b000</color>
+    <color name="gunmetal">#494d56</color>
+
+    <color name="ic_launcher_red_background">#DE5833</color>
+    <color name="ic_launcher_white_background">#FFFFFF</color>
+    <color name="ic_launcher_gold_background">#EEA849</color>
+    <color name="ic_launcher_silhouette_background">#222222</color>
+    <color name="ic_launcher_green_background">#5FAD3E</color>
+    <color name="ic_launcher_purple_background">#7A4BDC</color>
+    <color name="ic_launcher_blue_background">#4179ED</color>
+    <color name="ic_launcher_black_background">#262626</color>
+
+    <color name="toolbarBorderColorLight">#26000000</color>
+    <color name="toolbarBorderColorDark">#33FFFFFF</color>
+
+    <!-- App Tracker Blocking -->
+    <color name="accentBlue">#678FFF</color>
+    <color name="splitterGray">#E5E5E5</color>
+    <color name="red">#DE5833</color>
+    <color name="atp_onboardingHeaderBg">#F3F5F9</color>
+
+    <color name="magenta">#A64FD1</color>
+    <color name="purple">#D4A1EE</color>
+<!--    <color name="green">#6FBF5C</color>-->
+<!--    <color name="yellow">#FFB652</color>-->
+<!--    <color name="blue">#1A73E9</color>-->
+    <color name="grey_dapp">#F3F5F9</color>
+    <color name="light_blue">#F2F5F9</color>
+    <color name="yellow_10">#FFF2BF</color>
+
+    <color name="defaultTextColor">@color/white</color>
+</resources>

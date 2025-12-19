@@ -1,0 +1,86 @@
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+dependencies {
+    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
+
+    implementation libs.kotlin
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+
+    implementation libs.rxJava
+    implementation libs.rxAndroid
+
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+    // Room
+    implementation("androidx.room:room-runtime:2.5.0-alpha02")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+//    androidTestImplementation AndroidX.work.testing
+    implementation("androidx.work:work-rxjava2:2.7.1")
+
+//    implementation "com.google.dagger:dagger:2.42"
+    
+    implementation libs.androidx.core.ktx
+
+    // Apache commons
+    implementation libs.commonsMath3
+
+    implementation libs.timber
+
+//    testImplementation Testing.junit4
+//    androidTestImplementation AndroidX.test.runner
+//    androidTestImplementation AndroidX.test.rules
+}
+
+android {
+    namespace 'com.mangala.app.statistics'
+
+    buildFeatures {
+        buildConfig true
+    }
+}

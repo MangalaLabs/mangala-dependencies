@@ -1,0 +1,66 @@
+
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+dependencies {
+    implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
+    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:secure-storage-api:1.0"
+    implementation "com.mangala.wallet.browser:secure-storage-store:1.0"
+
+    implementation "com.google.dagger:dagger:2.42"
+    implementation libs.kotlinx.coroutines.core
+    implementation "com.squareup.okio:okio:3.2.0"
+
+
+    implementation libs.roomKtx
+
+    implementation "net.zetetic:sqlcipher-android:4.9.0"
+
+//    implementation "com.mangala.wallet.browser:common-test:1.0"
+//    testImplementation Testing.junit4
+//    testImplementation "org.mockito.kotlin:mockito-kotlin:_"
+//    testImplementation (KotlinX.coroutines.test) {
+//        // https://github.com/Kotlin/kotlinx.coroutines/issues/2023
+//        // conflicts with mockito due to direct inclusion of byte buddy
+//        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+//    }
+}
+android {
+    namespace 'com.mangala.securestorage.impl'
+}

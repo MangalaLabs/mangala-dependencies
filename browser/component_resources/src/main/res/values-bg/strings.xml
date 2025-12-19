@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="appName" translatable="false">Mangala</string>
+    <string name="mangalaLogoDescription">Лого на Mangala</string>
+    <string name="mangalaPrivacySimplified">Постижима поверителност</string>
+    <string name="yes">Да</string>
+    <string name="no">Не</string>
+    <string name="open">Отваряне</string>
+    <string name="cancel">Отмени</string>
+    <string name="search">Търсене</string>
+
+    <!-- Onboarding Activity -->
+    <string name="onboardingDefaultBrowserDescription">Посетете Настройки, за да търсите и сърфирате с Mangala всеки път.</string>
+    <string name="onboardingDefaultBrowserTitle">Направете Mangala Вашият браузър по подразбиране</string>
+
+    <!-- Default Browser -->
+    <string name="cannotLaunchDefaultAppSettings">Екранът за настройки на приложения по подразбиране не може да бъде стартиран</string>
+    <string name="settingsDefaultBrowserEnabled">Задаване като браузър по подразбиране</string>
+    <string name="defaultBrowserMaybeLater">Може би по-късно</string>
+    <string name="defaultBrowserLetsDoIt">Задаване като браузър по подразбиране</string>
+    <string name="defaultBrowserDescriptionNoDefault">Отваряйте връзки без притеснения, всеки път.</string>
+    <string name="defaultBrowserInstructions">Изберете Mangala и докоснете <font color="#678fff">Винаги</font>.</string>
+
+    <!-- Browser Activity -->
+    <string name="browserPopupMenu">Меню на браузъра</string>
+    <string name="refresh">Опресняване</string>
+    <string name="back">Обратно</string>
+    <string name="forward">Напред</string>
+
+    <string name="omnibarInputHint">Търсене или въвеждане на URL адрес</string>
+    <string name="clearButtonContentDescription">Изчистване на въведеното търсене</string>
+    <string name="no_compatible_third_party_app_installed">Няма инсталирано съвместимо приложение</string>
+    <string name="addBookmarkMenuTitle">Добави отметка</string>
+    <string name="editBookmarkMenuTitle">Редактиране на отметка</string>
+    <string name="addFavoriteMenuTitle">Добавяне в любими</string>
+    <string name="removeFavoriteMenuTitle">Премахване от любими</string>
+    <string name="favoriteAddedMessage">Добавено в любими</string>
+    <string name="bookmarkAddedMessage">Добавена е отметка</string>
+    <string name="requestDesktopSiteMenuTitle">Сайт на работния плот</string>
+    <string name="fireproofWebsiteMenuTitleRemove">Премахване на огнеустойчивост</string>
+    <string name="requestMobileSiteMenuTitle">Мобилна версия на сайта</string>
+    <string name="downloadsMenuTitle">Изтеглени файлове</string>
+    <string name="printMenuTitle">Отпечатване на страницата</string>
+    <string name="favoriteDeleteConfirmationMessage">Премахнато от любими</string>
+    <string name="fireproofDeleteConfirmationMessage">Премахната огнеустойчивост</string>
+    <string name="privacyProtectionEnabledConfirmationMessage">Защитата на поверителността е активирана за %1$s</string>
+    <string name="privacyProtectionDisabledConfirmationMessage">Защитата на поверителността е деактивирана за %1$s</string>
+    <string name="undoSnackbarAction">Отмяна</string>
+
+    <!-- Downloading files -->
+    <string name="downloadImage">Изтегляне на изображение</string>
+    <string name="permissionRequiredToDownload">Изтеглянето изисква разрешение за съхранение</string>
+
+    <!-- Sharing options -->
+    <string name="options">Опции</string>
+    <string name="shareLink">Споделяне на връзка</string>
+    <string name="shareMenuTitle">Споделяне</string>
+    <string name="copyUrl">Копиране на адреса на връзката</string>
+
+    <!-- Find in page -->
+    <string name="findInPageMenuTitle">Намери в страницата</string>
+    <string name="nextSearchTermDescription">Намери следващ</string>
+    <string name="previousSearchTermDescription">Намери предишен</string>
+    <string name="closeFindInPageButtonDescription">Затваряне на изгледа за търсене в страницата</string>
+    <string name="findInPageHint">Намери в страницата</string>
+    <string name="findInPageMatches" translatable="false">%d/%d</string>
+
+    <!-- AutoComplete Suggestions -->
+    <string name="editQueryBeforeSubmitting">Редактиране на заявка преди търсене</string>
+    <string name="settingsAutocompleteEnabled">Показване на предложенията за автоматично довършване</string>
+
+    <!-- Opening external apps -->
+    <string name="openExternalApp">Отваряне на външно приложение</string>
+    <string name="launchingExternalApp">Отваряне в друго приложение</string>
+    <string name="confirmOpenExternalApp">Искате ли да напуснете, за да видите това съдържание?</string>
+    <string name="unableToOpenLink">Не може да се отвори този тип връзка</string>
+
+    <!-- Tabs -->
+    <string name="homeTab" translatable="false">Mangala</string>
+    <string name="tabActivityTitle">Раздели</string>
+    <string name="tabsMenuItem">Раздели</string>
+    <string name="newTabMenuItem">Нов раздел</string>
+    <string name="openInNewTab">Отваряне в нов раздел</string>
+    <string name="openInNewBackgroundTab">Отваряне във фонов подпрозорец</string>
+    <string name="openImageInNewTab">Отваряне на изображението във фоновия подпрозорец</string>
+    <string name="faviconContentDescription">Фавикон</string>
+    <string name="closeContentDescription">Затваряне</string>
+    <string name="closeAllTabsMenuItem">Затваряне на всички раздели</string>
+    <string name="closeTab">Затваряне на раздел</string>
+    <string name="tabClosed">Разделът е затворен</string>
+    <string name="tabClosedUndo">Отмяна</string>
+    <string name="downloadsMenuItemTitle">Изтеглени файлове</string>
+
+    <!-- Privacy Dashboard Activities -->
+    <string name="privacyProtectionToggle">Защита на поверителността на сайта</string>
+    <string name="privacyProtectionEnabled">ЗАЩИТА НА САЙТА АКТИВИРАНА</string>
+    <string name="privacyProtectionDisabled">ЗАЩИТА НА САЙТА ДЕАКТИВИРАНА</string>
+    <string name="privacyDashboardActivityTitle">Табло за управление на поверителността</string>
+    <string name="privacyProtectionUpgraded" tools:ignore="TypographyQuotes">ПОДОБРЕН ОТ &lt;img src=\"%1$d\" /&gt; ДО &lt;img src=\"%2$d\" /&gt;</string>
+    <string name="privacyGradeContentDescription">Клас на поверителност</string>
+    <string name="privacyProtectionTemporarilyDisabled">Деактивирахме временно защитата на поверителността, защото изглежда, че пречи на зареждането на този сайт.</string>
+
+    <string name="httpsGood">Шифрована връзка</string>
+    <string name="httpsMixed">Смесена връзка за шифроване</string>
+    <string name="httpsBad">Нешифрована връзка</string>
+
+    <string name="networksActivityTitle">Проследяващи мрежи</string>
+    <string name="networksContentDescription">Проследяващи мрежи</string>
+    <string name="networksOverview">Проследяващите мрежи обединяват историята на мрежата ви в профил с данни за вас. Основните проследяващи мрежи са по-вредни, защото могат да ви проследяват и насочват през по-голяма част от интернет.</string>
+
+    <plurals name="trackersFound">
+        <item quantity="one">%1$s открит тракер</item>
+        <item quantity="other">%1$s открити проследяващи устройства</item>
+    </plurals>
+
+    <plurals name="trackerBlocked">
+        <item quantity="one">%1$s блокирани тракера</item>
+        <item quantity="other">%1$s блокирани проследяващи устройства</item>
+    </plurals>
+
+    <plurals name="majorNetworksFound">
+        <item quantity="one">%1$s открита основна проследяваща мрежа</item>
+        <item quantity="other">%1$s открити основни проследяващи мрежи</item>
+    </plurals>
+
+    <plurals name="majorNetworksBlocked">
+        <item quantity="one">%1$s блокирана основна проследяваща мрежа</item>
+        <item quantity="other">%1$s блокирани основни проследяващи мрежи</item>
+    </plurals>
+
+    <string name="scorecardActivityTitle">Клас на поверителност</string>
+    <string name="scorecardSiteIsMemberOfMajorNetwork">Сайтът е основна проследяваща мрежа</string>
+    <string name="scorecardPrivacyGrade">Клас на поверителност</string>
+    <string name="scorecardEnhancedGrade">Засилена степен</string>
+
+    <string name="privacyTermsActivityTitle">Практики за защита на поверителността</string>
+    <string name="practicesGood">Добри практики за защита на поверителността</string>
+    <string name="practicesMixed">Смесени практики за защита на поверителността</string>
+    <string name="practicesBad">Лоши практики за защита на поверителността</string>
+    <string name="practicesUnknown">Неизвестни практики за защита на поверителността</string>
+    <string name="practicesOverview">Практиките за защита на поверителността показват каква част от личната информация, която споделяте с уебсайт, е защитена.</string>
+    <string name="practicesTosdrLink">Практики за защита на поверителността от <b><u>ToS;DR</u></b>.</string>
+    <string name="practicesIconContentGood">Иконка за добра практика</string>
+    <string name="practicesIconContentBad">Иконка за лоша практика</string>
+
+    <string name="networkTrackerSummaryHeader">ОСНОВНИ НАРУШИТЕЛИ В ПРОСЛЕДЯВАЩАТА МРЕЖА</string>
+    <string name="networkTrackerSummaryNotReady">Все още събираме данни, за да покажем колко проследяващи елемента сме блокирали.</string>
+
+    <!-- Fire -->
+    <string name="fireMenu">Изчистване на данни</string>
+    <string name="fireClearAll">Изчистване на всички раздели и данни</string>
+    <string name="fireCancel">Отмени</string>
+    <string name="fireDataCleared">Данните са изчистени</string>
+
+    <!-- Settings Activity -->
+    <string name="settingsActivityTitle">Настройки</string>
+    <string name="settingsMenuItemTitle">Настройки</string>
+    <string name="settingsHeadingGeneral">Обща информация</string>
+    <string name="settingsHeadingOther">Други</string>
+    <string name="settingsHeadingPrivacy">Поверителност</string>
+    <string name="settingsAboutMangala">За Mangala</string>
+    <string name="settingsVersion">Версия</string>
+    <string name="leaveFeedback">Споделяне на отзив</string>
+    <string name="settingsEmailProtectionTitle">Защита на имейл</string>
+    <string name="settingsEmailProtectionSubtitle">Блокирайте имейл тракерите и скрийте своя адрес</string>
+    <string name="settingsHeadingMore">Още от Mangala</string>
+    <string name="settingsLightTheme">Светла</string>
+    <string name="settingsTheme">Тема</string>
+    <string name="settingsDarkTheme">Тъмен</string>
+    <string name="settingsSystemTheme">По подразбиране за системата</string>
+    <string name="settingsThemeDialogSave">Задаване на тема</string>
+    <string name="settingsTitleAppLinks">Отваряне на връзки в приложения</string>
+    <string name="settingsTitleAppLinksDialog">Отваряне на връзки в приложения</string>
+    <string name="settingsAppLinksAskEveryTime">Питай всеки път</string>
+    <string name="settingsAppLinksAlways">Винаги</string>
+    <string name="settingsAppLinksNever">Никога</string>
+
+    <!-- Settings - Automatically clearing data -->
+    <string name="settingsAutomaticallyClearingDialogSave">Запази</string>
+
+    <string name="settingsAutomaticallyClearWhat">Автоматично изчистване…</string>
+    <string name="settingsAutomaticallyClearWhatDialogTitle">Автоматично изчистване…</string>
+    <string name="settingsAutomaticallyClearWhatOptionNone">Няма</string>
+    <string name="settingsAutomaticallyClearWhatOptionTabs">Раздели</string>
+    <string name="settingsAutomaticallyClearWhatOptionTabsAndData">Раздели и данни</string>
+
+    <string name="settingsAutomaticallyClearWhen">Изчистване на…</string>
+    <string name="settingsAutomaticallyClearWhenDialogTitle">Изчистване на…</string>
+    <string name="settingsAutomaticallyClearWhenAppExitOnly">Само при изход от приложението</string>
+    <string name="settingsAutomaticallyClearWhenAppExit5Seconds">Изход от приложението, неактивен за 5 секунди</string>
+    <string name="settingsAutomaticallyClearWhenAppExit5Minutes">Изход от приложението, неактивен за 5 минути</string>
+    <string name="settingsAutomaticallyClearWhenAppExit15Minutes">Изход от приложението, неактивен за 15 минути</string>
+    <string name="settingsAutomaticallyClearWhenAppExit30Minutes">Изход от приложението, неактивен за 30 минути</string>
+    <string name="settingsAutomaticallyClearWhenAppExit60Minutes">Изход от приложението, 1 час без активност</string>
+
+    <!-- About Activity -->
+    <string name="aboutActivityTitle">Относно Mangala</string>
+    <string name="aboutDescription">
+        В Mangala задаваме новия стандарт на доверие онлайн.\n\nБраузърът за поверителност Mangala осигурява всички необходими елементи за защита на поверителността, докато търсите и сърфирате в мрежата, включително блокиране на тракери, по-интелигентно криптиране и поверително търсене с Mangala.\n\n В крайна сметка интернет не трябва да създава чувство на страх, а получаването на поверителността, която заслужавате онлайн, трябва да е толкова просто, колкото пускането на щорите.</string>
+    <string name="aboutMoreLink">Още на Mangala.com/about</string>
+    <string name="no_suggestions">Няма предложения</string>
+
+    <!-- Broken Site Activity -->
+    <string name="brokenSiteReportBrokenSiteMenuItem">Подаване на сигнал за повреден сайт</string>
+    <string name="brokenSiteHeading">Подаване на сигнал за повреден сайт</string>
+    <string name="brokenSiteSubmitted">Благодарим ви! Отзивът ви е изпратен.</string>
+    <string name="brokenSitesCategoriesTitle">Опишете проблема</string>
+    <string name="brokenSitesCategoriesHint">Опишете проблема</string>
+    <string name="brokenSiteSubmitButton">Изпращане на доклад</string>
+    <string name="brokenSiteDescription">Изпращането на анонимен доклад за неработещ сайт ни помага да отстраним грешките и да подобрим приложението.</string>
+
+    <string name="brokenSiteCategoryImages">Изображенията не се зареждат</string>
+    <string name="brokenSiteCategoryPaywall">Сайтът ме помоли да деактивирам</string>
+    <string name="brokenSiteCategoryComments">Коментарите не се зареждат</string>
+    <string name="brokenSiteCategoryVideos">Видеото не се възпроизвежда</string>
+    <string name="brokenSiteCategoryLinks">Връзките или бутоните не работят</string>
+    <string name="brokenSiteCategoryContent">Липсва съдържание</string>
+    <string name="brokenSiteCategoryLogin">Не мога да вляза</string>
+    <string name="brokenSiteCategoryUnsupported">Браузърът е несъвместим</string>
+    <string name="brokenSiteCategoryOther">Нещо друго</string>
+
+    <!-- Bookmarks Activity -->
+    <string name="bookmarksMenuTitle">Отметки</string>
+    <string name="bookmarksActivityTitle">Отметки</string>
+    <string name="noBookmarks">Все още няма добавени отметки</string>
+    <string name="bookmarkOverflowContentDescription">Още опции за отметка %1$s</string>
+    <string name="bookmarkDeleteConfirmationMessage">Изтрито &lt;b&gt;%1$s&lt;/b&gt;</string>
+    <string name="exportBookmarksMenu">Експортиране</string>
+    <string name="exportBookmarksEmpty">Нямате отметки, няма да бъде експортирано нищо</string>
+    <string name="exportBookmarksError">Не успяхме да експортираме отметките, възникна някаква грешка</string>
+    <string name="exportBookmarksSuccess">Всички отметки бяха експортирани успешно</string>
+    <string name="importBookmarksMenu">Импортиране</string>
+    <string name="importBookmarksFileTitle">Изберете файл с отметки за импортиране</string>
+    <string name="importBookmarksError">Не успяхме да импортираме отметките, възникна някаква грешка</string>
+    <string name="importBookmarksEmpty">Във файла няма отметки за импортиране</string>
+    <string name="importBookmarksSuccess">%1$d отметки са импортирани успешно</string>
+    <string name="savedSiteDialogTitleHint">Заглавие</string>
+    <string name="savedSiteDialogUrlHint">URL</string>
+    <string name="savedSiteDialogTitleEdit">Редактиране</string>
+    <string name="bookmarksSectionTitle">Отметки</string>
+    <string name="favoritesSectionTitle">Любими</string>
+    <string name="bookmarksEmptyHint">Все още няма добавени отметки</string>
+    <string name="favoritesEmptyHint">Все още няма добавени любими</string>
+
+    <!-- Dialogs -->
+    <string name="dialogConfirmTitle">Потвърдете</string>
+    <string name="dialogSave">Запази</string>
+    <string name="delete">Изтриване</string>
+    <string name="edit">Редактиране</string>
+    <string name="remove">Премахване</string>
+    <string name="removeAll">Премахване на всички</string>
+
+    <!-- Widget -->
+    <string name="searchWidgetTextHint">Търсене</string>
+
+    <!-- Favorites widget -->
+    <string name="addFavoriteMenuTitleHighlighted">👋 Добавяне към „Предпочитани“</string>
+    <string name="widgetConfigurationTitleText">Изберете тема</string>
+    <string name="widgetConfigurationSystemThemeOption">По подразбиране за системата</string>
+    <string name="widgetConfigurationLightThemeOption">Светла</string>
+    <string name="widgetConfigurationDarkThemeOption">Тъмен</string>
+    <string name="widgetConfigurationAddWidgetOption">Добави приспособлението</string>
+    <string name="searchWidgetEmtpyFavoritesHint">Все още няма добавени любими</string>
+    <string name="searchWidgetEmtpyFavoritesCta">Добавяне в любими</string>
+    <string name="daxFavoritesOnboardingCtaText"><![CDATA[Отварянето на вашите предпочитани сайтове става светкавично!<br/><br/>Отворете сайт, който харесвате. След това докоснете иконата \" ⠇\" и изберете „Добавяне към Предпочитани“.]]></string>
+    <string name="daxFavoritesOnboardingCtaContentDescription">Отварянето на вашите предпочитани сайтове става светкавично! Отворете сайт, който харесвате. След това докоснете иконата за меню на браузъра и изберете „Добавяне към Предпочитани“.</string>
+    <string name="widgetConfigurationActivityTitle">Конфигуриране на уиджет</string>
+    <string name="favoritesWidgetLabel">Любими</string>
+    <string name="searchWidgetLabel">Търсене</string>
+
+    <!-- Home Screen Shortcuts -->
+    <string name="addToHome">Добавете към Начална Страница</string>
+    <string name="shortcutAddedText">Готово! %1$s е добавен към началния екран.</string>
+
+    <!-- User Survey -->
+    <string name="surveyCtaTitle">Помогнете ни да подобрим приложението!</string>
+    <string name="surveyCtaDescription">Попълнете нашата кратка анкета и споделете отзивите си.</string>
+    <string name="surveyCtaLaunchButton">Попълнете анкетата</string>
+    <string name="surveyCtaDismissButton">Не, благодаря</string>
+    <string name="surveyActivityTitle">Потребителска анкета</string>
+    <string name="surveyTitle">АНКЕТА НА</string>
+    <string name="surveyDismissContentDescription">Отхвърляне на анкетата</string>
+    <string name="surveyLoadingErrorTitle">О, не!</string>
+    <string name="surveyLoadingErrorText">В момента анкетата ни не се зарежда.\n Моля, опитайте отново по-късно.</string>
+
+    <!-- Add widget -->
+    <string name="addWidgetCtaTitle">Изпробвайте нашето приспособление за търсене!</string>
+    <string name="addWidgetCtaDescription">Добавете нашето приспособление за търсене към началния си екран за бърз и лесен достъп.</string>
+    <string name="addWidgetCtaAutoLaunchButton">Добави приспособлението</string>
+    <string name="addWidgetCtaInstructionsLaunchButton">Показване</string>
+    <string name="addWidgetCtaDismissButton">Отказване</string>
+    <string name="addWidgetInstructionsActivityTitle">Добави приспособлението</string>
+    <string name="addWidgetInstruction1Label">1</string>
+    <string name="addWidgetInstruction1">Натиснете продължително началния екран и след това отворете менюто с приспособления.</string>
+    <string name="addWidgetInstruction2Label">2</string>
+    <string name="addWidgetInstruction2">Намерете приспособлението Seven Coin.</string>
+    <string name="addWidgetInstruction3Label">3</string>
+    <string name="addWidgetInstruction3">Плъзнете приспособлението до началния екран.</string>
+    <string name="addWidgetInstructionsButtonGoHome">Към началния екран</string>
+    <string name="addWidgetInstructionsButtonClose">Затваряне</string>
+
+    <!-- App Enjoyment / Rating / Feedback -->
+    <string name="appEnjoymentDialogTitle">Наслаждавате ли се на Seven Coin?</string>
+    <string name="appEnjoymentDialogMessage">Ще се радваме да научим какво мислите.</string>
+    <string name="appEnjoymentDialogPositiveButton">Харесва ми</string>
+    <string name="appEnjoymentDialogNegativeButton">Необходимо е да се поработи върху него</string>
+
+    <string name="rateAppDialogTitle">Оценете приложението</string>
+    <string name="rateAppDialogMessage">Вашите отзиви са ценни. Моля, споделете дали го харесвате с отзив.</string>
+    <string name="rateAppDialogPositiveButton">Оценка на приложението</string>
+    <string name="rateAppDialogNegativeButton" translatable="false">@string/noThanks</string>
+
+    <string name="giveFeedbackDialogTitle">Съжаляваме да чуем това</string>
+    <string name="giveFeedbackDialogMessage">Кажете ни как можем да подобрим приложението за Вас.</string>
+    <string name="giveFeedbackDialogPositiveButton">Споделяне на отзив</string>
+    <string name="giveFeedbackDialogNegativeButton" translatable="false">@string/noThanks</string>
+
+    <string name="noThanks">Не, благодаря</string>
+
+    <!-- Notification Channel Names -->
+    <string name="notificationChannelTutorials">Указания</string>
+
+    <!-- Clear Notification -->
+    <string name="clearNotificationTitle">Ръчно изчистване на данните</string>
+    <string name="clearNotificationDescription">Персонализирайте да изчиства автоматично данните от сърфирането след всяка сесия.</string>
+
+    <!-- Privacy Protection Notification -->
+    <string name="privacyProtectionNotificationDefaultTitle">Ние защитаваме Вашата поверителност</string>
+    <string name="privacyProtectionNotificationReportTitle">Доклад за Вашата поверителност</string>
+    <string name="privacyProtectionNotificationDefaultDescription">Използването на приложението защитава Вашите данни, като блокира проследяващите елементи и шифрова връзките.</string>
+    <string name="privacyProtectionNotificationUpgadeDescription">Вие защитихте своите данни, като осигурихте %1$d нешифровани връзки, докато използвахте.</string>
+    <string name="privacyProtectionNotificationTrackerDescription">Вие защитихте своите данни, като блокирахте %1$d проследяващи елемента, докато използвахте.</string>
+    <string name="privacyProtectionNotificationBothDescription">Вие защитихте своите данни, като блокирахте %1$d проследяващи елемента и осигурихте %2$d нешифровани връзки, докато използвахте.</string>
+    <string name="privacyProtectionNotificationLaunchButton">Подновете сърфирането</string>
+
+    <!-- Authentication -->
+    <string name="authenticationDialogTitle">Влизане</string>
+    <string name="authenticationDialogMessage">%1$s изисква потребителско име и парола.</string>
+    <string name="authenticationDialogPositiveButton">Влизане</string>
+    <string name="authenticationDialogNegativeButton">Отмени</string>
+    <string name="authenticationDialogUsernameHint">Потребителско име</string>
+    <string name="authenticationDialogPasswordHint">Парола</string>
+
+    <!-- App feedback disambiguation -->
+    <string name="feedbackActivityTitle">Споделяне на отзив</string>
+    <string name="missingBrowserFeaturesTitleLong">Липсват някои функции на браузъра или са объркващи</string>
+    <string name="missingBrowserFeaturesTitleShort">Проблеми с функция на браузъра</string>
+    <string name="missingBrowserFeaturesSubtitle">Коя функция за сърфиране можем да добавим или да подобрим?</string>
+    <string name="missingBrowserFeatureSubReasonNavigation">Придвижване напред, назад и/или опресняване</string>
+    <string name="missingBrowserFeatureSubReasonTabManagement">Създаване и управление на раздели</string>
+    <string name="missingBrowserFeatureSubReasonAdPopups">Блокиране на реклами и изскачащи прозорци</string>
+    <string name="missingBrowserFeatureSubReasonVideos">Гледане на видео</string>
+    <string name="missingBrowserFeatureSubReasonImages">Интерактивно гледане на изображения</string>
+    <string name="missingBrowserFeatureSubReasonBookmarks">Създаване и управление на отметки</string>
+    <string name="missingBrowserFeatureSubReasonOther">Никое от тези</string>
+
+    <string name="websiteNotLoadingTitleLong">Проблеми със зареждането на уебсайтове</string>
+    <string name="websiteNotLoadingTitleShort">Проблеми със зареждането на уебсайтове</string>
+    <string name="websiteNotLoadingSubtitle">Кой уебсайт е повреден?</string>
+
+    <string name="searchNotGoodEnoughTitleLong">Търсенето с Mangala не е достатъчно добро</string>
+    <string name="searchNotGoodEnoughTitleShort">Проблеми при търсенето с Mangala</string>
+    <string name="searchNotGoodEnoughSubtitle">Коя функция за търсене можем да добавим или да подобрим?</string>
+    <string name="searchNotGoodEnoughSubReasonTechnicalSearches">Програмиращо/техническо търсене</string>
+    <string name="searchNotGoodEnoughSubReasonGoogleLayout">Оформлението трябва да бъде повече като Google</string>
+    <string name="searchNotGoodEnoughSubReasonFasterLoadTimes">По-бързо зареждане</string>
+    <string name="searchNotGoodEnoughSubReasonSpecificLanguage">Търсене на специфичен език или в специфичен район</string>
+    <string name="searchNotGoodEnoughSubReasonBetterAutocomplete">По-добро автозавършване</string>
+    <string name="searchNotGoodEnoughSubReasonOther">Никое от тези</string>
+
+    <string name="needMoreCustomizationTitleLong">Няма достатъчно начини за персонализиране на приложението</string>
+    <string name="needMoreCustomizationTitleShort">Проблеми с персонализирането</string>
+    <string name="needMoreCustomizationSubtitle">Коя опция за персонализиране можем да добавим или да подобрим?</string>
+    <string name="needMoreCustomizationSubReasonHomeScreenConfiguration">Конфигурацията на началния екран</string>
+    <string name="needMoreCustomizationSubReasonTabDisplay">Как са изобразени разделите</string>
+    <string name="needMoreCustomizationSubReasonAppLooks">Как изглежда приложението</string>
+    <string name="needMoreCustomizationSubReasonWhichDataIsCleared">Кои данни са изчистени</string>
+    <string name="needMoreCustomizationSubReasonWhenDataIsCleared">Кога са изчистени данните</string>
+    <string name="needMoreCustomizationSubReasonBookmarksDisplay">Как са изобразени отметките</string>
+    <string name="needMoreCustomizationSubReasonOther">Никое от тези</string>
+
+    <string name="appIsSlowOrBuggyTitleLong">Приложението е бавно, има бъгове или се срива</string>
+    <string name="appIsSlowOrBuggyTitleShort">Проблеми с работата</string>
+    <string name="appIsSlowOrBuggySubtitle">Кой проблем имате?</string>
+    <string name="appIsSlowOrBuggySubReasonSlowResults">Уеб страниците или резултатите от търсене се зареждат бавно</string>
+    <string name="appIsSlowOrBuggySubReasonAppCrashesOrFreezes">Срив или замръзване на приложението</string>
+    <string name="appIsSlowOrBuggySubReasonMediaPlayback">Бъгове при възпроизвеждане на видео или мултимедийни файлове</string>
+    <string name="appIsSlowOrBuggySubReasonOther">Никое от тези</string>
+
+    <string name="otherMainReasonTitleLong">Никое от тези</string>
+    <string name="otherMainReasonTitleShort">Други проблеми</string>
+
+    <string name="openEndedInputHint">Моля, бъдете колкото може по-конкретни</string>
+    <string name="submitFeedback">ИЗПРАТИ</string>
+
+    <string name="tellUsHowToImprove">Моля, кажете ни какво можем да подобрим.</string>
+    <string name="thanksForTheFeedback">Благодарим за отзивите!</string>
+    <string name="feedbackNegativeMainReasonPageSubtitle">С какво най-вече са свързани отрицателните Ви впечатления?</string>
+    <string name="feedbackNegativeMainReasonPageTitle">Съжаляваме да чуем това</string>
+    <string name="feedbackShareDetails">Споделете подробности</string>
+    <string name="sharePositiveFeedbackWithTheTeam">Има ли някакви подробности, които искате да споделите с екипа?</string>
+    <string name="whatHaveYouBeenEnjoying">Кое Ви беше най-приятно?</string>
+    <string name="awesomeToHear">Страхотно е да чуем това!</string>
+    <string name="shareTheLoveWithARating">Моля, споделете вашето харесване като оцените в Play Store.</string>
+    <string name="rateTheApp">ОЦЕНКА НА ПРИЛОЖЕНИЕТО</string>
+    <string name="declineFurtherFeedback">НЕ БЛАГОДАРЯ, ПРИКЛЮЧИХ</string>
+    <string name="whichBrokenSites">Къде виждате тези проблеми?</string>
+    <string name="whichBrokenSitesHint">В кой уебсайт има проблеми?</string>
+    <string name="feedbackSpecificAsPossible">Моля, бъдете колкото може по-конкретни</string>
+    <string name="feedbackInitialDisambiguationTitle">Да започваме!</string>
+    <string name="feedbackInitialDisambiguationSubtitle">Как бихте категоризирали отзивите си?</string>
+    <string name="feedbackInitialDisambiguationHappyButtonContentDescription">Бутон за положителни отзиви</string>
+    <string name="feedbackInitialDisambiguationSadButtonContentDescription">Бутон за отрицателни отзиви</string>
+    <string name="feedbackIsImportantToUs">Вашите анонимни отзиви са важни за нас.</string>
+
+    <!-- Webview Recovery -->
+    <string name="crashedWebViewErrorMessage">"Уеб страницата не може да бъде показана."</string>
+    <string name="crashedWebViewErrorAction">"Презареждане"</string>
+
+    <!-- System Search-->
+    <string name="systemSearchDeviceAppLabel">От това устройство</string>
+    <string name="systemSearchOmnibarInputHint"><font size="13">Търсене или въвеждане на URL адрес</font></string>
+    <string name="systemSearchAppNotFound">Приложението не може да бъде намерено</string>
+    <string name="systemSearchOnboardingText">Благодарим ви, че избрахте Mangala!\nС използването на нашата търсачка или приложение вашите търсения са защитени.</string>
+    <string name="systemSearchOnboardingFeaturesIntroText">Приложението също:</string>
+    <string name="systemSearchOnboardingFeatureOneText">Блокира опасни тракери.</string>
+    <string name="systemSearchOnboardingFeatureTwoText">Криптира уебсайтове принудително.</string>
+    <string name="systemSearchOnboardingFeatureThreeText">Изчиства данни с едно докосване.</string>
+    <string name="systemSearchOnboardingButtonMore">Покажи повече</string>
+    <string name="systemSearchOnboardingButtonLess">Скрий</string>
+    <string name="systemSearchOnboardingButtonOk">Разбрах</string>
+
+    <!-- Dax Dialog -->
+    <string name="daxDialogHideButton">СКРИЙ</string>
+    <string name="daxDialogPhew">Слава Богу!</string>
+    <string name="daxDialogNext">Следващ</string>
+    <string name="daxDialogHighFive">Дай пет!</string>
+    <string name="daxDialogGotIt">Разбрах</string>
+    <string name="hideTipsTitle">Скрий оставащите съвети?</string>
+    <string name="hideTipsText">Само няколко са и се постарахме да са информативни.</string>
+    <string name="hideTipsButton">Скрий съветите за постоянно</string>
+
+    <!-- New Onboarding Experience -->
+    <string name="onboardingWelcomeTitle">"Добре дошли!"</string>
+    <string name="onboardingDaxText"><![CDATA[Интернет може да бъде и страшен.<br/><br/>Не се притеснявайте! Частното търсене и сърфиране е по-лесно, отколкото си мислите.]]></string>
+    <string name="onboardingLetsDoItButton">Да го направим!</string>
+    <string name="daxIntroCtaText"><![CDATA[Сега, отворете един от любимите си сайтове! <br/><br/>Ще блокирам тракерите, за да не ви шпионират. Също така ще надстроя сигурността на вашата връзка, ако е възможно. 🔒]]></string>
+    <string name="daxEndCtaText"><![CDATA[Вече разбрахте!<br/><br/>Запомнете: Всеки път, когато сърфирате с мен, аз подрязвам крилцата на някоя досадна реклама. 👍]]></string>
+    <string name="daxSerpCtaText">Търсенето е анонимно. Винаги. 🙌</string>
+    <plurals name="daxTrackersBlockedCtaText">
+        <item quantity="one"><![CDATA[ и още <b>%1$d друг</b> се опитват да ви проследят тук. <br/><br/>Блокирах ги!<br/><br/> ☝️Вижте адресната лента, за да разберете кой се опитва да ви проследи, когато посещавате нов сайт.️]]></item>
+        <item quantity="other"><![CDATA[ и още <b>%1$d други</b> се опитват да ви проследят тук. <br/><br/>Блокирах ги!<br/><br/> ☝️Вижте адресната лента, за да разберете кой се опитва да ви проследи, когато посещавате нов сайт.️]]></item>
+    </plurals>
+    <plurals name="daxTrackersBlockedCtaZeroText">
+        <item quantity="one"><![CDATA[ се опитва да ви проследи тук. <br/><br/>Блокирах го!<br/><br/> ☝️Вижте лентата с URL адрес, за да разберете кой се опитва да ви проследи, когато посещавате нов сайт.️]]></item>
+        <item quantity="other"><![CDATA[ се опитват да ви проследят тук. <br/><br/>Блокирах ги!<br/><br/> ☝️Вижте лентата с URL адрес, за да разберете кой се опитва да ви проследи, когато посещавате нов сайт.️]]></item>
+    </plurals>
+    <string name="daxNonSerpCtaText"><![CDATA[Докато докосвате и скролвате, ще блокирам досадните тракери. <br/><br/>Продължавайте - не спирайте да сърфирате!]]></string>
+    <string name="daxMainNetworkCtaText">Внимание! Не мога да направя така, че %1$s да не вижда вашата активност в %2$s.&lt;br/&gt;&lt;br/&gt;Но ако сърфирате с мен, като цяло мога да намаля информацията, която %3$s научава за вас, като блокирам неговите тракери на много други сайтове.</string>
+    <string name="daxMainNetworkOwnedCtaText">Внимание! Тъй като %1$s притежава %2$s, той вижда какво правите тук а аз не мога да предотвратя това.&lt;br/&gt;&lt;br/&gt;Но ако сърфирайте с мен, като цяло мога да намаля информацията, която %3$s научава за вас, като блокирам неговите тракери на много други сайтове.</string>
+
+    <!-- Download Confirmation -->
+    <string name="downloadConfirmationContinue">Запазване в Изтеглени файлове</string>
+    <string name="downloadConfirmationSaveFileTitle">Запази %1$s</string>
+    <string name="downloadConfirmationKeepBothFilesText">Запазване на двете</string>
+    <string name="downloadConfirmationReplaceOldFileText">Заместване</string>
+    <string name="downloadConfirmationOpenFileText">Отваряне</string>
+    <string name="downloadConfirmationUnableToOpenFileText">Файлът не може да се отвори</string>
+    <string name="downloadConfirmationUnableToDeleteFileText">Старият файл не можа да бъде изтрит</string>
+
+    <!-- Change Icon Activity -->
+    <string name="changeIconActivityTitle">Икона на приложението</string>
+    <string name="changeIconCtaLabel">Икона на приложението</string>
+    <string name="changeIconCtaAccept">Приложи</string>
+    <string name="changeIconCtaCancel">Отмени</string>
+    <string name="changeIconDialogTitle">Прилагане на нова икона?</string>
+    <string name="changeIconDialogMessage">Приложението може да се затвори, за да приложи промените. Върнете се, след като се насладите на красивата си нова икона.</string>
+
+    <!-- New dashboard / menu buttons -->
+    <string name="manageWhitelist">Незащитени сайтове</string>
+    <string name="reportBrokenSite">Подаване на сигнал за повреден сайт</string>
+
+    <!-- Dialogs -->
+    <string name="dialogAddTitle">Добавяне</string>
+    <string name="dialogEditTitle">Редактиране</string>
+    <string name="dialogSaveAction">Запази</string>
+
+    <!-- Whitelist -->
+    <string name="whitelistActivityTitle">Незащитени сайтове</string>
+    <string name="enablePrivacyProtection">Активиране на защита на поверителността</string>
+    <string name="disablePrivacyProtection">Деактивиране на защита на поверителността</string>
+    <string name="whitelistEntryOverflowContentDescription">Още опции за незащитен сайт %1$s</string>
+    <string name="whitelistEntryDeleteConfirmMessage">Сигурни ли сте, че искате да премахнете &lt;b&gt;%1$s&lt;/b&gt; от незащитените сайтове?</string>
+    <string name="whitelistExplanation">Към тези сайтове няма да бъде приложена защита на поверителността.</string>
+    <string name="whitelistNoEntries">Защитата на поверителността е активирана за всички сайтове</string>
+    <string name="whitelistDomainHint">www.example.com</string>
+    <string name="whitelistFormatError">Моля, въведете домейн, като например <b>example.com</b>, и опитайте отново</string>
+
+    <!-- Settings -->
+    <string name="settingsPrivacyProtectionWhitelist">Незащитени сайтове</string>
+
+    <!-- Fireproof websites -->
+    <string name="fireproofWebsitesActivityTitle">Огнеустойчиви сайтове</string>
+    <string name="settingsFireproofWebsites">Огнеустойчиви сайтове</string>
+    <string name="fireproofWebsiteMenuTitleAdd">Направи този сайт огнеустойчив</string>
+    <string name="fireproofWebsiteSnackbarConfirmation">&lt;b&gt;%1$s&lt;/b&gt; вече е огнеустойчив</string>
+    <string name="fireproofWebsiteSnackbarAction">Отмяна</string>
+    <string name="fireproofWebsiteDeleteConfirmMessage">Сигурни ли сте, че искате да изтриете &lt;b&gt;%1$s&lt;/b&gt;?</string>
+    <string name="fireproofWebsiteFeatureDescription">Уеб сайтовете разчитат на бисквитки, за да поддържат сесията ви активна. Когато направите сайта огнеустойчив, бисквитките няма да бъдат изтрити и ще останете вписани, дори след като използвате огнения бутон. Ние все пак блокираме тракери на трети страни, които се намират на огнеустойчиви сайтове.</string>
+    <string name="fireproofWebsiteOverflowContentDescription">Още опции за огнеустойчивост на уебсайт %1$s</string>
+    <string name="fireproofWebsiteLoginDialogTitle">Искате ли да направите %1$s огнеустойчив?</string>
+    <string name="fireproofWebsiteLoginDialogDescription">Ако направите този сайт огнеустойчив, ще останете вписани, след като използвате огнения бутон.</string>
+    <string name="fireproofWebsiteLoginDialogPositive">Направи огнеустойчив</string>
+    <string name="fireproofWebsiteLoginDialogNegative">Не сега</string>
+    <string name="fireproofWebsiteItemsSectionTitle">Огнеустойчиви сайтове</string>
+    <string name="fireproofWebsiteEmptyListHint">Все още няма огнеустойчиви уебсайтове</string>
+    <string name="fireproofWebsiteSettingSelectionTitle">Прави уебсайтовете огнеустойчиви при влизане</string>
+    <string name="fireproofWebsiteRemoveAllConfirmation">Премахнати са всички уебсайтове от списъка с огнеустойчиви</string>
+    <string name="fireproofWebsiteRemovalConfirmation">Премахната огнеустойчивост за &lt;b&gt;%1$s&lt;/b&gt;</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogAskEveryTime">Питай всеки път</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogAlways">Винаги</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogNever">Никога</string>
+    <string name="disableLoginDetectionDialogTitle">Да се деактивира ли напомняне за огнеустойчивост при вход в сайтове?</string>
+    <string name="disableLoginDetectionDialogDescription">Можете да промените това предпочитание по всяко време в настройките.</string>
+    <string name="disableLoginDetectionDialogPositive">ЗАБРАНИ</string>
+    <string name="disableLoginDetectionDialogNegative">ОТМЕНИ</string>
+    <string name="automaticFireproofWebsiteLoginDialogTitle">Да се правят ли уебсайтовете огнеустойчиви автоматично при влизане?</string>
+    <string name="automaticFireproofWebsiteLoginDialogDescription">Ако направите сайтовете огнеустойчиви, ще останете вписани, след като използвате огнения бутон. Можете винаги да промените това по-късно в Настройки. </string>
+    <string name="automaticFireproofWebsiteLoginDialogFirstOption">Винаги прави огнеустойчиви</string>
+    <string name="automaticFireproofWebsiteLoginDialogSecondOption">Направи този сайт огнеустойчив</string>
+    <string name="automaticFireproofWebsiteLoginDialogThirdOption">Не сега</string>
+
+
+    <!-- Fire Animation settings -->
+    <string name="settingsFireAnimation">Анимация на огнения бутон</string>
+    <string name="settingsHeroFireAnimation">Адски огън</string>
+    <string name="settingsHeroWaterAnimation">Водовъртеж</string>
+    <string name="settingsHeroAbstractAnimation">Въздушна струя</string>
+    <string name="settingsNoneAnimation">Няма</string>
+    <string name="settingsSelectFireAnimationDialog">Анимация на огнения бутон</string>
+    <string name="settingsSelectFireAnimationDialogSave">Запази</string>
+
+    <!-- Dos Attack error-->
+    <string name="dosErrorMessage">Връзката е прекъсната. Този уебсайт може да навреди на вашето устройство.</string>
+
+    <!-- Download Manager problems -->
+    <string name="downloadManagerDisabled">Управлението на изтеглени файлове е деактивирано</string>
+    <string name="downloadManagerIncompatible">Управлението на изтеглени файлове не е налично на това устройство</string>
+    <string name="enable">Активиране</string>
+
+    <!-- Precise Location -->
+    <string name="preciseLocationSystemDialogTitle">Да се активира ли местоположение на устройството?</string>
+    <string name="preciseLocationSystemDialogSubtitle">%1$s иска информация за местоположението на устройството. Първо трябва да разрешите на приложението да изпраща местоположението на устройството и след това %2$s може да поиска разрешение.</string>
+    <string name="preciseLocationSystemDialogAllow">Активиране</string>
+    <string name="preciseLocationSystemDialogDeny">Може би по-късно</string>
+    <string name="preciseLocationSystemDialogNeverAllow">Не питай отново за този сайт</string>
+    <string name="preciseLocationSiteDialogTitle">Давате ли разрешение на %1$s за достъп до местоположението?</string>
+    <string name="preciseLocationDDGDialogSubtitle">Използваме анонимното Ви местоположение само за да Ви осигурим по-добри резултати близо до мястото, на което се намирате. Можете винаги да промените решението си по-късно.</string>
+    <string name="preciseLocationSiteDialogSubtitle">В Настройки можете да управлявате разрешенията за достъп до местоположението, които сте дали на отделни сайтове.</string>
+    <string name="preciseLocationSiteDialogAllowAlways">Винаги</string>
+    <string name="preciseLocationSiteDialogAllowOnce">Само за тази сесия</string>
+    <string name="preciseLocationSiteDialogDenyAlways">Винаги да се отказва</string>
+    <string name="preciseLocationSiteDialogDenyOnce">Отказ само за тази сесия</string>
+    <string name="settingsPreciseLocation">Местоположение</string>
+    <string name="preciseLocationFeatureDescription">Сайтовете, които посещавате, може да поискат да научат местоположението на устройството. Те няма да имат достъп до него, докато не им дадете изрично разрешение. Ние използваме местоположение само анонимно, за да предоставим резултати от локално търсене.</string>
+    <string name="preciseLocationToggleText">Сайтовете може да питат за местоположението ми</string>
+    <string name="preciseLocationEmptyListHint">Никой уебсайт няма разрешение за достъп до местоположението</string>
+    <string name="preciseLocationNoSystemPermission">За да управлявате разрешенията за достъп до местоположението, които сте дали на отделни сайтове, активирайте местоположение за това приложение в настройките на Android.</string>
+    <string name="preciseLocationActivityTitle">Местоположение</string>
+    <string name="preciseLocationDeleteConfirmMessage">Сигурни ли сте, че искате да изтриете &lt;b&gt;%1$s&lt;/b&gt;?</string>
+    <string name="preciseLocationDeleteContentDescription">Още опции за разрешения за местоположение в домейн %1$s</string>
+    <string name="preciseLocationAllowedSitesSectionTitle">Даден</string>
+    <string name="preciseLocationDeniedSitesSectionTitle">Отказан</string>
+    <string name="preciseLocationSnackbarMessage">Дали сте разрешение на %1$s за достъп до местоположението на устройството.</string>
+
+    <!--Fire button education-->
+    <string name="daxClearDataCtaText">Личните данни могат да се натрупват в браузъра. Много неприятно. Използвайте огнения бутон, за да изгорите всичко. Опитайте сега! 👇</string>
+
+    <!--  Global Privacy Control-->
+    <string name="globalPrivacyControlActivityTitle">Глобален контрол на поверителността (GPC)</string>
+    <string name="globalPrivacyControlDescription">
+        <![CDATA[блокира автоматично много тракери. С настройката \"Глобален контрол на поверителността\" (GPC) можете също да поискате от участващите уебсайтове да ограничат продажбата или споделянето на Вашите лични данни на/с други компании. <u><a href="">Научете повече</a><u/>]]>
+    </string>
+    <string name="globalPrivacyControlSetting">Глобален контрол на поверителността (GPC)</string>
+    <string name="globalPrivacyControlToggle">Глобален контрол на поверителността (GPC)</string>
+    <string name="disabled">Деактивирано</string>
+    <string name="enabled">Активирано</string>
+
+    <!-- Opening app links -->
+    <string name="settingTitleOpenLinksInAssociatedApps">Отваряне на връзките в свързаните приложения</string>
+    <string name="settingSubtitleOpenLinksInAssociatedApps">Деактивирайте, за да предотвратите автоматично отваряне на връзки в други инсталирани приложения.</string>
+    <string name="appLinkDialogTitle">Отваряне в друго приложение?</string>
+    <string name="appLinkSnackBarAction">Отваряне в приложението</string>
+    <string name="appLinkMultipleSnackBarAction">Изберете приложение</string>
+    <string name="appLinkSnackBarMessage">Можете да отворите тази връзка в %1$s.</string>
+    <string name="appLinkMultipleSnackBarMessage">Можете да отворите тази връзка в други приложения.</string>
+    <string name="appLinkIntentChooserTitle">Отваряне с</string>
+    <string name="appLinkMenuItemTitle">Отваряне в приложението</string>
+
+    <!-- Email Autofill -->
+    <string name="aliasToClipboardMessage">Новият адрес е копиран в клипборда</string>
+    <string name="autofillTooltipUseYourAlias">Използване на %1$s</string>
+    <string name="autofillTooltipUseYourAliasDescription">Блокира имейл тракери</string>
+    <string name="autofillTooltipGenerateAddress">Генериране на личен адрес</string>
+    <string name="autofillTooltipGenerateAddressDescription">Блокира имейл тракерите и скрива Вашия адрес</string>
+    <string name="newEmailAliasMenuTitle">Създаване на Duck адрес</string>
+
+    <!-- Email Sign Out Dialog -->
+    <string name="emailSignOutDialogTitle">Да се премахне ли защитата на имейла?</string>
+    <string name="emailSignOutDialogText">Забележка: При премахване на защитата на имейла от устройството, Вашият Duck адрес няма да бъде изтрит.</string>
+    <string name="emailSignOutDialogCancel">Отмени</string>
+    <string name="emailSignOutDialogDisable">Премахване</string>
+
+    <!-- Waitlist Notification -->
+    <string name="notificationChannelEmailWaitlist">Списък с чакащи за имейл</string>
+    <string name="waitlistNotificationTitle">Защитата на имейла е готова!</string>
+    <string name="waitlistNotificationDescription">Отворете поканата</string>
+
+    <string name="waitlistNotificationDialogDescription">Искате ли да Ви изпратим известие, когато дойде Вашият ред?</string>
+    <string name="waitlistNotificationDialogNoThanks">Не, благодаря</string>
+    <string name="waitlistNotificationDialogNotifyMe">УВЕДОМЕТЕ МЕ</string>
+
+    <!-- Email Protection -->
+    <string name="emailProtectionWebViewActivityTitle">Защита на имейл (Бета версия)</string>
+    <string name="emailProtectionActivityTitle">Защита на имейл (Бета версия)</string>
+    <string name="emailProtectionFooterDescription">Не е необходимо да споделяте лична информация, за да се включите в списъка с чакащи. Ще си осигурите място на опашката с клеймо за време, което съществува само на вашето устройство, така можем да ви уведомим, когато дойде вашия ред.</string>
+    <string name="emailProtectionErrorJoiningWaitlist">Възникна грешка при включване в списъка с чакащи, моля, опитайте отново по-късно</string>
+    <string name="emailProtectionDuckAddressCta">Вече имам Duck адрес</string>
+    <string name="emailProtectionInviteCodeCta">Имам код за покана</string>
+    <string name="emailProtectionWaitlistCta">Включване в списък с чакащи за личен адрес</string>
+    <string name="emailProtectionGetStartedCta">Първи стъпки</string>
+    <string name="emailNotSupported">Устройството не се поддържа</string>
+    <string name="emailNotSupportedExplanation">Защитата на имейла ви позволява да създавате поверителни имейл адреси, които премахват имейл тракерите. Необходимо е да криптираме и съхраняваме създадените от вас адреси локално на вашето устройство. Тъй като вашето устройство не поддържа криптирано съхранение, защитата на имейл не е достъпна.</string>
+
+    <!-- Screen 1-->
+    <string name="emailProtectionStatusTitleJoin">Поверителност на имейла с две думи.</string>
+    <string name="emailProtectionDescriptionJoin"><![CDATA[Блокирайте имейл тракерите и скрийте своя адрес, без да променяте своя имейл доставчик.<a href=""><b>Научете повече</b></a>.]]></string>
+
+    <!-- Screen 2 -->
+    <string name="emailProtectionStatusTitleJoined">Вече сте в списъка!</string>
+    <string name="emailProtectionDescriptionJoinedWithNotification"><![CDATA[Ще Ви изпратим известие, когато<br/> Вашата защита на имейли е готова. <a href=""><b>Научете повече</b></a>.]]></string>
+    <string name="emailProtectionDescriptionJoinedWithoutNotification"><![CDATA[Вашата покана ще се покаже, когато сме готови. Искате ли да <a href=""><b>получите известие</b></a>, когато пристигне?<br/><a href=""><b>Научете повече</b></a> за защитата на имейли.]]></string>
+
+    <!-- Screen 3 -->
+    <string name="emailProtectionStatusTitleInBeta">Получихте покана!</string>
+    <string name="emailProtectionDescriptionInBeta"><![CDATA[Блокирайте имейл тракерите и скрийте своя адрес,<br/>без да променяте своя имейл доставчик.<a href=""><b>Научете повече</b></a>.]]></string>
+
+    <!-- Email Protection Sign Out -->
+    <string name="emailProtectionSignOutTitle">Личен Duck адрес</string>
+    <string name="emailProtectionSignOutFooter">
+        <![CDATA[Когато защитата на имейли бъде премахната от това устройство, ще бъде премахната и опцията за попълване на Вашия личен Duck адрес или генериран нов личен Duck адрес в полетата за имейл при сърфиране в мрежата.<br/><br/>Ако искате да изтриете напълно своите Duck адреси или имате други въпроси или мнения, свържете се с нас на <a href=\"mailto:support@duck.com\">support@duck.com</a>.]]>
+    </string>
+    <string name="emailProtectionSignOutRemoveCta">Премахване от устройството</string>
+
+    <!-- Bookmark folders -->
+    <string name="bookmarkDialogTitleEdit">Редактиране на отметка</string>
+    <string name="favoriteDialogTitleEdit">Редактиране на Предпочитан</string>
+    <string name="locationLabel">Местоположение</string>
+    <string name="folderLocationTitle">Изберете местоположение</string>
+    <string name="addFolder">Добавяне на папка</string>
+    <string name="editFolder">Редактиране на папка</string>
+    <string name="bookmarkFolderDeleteDialogMessage">"Сигурни ли сте, че искате да изтриете "</string>
+    <string name="bookmarkFolderEmpty">Празна</string>
+
+    <plurals name="bookmarkFolderDeleteDialogMessage">
+        <item quantity="one">%1$s%2$s и %3$d елемент?</item>
+        <item quantity="other">%1$s%2$s и %3$d елемента?</item>
+    </plurals>
+
+    <plurals name="bookmarkFolderItems">
+        <item quantity="one">%1$d елемент</item>
+        <item quantity="other">%1$d елемента</item>
+    </plurals>
+
+    <!-- Accessibility-->
+    <string name="settingsAccessibility">Достъпност</string>
+    <string name="accessibilityActivityTitle">Достъпност</string>
+    <string name="accessibilityFontSizeTitle">Размер на текста</string>
+    <string name="accessibilityFontSizeHint">Придвижете плъзгача до положение, в което можете да виждате текста добре. Уебсайтовете, които разглеждате в Mangala, ще се регулират спрямо него.</string>
+    <string name="accessibilityForceZoomTitle">Прилагане на ръчно мащабиране на страницата</string>
+    <string name="accessibilityForceZoomSubtitle">Щипнете и увеличете всеки сайт, дори и тези, които не позволяват мащабиране</string>
+    <string name="accessibilityTextSizeOverrideTitle">Управление на размера на текста</string>
+    <string name="accessibilityTextSizeOverrideSubtitle">Текстът на уебсайтовете, които разглеждате с Mangala, ще се регулира спрямо настройката по-долу</string>
+
+    <!-- Privacy Policy -->
+    <string name="settingsPrivacyPolicyMangala">Политика за поверителност</string>
+
+    <!-- Home Screen Widget -->
+    <string name="homeScreenWidgetAdded">Уиджетът %1$s е добавен към началния екран</string>
+    <string name="settingsAddHomeScreenWidget">Уиджет на началния екран</string>
+
+    <!-- MacOs Settings -->
+    <string name="macos_settings_description">Сърфирайте поверително с нашето приложение за Mac</string>
+    <string name="macos_settings_description_list">Вече сте в списъка!</string>
+    <string name="macos_settings_description_ready">Налично за изтегляне на Mac</string>
+    <string name="macos_settings_title">Приложение за настолен компютър</string>
+
+    <!-- Downloads -->
+    <string name="downloadsMenuItem">Изтеглени файлове</string>
+    <string name="downloadsActivityTitle">Изтеглени файлове</string>
+    <string name="downloadsActivityNoItemsDescription">Все още няма изтеглени файлове</string>
+    <string name="downloadsShareTitle">Споделяне с…</string>
+    <string name="downloadsDownloadFinishedActionName">Отваряне</string>
+    <string name="downloadsCannotOpenFileErrorMessage">Файлът не може да се отвори. Проверете за съвместимо приложение.</string>
+    <string name="downloadsFileNotFoundErrorMessage">Файлът вече не съществува</string>
+    <string name="downloadsItemMenuShare">Споделяне</string>
+    <string name="downloadsItemMenuDelete">Изтриване</string>
+    <string name="downloadsItemMenuCancel">Отмени</string>
+    <string name="downloadsActivityMenuDeleteAll">Изтриване на всички</string>
+    <string name="downloadsFileDeletedMessage">Изтрито %1$s</string>
+    <string name="downloadsAllFilesDeletedMessage">Всички файлове са изтрити</string>
+    <string name="downloadsMoreOptionsContentDescription">Още опции за %1$s</string>
+    <string name="downloadsUndoActionName">Отмяна</string>
+    <string name="downloadsStateInProgress">В процес на изпълнение…</string>
+
+    <!-- App Tracking Protection -->
+    <string name="atp_SettingsTitle">Защита от проследяване в приложения</string>
+    <string name="atp_SettingsDeviceShieldNeverEnabled">Блокиране на тракерите на Вашето устройство</string>
+    <string name="atp_SettingsDeviceShieldEnabled">Активирано</string>
+    <string name="atp_SettingsDeviceShieldDisabled">Деактивирано</string>
+
+    <string name="downloadsErrorMessage">Неуспешно изтегляне. Проверете интернет връзката.</string>
+
+    <!--  =================================  downloads-impl ================================= -->
+
+    <string name="notificationChannelFileDownloading">Файлът се изтегля</string>
+    <string name="notificationChannelFileDownloaded">Файлът е изтеглен</string>
+
+    <string name="downloadComplete">Изтеглянето е завършено</string>
+    <string name="downloadFailed">Неуспешно изтегляне</string>
+    <string name="downloadInProgress">Изтегля се</string>
+
+</resources>

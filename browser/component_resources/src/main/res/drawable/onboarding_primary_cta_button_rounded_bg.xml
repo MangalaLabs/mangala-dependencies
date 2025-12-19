@@ -1,0 +1,11 @@
+
+<!--  TODO aitor - Once we extract the themes to its own gradle module, this will go  -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white">
+    <item>
+        <shape>
+            <solid android:color="@color/gray20" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+</ripple>

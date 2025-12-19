@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="managementScreenTitle">Autofill Logins</string>
+
+    <string name="managementLockedModeText">Unlock Autofill</string>
+
+    <string name="managementDisabledModeCta"><b>Set up in Settings</b></string>
+    <string name="managementDisabledModeSubtitle">A device lock pattern, PIN, or biometrics is required to protect your Autofill Login details.</string>
+    <string name="managementDisabledModeTitle">Secure your device to use Autofill</string>
+
+    <string name="saveLoginDialogTitle">Save Login?</string>
+    <string name="saveLoginDialogButtonSave">Save Login</string>
+    <string name="saveLoginDialogNotNow">Not Now</string>
+
+    <string name="useSavedLoginDialogTitle">Use Saved Login?</string>
+
+    <string name="updateLoginDialogTitle">Update Password?</string>
+    <string name="updateLoginDialogButtonUpdatePassword">Update Password</string>
+    <string name="updateLoginDialogButtonNotNow">Now Now</string>
+
+    <string name="credentialManagementEditUsernameHint">Username</string>
+    <string name="credentialManagementEditPasswordHint">Password</string>
+    <string name="credentialManagementEditWebsiteHint">Website</string>
+    <string name="credentialManagementEditButtonDelete">Delete</string>
+    <string name="credentialManagementEditButtonSaveChanges">Save Changes</string>
+    <string name="credentialManagementEditButtonCopyUsername">Copy Username</string>
+    <string name="credentialManagementEditButtonCopyPassword">Copy Password</string>
+
+    <string name="credentialManagementAutofillToggleLabel">Save and Autofill Logins</string>
+
+</resources>

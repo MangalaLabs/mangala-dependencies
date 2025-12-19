@@ -1,0 +1,15 @@
+
+<LinearLayout android:id="@+id/emptyGridViewContainer"
+    style="@style/SearchWidgetEmptyFavoritesHintContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/noFavoritesText"
+        android:text="@string/searchWidgetEmtpyFavoritesHint"
+        style="@style/SearchWidgetEmptyFavoritesHint" />
+
+    <TextView
+        android:id="@+id/addFavoriteText"
+        android:text="@string/searchWidgetEmtpyFavoritesCta"
+        style="@style/SearchWidgetEmptyFavoritesAction" />
+</LinearLayout>

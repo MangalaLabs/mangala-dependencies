@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <!-- Widget colors -->
+    <color name="favoriteTitleTextColor">@color/brownishGrayTwo</color>
+    <color name="favoriteFaviconBackgroundColor">@color/whiteFive</color>
+    <color name="searchWidgetBackgroundColor">@color/white</color>
+    <color name="searchWidgetSearchBarBackgroundColor">@color/whiteFour</color>
+    <color name="searchWidgetSearchBarHintColor">@color/brownishGrayTwo</color>
+    <color name="searchWidgetSearchBarLoupeColor">@color/almostBlack</color>
+</resources>

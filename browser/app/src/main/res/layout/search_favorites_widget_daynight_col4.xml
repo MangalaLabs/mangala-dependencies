@@ -1,0 +1,26 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetContainer"
+    style="@style/SearchWidgetContainer"
+    android:background="@drawable/search_widget_favorites_daynight_background">
+
+    <include layout="@layout/search_favorites_widget_search_bar_daynight" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/searchWidgetFavoritesSideMargin"
+        android:layout_marginEnd="@dimen/searchWidgetFavoritesSideMargin">
+
+        <GridView
+            android:id="@+id/emptyfavoritesGrid"
+            style="@style/SearchWidgetFavoritesGrid"/>
+
+        <GridView
+            android:id="@+id/favoritesGrid"
+            style="@style/SearchWidgetFavoritesGrid"
+            android:numColumns="4" />
+
+        <include layout="@layout/search_favorites_widget_empty_hint"/>
+    </FrameLayout>
+</LinearLayout>

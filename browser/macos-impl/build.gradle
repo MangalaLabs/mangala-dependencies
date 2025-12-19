@@ -1,0 +1,104 @@
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+dependencies {
+    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common-ui:1.0"
+    implementation "com.mangala.wallet.browser:macos-api:1.0"
+    implementation "com.mangala.wallet.browser:browser-api:1.0"
+    implementation "com.mangala.wallet.browser:statistics:1.0"
+    implementation "com.mangala.wallet.browser:macos-store:1.0"
+
+    implementation libs.kotlin
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation "com.google.android.material:material:1.6.1"
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+//    implementation "com.google.dagger:dagger:2.42"
+
+    implementation libs.kotlinx.coroutines.core
+
+    implementation libs.timber
+
+    // ViewModel and LiveData
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.5.0")
+
+//    testImplementation (KotlinX.coroutines.test) {
+//        // https://github.com/Kotlin/kotlinx.coroutines/issues/2023
+//        // conflicts with mockito due to direct inclusion of byte buddy
+//        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+//    }
+
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+//    implementation "com.google.dagger:dagger:2.42"
+    implementation libs.androidx.core.ktx
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+    // Testing dependencies
+//    implementation "com.mangala.wallet.browser:common-test:1.0"
+//    testImplementation AndroidX.work.testing
+//    testImplementation AndroidX.room.testing
+//    testImplementation "org.mockito.kotlin:mockito-kotlin:_"
+//    testImplementation Testing.junit4
+//    testImplementation AndroidX.archCore.testing
+//    testImplementation AndroidX.core
+//    testImplementation AndroidX.test.ext.junit
+//    testImplementation "androidx.test:runner:_"
+//    testImplementation Testing.robolectric
+//    testImplementation CashApp.turbine
+}
+
+android {
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+android {
+    namespace 'com.mangala.macos_impl'
+}

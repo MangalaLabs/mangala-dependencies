@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2019-2023 AlphaWallet
+ * Copyright (c) 2023-2025 Mangala Wallet
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Modified from original source: https://github.com/AlphaWallet/alpha-wallet-android
+ */
+
+package com.alphawallet.app.walletconnect.entity
+
+import com.google.gson.annotations.SerializedName
+
+enum class MessageType {
+    @SerializedName("pub")
+    PUB,
+    @SerializedName("sub")
+    SUB
+}
+
+enum class WCMethod {
+    @SerializedName("wc_sessionRequest")
+    SESSION_REQUEST,
+
+    @SerializedName("wc_sessionUpdate")
+    SESSION_UPDATE,
+
+    @SerializedName("eth_sign")
+    ETH_SIGN,
+
+    @SerializedName("personal_sign")
+    ETH_PERSONAL_SIGN,
+
+    @SerializedName("eth_signTypedData")
+    ETH_SIGN_TYPE_DATA,
+
+    @SerializedName("eth_signTransaction")
+    ETH_SIGN_TRANSACTION,
+
+    @SerializedName("eth_sendTransaction")
+    ETH_SEND_TRANSACTION,
+
+    @SerializedName("get_accounts")
+    GET_ACCOUNTS,
+
+    @SerializedName("wallet_switchEthereumChain")
+    SWITCH_ETHEREUM_CHAIN,
+
+    @SerializedName("wallet_addEthereumChain")
+    ADD_ETHEREUM_CHAIN,
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.SwitchCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/locationPermissionsToggle"
+    style="@style/LocationPermissionsSwitch"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:text="@string/preciseLocationToggleText"
+    android:theme="@style/SettingsSwitchTheme" />

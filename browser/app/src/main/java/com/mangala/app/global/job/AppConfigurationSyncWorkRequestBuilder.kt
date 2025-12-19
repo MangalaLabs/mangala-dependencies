@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) DuckDuckGo, Inc.
+ * Copyright (c) 2023-2025 Mangala Wallet
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Modified from original source: https://github.com/duckduckgo/Android
+ */
+
+
+
+package com.mangala.app.global.job
+
+import android.content.Context
+
+import androidx.work.*
+import com.mangala.app.job.ConfigurationDownloader
+
+import io.reactivex.Single
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
+import org.koin.java.KoinJavaComponent.inject
+import timber.log.Timber
+import java.util.concurrent.TimeUnit
+
+class AppConfigurationSyncWorkRequestBuilder{
+
+    fun appConfigurationWork(): PeriodicWorkRequest {
+        return PeriodicWorkRequestBuilder<AppConfigurationWorker>(12, TimeUnit.HOURS)
+            .setConstraints(networkAvailable())
+            .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 60, TimeUnit.MINUTES)
+            .addTag(APP_CONFIG_SYNC_WORK_TAG)
+            .build()
+    }
+
+    private fun networkAvailable() = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
+
+    companion object {
+        const val APP_CONFIG_SYNC_WORK_TAG = "AppConfigurationWorker"
+    }
+}
+
+class AppConfigurationWorker(
+    context: Context,
+   workerParams: WorkerParameters,
+) : RxWorker(context, workerParams), KoinComponent {
+
+    private val appConfigurationDownloader: ConfigurationDownloader by inject()
+    override fun createWork(): Single<Result> {
+        Timber.i("Running app config sync")
+        return appConfigurationDownloader.downloadTask()
+            .toSingle {
+                Timber.i("App configuration sync was successful")
+                Result.success()
+            }
+            .onErrorReturn {
+                Timber.w(it, "App configuration sync work failed")
+                Result.retry()
+            }
+    }
+}

@@ -1,0 +1,61 @@
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = project.name
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+dependencies {
+    implementation "com.mangala.wallet.browser:bandwidth-store:1.0"
+    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:browser-api:1.0"
+    implementation "com.mangala.wallet.browser:statistics:1.0"
+
+    implementation libs.kotlin
+    implementation libs.androidx.core.ktx
+    implementation libs.kotlinx.coroutines.core
+    implementation "com.squareup.okio:okio:3.2.0"
+    kapt libs.roomCompiler
+    implementation libs.roomKtx
+    implementation libs.roomRunTime
+    implementation libs.roomRxJava
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+
+    implementation libs.timber
+}
+
+android {
+    namespace 'com.mangala.bandwidth.impl'
+}

@@ -1,0 +1,217 @@
+/*
+ * ORIGINAL COPYRIGHT:
+ * Copyright (c) 2019-2023 AlphaWallet
+ * Licensed under the MIT License (MIT).
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * ----------------------------------------------------------------
+ * SOURCE:
+ * Derived from: https://github.com/AlphaWallet/alpha-wallet-android
+ *
+ * ----------------------------------------------------------------
+ * MODIFICATIONS:
+ * Modified by Mangala Wallet for Kotlin Multiplatform compatibility.
+ * ----------------------------------------------------------------
+ */
+
+package com.alphawallet.app.ui.widget.adapter;
+
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+
+import com.alphawallet.app.R;
+import com.alphawallet.app.entity.DApp;
+import com.alphawallet.app.ui.widget.entity.ItemClickListener;
+import com.alphawallet.app.ui.widget.entity.SuggestionsFilter;
+import com.alphawallet.app.util.DappBrowserUtils;
+import com.alphawallet.app.util.Utils;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.Target;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DappBrowserSuggestionsAdapter extends ArrayAdapter<DApp> implements Filterable {
+    private final List<DApp> suggestions;
+    public List<DApp> filteredSuggestions;
+    private final ItemClickListener listener;
+//    private String text;
+//    private TextView name;
+
+    public DappBrowserSuggestionsAdapter(@NonNull Context context,
+                                         List<DApp> suggestions,
+                                         ItemClickListener listener) {
+        super(context, 0, suggestions);
+        this.suggestions = suggestions;
+        this.listener = listener;
+        this.filteredSuggestions = new ArrayList<>();
+        //this.text = "";
+
+        // Append browser history to known DApps list during initialisation
+        addSuggestions(DappBrowserUtils.getBrowserHistory(context));
+    }
+
+    public void addSuggestion(DApp dapp) {
+        if (!suggestions.contains(dapp)) {
+            suggestions.add(dapp);
+            notifyDataSetChanged();
+        }
+    }
+
+    public void addSuggestions(List<DApp> dapps) {
+        for (DApp d : dapps) {
+            if (!suggestions.contains(d)) {
+                suggestions.add(d);
+            }
+        }
+        notifyDataSetChanged();
+    }
+
+    public void removeSuggestion(DApp dapp) {
+        for (DApp d : suggestions) {
+            if (d.getName().equals(dapp.getName()) && d.getUrl().equals(dapp.getUrl())) {
+                suggestions.remove(d);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public int getCount() {
+        return filteredSuggestions.size();
+    }
+
+    @Nullable
+    @Override
+    public DApp getItem(int position) {
+        return filteredSuggestions.get(position);
+    }
+
+    @NonNull
+    @Override
+    public Filter getFilter() {
+        return new SuggestionsFilter(this, suggestions);
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
+        DApp dapp = filteredSuggestions.get(position);
+
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_browser_suggestion, parent, false);
+        }
+
+        RelativeLayout layout = convertView.findViewById(R.id.layout);
+        layout.setOnClickListener(v -> listener.onItemClick(dapp.getUrl()));
+
+        ImageView icon = convertView.findViewById(R.id.icon);
+        String visibleUrl = Utils.getDomainName(dapp.getUrl());
+
+        String favicon;
+        if (!TextUtils.isEmpty(visibleUrl)) {
+            favicon = DappBrowserUtils.getIconUrl(visibleUrl);
+            Glide.with(icon.getContext())
+                    .load(favicon)//.load(favicon)
+                    .apply(new RequestOptions().circleCrop())
+                    .apply(new RequestOptions().placeholder(com.schoolonair.wallet.component.resources.R.drawable.logo_full))
+                    .listener(requestListener)
+                    .into(icon);
+        }
+
+        TextView name = convertView.findViewById(R.id.name);
+        TextView description = convertView.findViewById(R.id.description);
+
+        name.setText(dapp.getName());
+        if (!TextUtils.isEmpty(dapp.getDescription()))
+        {
+            description.setText(dapp.getDescription());
+        }
+        else
+        {
+            description.setText(dapp.getUrl());
+        }
+
+        //highlightSearch(text, dapp.getName());
+
+        return convertView;
+    }
+
+    /**
+     * Prevent glide dumping log errors - it is expected that load will fail
+     */
+    private final RequestListener<Drawable> requestListener = new RequestListener<Drawable>() {
+        @Override
+        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+            return false;
+        }
+
+        @Override
+        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+            return false;
+        }
+    };
+
+    private void highlightSearch(String text, String name) {
+        String lowerCaseText;
+        String lowerCaseName;
+        if (!text.isEmpty()) {
+            lowerCaseName = name.toLowerCase();
+            lowerCaseText = text.toLowerCase();
+            int start = lowerCaseName.indexOf(lowerCaseText);
+            int end = lowerCaseText.length() + start;
+            SpannableStringBuilder builder = new SpannableStringBuilder(name);
+            if (start >= 0) {
+                int highlightColor = ContextCompat.getColor(getContext(), com.schoolonair.wallet.component.resources.R.color.text_secondary);
+                builder.setSpan(new ForegroundColorSpan(highlightColor), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+            //this.name.setText(builder);
+        } else {
+            //this.name.setText(name);
+        }
+    }
+
+    public void setHighlighted(String text) {
+        //this.text = text;
+        notifyDataSetChanged();
+    }
+}

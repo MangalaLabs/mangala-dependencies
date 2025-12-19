@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="FrameLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appBarLayoutMockup"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?toolbarBgColor"
+        android:theme="@style/AppTheme3.Dark.AppBarOverlay">
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/imageHome"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <FrameLayout
+            android:id="@+id/browserClose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="9dp"
+            android:paddingEnd="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/browserCloseImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/closeTab"
+                android:padding="3dp"
+                android:src="@drawable/ic_close_dapp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/browserNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="4dp"
+            android:paddingEnd="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/browserClose"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/browserShareImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/network"
+                android:padding="3dp"
+                android:src="@drawable/ic_network_2" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/omniBarContainerMockup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/omnibar_field_background"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tabsMenuMockup"
+            app:layout_constraintStart_toEndOf="@+id/browserNetwork"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/searchIconMockup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/privacyGradeContentDescription"
+                android:gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/ic_loupe_24dp" />
+
+            <TextView
+                android:id="@+id/omnibarTextInputMockup"
+                style="@style/Base.V7.Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:fontFamily="sans-serif"
+                android:hint="@string/omnibarInputHint"
+                android:maxLines="1"
+                android:paddingStart="37dp"
+                android:paddingEnd="8dp"
+                android:textColor="?attr/omnibarTextColor"
+                android:textColorHint="?attr/omnibarHintColor"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="16sp"
+                android:textStyle="normal"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fireIconMenuMockup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:paddingStart="4dp"
+            android:visibility="gone"
+            android:paddingEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tabsMenuMockup"
+            app:layout_constraintStart_toEndOf="@id/omniBarContainerMockup"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/fireIconImageViewMockup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/browserPopupMenu"
+                android:padding="3dp"
+                android:src="@drawable/ic_fire" />
+        </FrameLayout>
+
+        <com.mangala.app.browser.TabSwitcherButton
+            android:id="@+id/tabsMenuMockup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="visible"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/browserMenuMockup"
+            app:layout_constraintStart_toEndOf="@id/fireIconMenuMockup"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/browserMenuMockup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="6dp"
+            android:paddingEnd="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/browserPopupMenu"
+                android:padding="3dp"
+                android:src="@drawable/ic_overflow_12dp" />
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

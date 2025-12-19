@@ -1,0 +1,196 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+//apply plugin: 'com.google.dagger.hilt.android'
+apply plugin: 'maven-publish'
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = "crypto-execute"
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+android {
+    namespace 'com.alphawallet.app'
+    compileSdk project.properties['androidCompileSdk'].toInteger()
+    ndkVersion "27.0.12077973"
+
+    defaultConfig {
+        minSdk project.properties['androidMinSdk'].toInteger()
+        targetSdk project.properties['androidTargetSdk'].toInteger()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField 'int', 'DB_VERSION', '1'
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+
+        def XInfuraAPI = "XInfuraAPI"
+        //Put your Infura key here, NB with over 30 - 40 users this API key will rate limit, it's only here for bootstrapping a free build
+        def DEFAULT_INFURA_API_KEY = "\"da3717f25f824cc1baa32d812386d93f\""
+        def DEFAULT_OPENSEA_API_KEY = "\"...\""; //Put your OpenSea developer API key in here, otherwise you are reliant on the backup NFT fetch method (which usually works ok)
+        def DEFAULT_POLYGONSCAN_API_KEY = "\"\""; //Put your Polygonscan developer API key in here to get access to Polygon/Mumbai token discovery and transactions
+        def DEFAULT_AURORA_API_KEY = "\"HFDDY5BNKGXBB82DE2G8S64C3C41B76PYI\""; //Put your Aurorascan.dev API key here - this one will rate limit as it is common
+
+        buildConfigField 'int', 'DB_VERSION', '45'
+        buildConfigField "String", XInfuraAPI, DEFAULT_INFURA_API_KEY
+
+//        ndk {
+//            abiFilters "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
+//        }
+        packagingOptions {
+            pickFirst 'META-INF/LICENSE.md'
+            pickFirst 'META-INF/NOTICE.md'
+            pickFirst 'META-INF/LICENSE-notice.md'
+            pickFirst 'solidity/ens/build/AbstractENS.bin'
+        }
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                arguments "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=0x4000"
+
+                cFlags "-DIFKEY=\\\"" + DEFAULT_INFURA_API_KEY + "\\\""
+                cFlags "-DOSKEY=\\\"" + DEFAULT_OPENSEA_API_KEY + "\\\""
+                cFlags "-DPSKEY=\\\"" + DEFAULT_POLYGONSCAN_API_KEY + "\\\""
+                cFlags "-DASKEY=\\\"" + DEFAULT_AURORA_API_KEY + "\\\""
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/LICENSE.md'
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE-notice.md'
+        exclude 'solidity/ens/build/*.bin'
+        exclude 'solidity/ens/*.sol'
+        exclude 'solidity/ens/build/*.abi'
+        exclude 'en-mnemonic-word-list.txt'
+        exclude 'solidity/*'
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation project(":browser:crypto:attestation-crypto")
+//    implementation "com.mangala.wallet.browser:di:1.0"
+    implementation "com.mangala.wallet.browser:local:1.0"
+    implementation "com.mangala.wallet.browser:common-ui:1.0"
+    implementation "com.mangala.wallet.browser:component_resources:1.0"
+//    implementation project(path: ':components:component_views')
+//    implementation project(path: ':data:local')
+//    implementation project(':features:shared')
+
+//    implementation libs.walletConnect
+
+    implementation "com.github.TrustWallet:wallet-connect-kotlin:1.5.6"
+
+    implementation libs.kotlin
+
+    implementation libs.swipeRefreshlayout
+    implementation libs.biometric
+    implementation "androidx.webkit:webkit:1.4.0"
+    implementation libs.corektx
+    implementation libs.preference
+    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "com.google.android.material:material:1.6.1"
+    implementation libs.recyclerView
+
+    implementation libs.zxing
+    implementation libs.googleZxing
+    implementation libs.slf4j
+    implementation libs.trustWalletCore
+    implementation libs.jacksonCore
+    implementation libs.jacksonDataBind
+    implementation libs.okhttp
+    implementation libs.rxJava
+    implementation libs.rxAndroid
+//    implementation "com.google.dagger:dagger:2.42"
+    implementation libs.gson
+    implementation libs.kotson
+
+    implementation libs.bouncyCastle
+    // https://mvnrepository.com/artifact/com.github.cliftonlabs/json-simple
+    implementation libs.jsonSimple
+
+    implementation "com.intuit.ssp:ssp-android:1.0.6"
+    implementation "com.intuit.sdp:sdp-android:1.0.6"
+
+    //hilt
+//    implementation libs.hilt
+//    kapt libs.hiltCompiler
+//    implementation libs.hiltWork
+//    kapt libs.androidHiltCompiler
+
+    implementation libs.koin.core
+    implementation libs.koin.android
+
+    implementation libs.glide
+    annotationProcessor libs.glideCompiler
+
+    implementation libs.timber
+
+    implementation libs.roomRunTime
+    implementation libs.roomKtx
+    implementation libs.roomRxJava
+    kapt libs.roomCompiler
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

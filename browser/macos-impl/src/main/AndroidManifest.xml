@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mangala.macos_impl">
+
+    <application android:supportsRtl="true">
+        <activity
+            android:name="com.mangala.macos_impl.waitlist.ui.MacOsWaitlistActivity"
+            android:exported="false"
+            android:label="@string/macos_app"
+            android:parentActivityName="com.mangala.app.settings.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <receiver
+            android:name="com.mangala.macos_impl.waitlist.ui.MacOsInviteShareBroadcastReceiver"
+            android:exported="false" />
+    </application>
+</manifest>

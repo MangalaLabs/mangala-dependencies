@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsSectionGeneral"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/settingsGeneralTitle"
+        style="@style/SettingsSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsHeadingGeneral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mangala.app.settings.SettingsOptionWithSubtitle
+        android:id="@+id/selectedThemeSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsGeneralTitle"
+        app:subtitle="@string/settingsSystemTheme"
+        app:title="@string/settingsTheme" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/autocompleteToggle"
+        style="@style/SettingsSwitch"
+        android:text="@string/settingsAutocompleteEnabled"
+        android:theme="@style/SettingsSwitchTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedThemeSetting" />
+
+    <TextView
+        android:id="@+id/homeScreenWidgetSetting"
+        style="@style/SettingsItemClickable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/settingsAddHomeScreenWidget"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/autocompleteToggle" />
+
+    <com.mangala.app.settings.SettingsOptionWithSubtitle
+        android:id="@+id/selectedFireAnimationSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeScreenWidgetSetting"
+        app:subtitle="@string/settingsHeroFireAnimation"
+        app:title="@string/settingsFireAnimation" />
+
+    <TextView
+        android:id="@+id/accessibilitySetting"
+        style="@style/SettingsItemClickable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/settingsAccessibility"
+        app:layout_constraintTop_toBottomOf="@id/selectedFireAnimationSetting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

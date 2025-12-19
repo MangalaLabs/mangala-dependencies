@@ -1,0 +1,290 @@
+/*
+ * Copyright 2023-2024 Mangala Wallet
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This file uses patterns and conventions from eos-jvm
+ * (https://github.com/memtrip/eos-jvm) by memtrip LTD.
+ */
+
+package com.mangala.app.tabs.ui
+
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.TextView
+import androidx.activity.viewModels
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
+import com.mangala.app.browser.favicon.FaviconManager
+import com.mangala.app.browser.tabpreview.WebViewPreviewPersister
+import com.mangala.app.cta.ui.CtaViewModel
+import com.mangala.app.di.AppCoroutineScope
+import com.mangala.app.downloads.DownloadsActivity
+import com.mangala.app.global.MangalaBrowserActivity
+import com.mangala.app.global.events.db.UserEventsStore
+import com.mangala.app.global.view.ClearDataAction
+import com.mangala.app.settings.SettingsActivity
+import com.mangala.app.settings.db.SettingsDataStore
+import com.mangala.app.statistics.pixels.Pixel
+import com.mangala.app.tabs.model.TabEntity
+import com.mangala.app.tabs.ui.TabSwitcherViewModel.Command
+import com.mangala.app.tabs.ui.TabSwitcherViewModel.Command.Close
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
+import com.schoolonair.wallet.browser.app.R
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.qualifier.named
+
+import kotlin.coroutines.CoroutineContext
+
+
+class TabSwitcherActivity : MangalaBrowserActivity(), TabSwitcherListener, CoroutineScope {
+
+    override val coroutineContext: CoroutineContext
+        get() = SupervisorJob() + Dispatchers.Main
+
+    val settingsDataStore: SettingsDataStore by inject()
+
+    val clearPersonalDataAction: ClearDataAction  by inject()
+
+    val gridViewColumnCalculator: GridViewColumnCalculator by inject()
+
+    val webViewPreviewPersister: WebViewPreviewPersister by inject()
+
+    val pixel: Pixel by inject()
+
+    val ctaViewModel: CtaViewModel by inject()
+
+    val faviconManager: FaviconManager by inject()
+
+    val userEventsStore: UserEventsStore by inject()
+
+
+    @AppCoroutineScope
+    val appCoroutineScope: CoroutineScope by inject(named("AppCoroutineScope"))
+
+    private val viewModel: TabSwitcherViewModel by viewModel()
+
+    private val tabsAdapter: TabSwitcherAdapter by lazy { TabSwitcherAdapter(this, webViewPreviewPersister, this, faviconManager) }
+
+    // we need to scroll to show selected tab, but only if it is the first time loading the tabs.
+    private var firstTimeLoadingTabsList = true
+
+    private var selectedTabId: String? = null
+
+    private lateinit var tabsRecycler: RecyclerView
+    private lateinit var tabGridItemDecorator: TabGridItemDecorator
+    private lateinit var toolbar: Toolbar
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_tab_switcher)
+        extractIntentExtras()
+        configureViewReferences()
+        setupToolbar(toolbar)
+        configureRecycler()
+        configureObservers()
+    }
+
+    private fun extractIntentExtras() {
+        selectedTabId = intent.getStringExtra(EXTRA_KEY_SELECTED_TAB)
+    }
+
+    private fun configureViewReferences() {
+        tabsRecycler = findViewById(R.id.tabsRecycler)
+        toolbar = findViewById(R.id.toolbar)
+    }
+
+    private fun configureRecycler() {
+        val numberColumns = gridViewColumnCalculator.calculateNumberOfColumns(
+            TAB_GRID_COLUMN_WIDTH_DP, TAB_GRID_MAX_COLUMN_COUNT
+        )
+        val layoutManager = GridLayoutManager(this, numberColumns)
+        tabsRecycler.layoutManager = layoutManager
+        tabsRecycler.adapter = tabsAdapter
+
+        val swipeListener = ItemTouchHelper(
+            SwipeToCloseTabListener(
+                tabsAdapter, numberColumns,
+                object : SwipeToCloseTabListener.OnTabSwipedListener {
+                    override fun onSwiped(tab: TabEntity) {
+                        onTabDeleted(tab)
+                    }
+                }
+            )
+        )
+        swipeListener.attachToRecyclerView(tabsRecycler)
+
+        tabGridItemDecorator = TabGridItemDecorator(this, selectedTabId)
+        tabsRecycler.addItemDecoration(tabGridItemDecorator)
+    }
+
+    private fun configureObservers() {
+        viewModel.tabs.observe(this) {
+            render(it)
+        }
+        viewModel.deletableTabs.observe(this) {
+            if (it.isNotEmpty()) {
+                onDeletableTab(it.last())
+            }
+        }
+        viewModel.command.observe(this) {
+            processCommand(it)
+        }
+    }
+
+    private fun render(tabs: List<TabEntity>) {
+        tabsAdapter.updateData(tabs)
+
+        if (firstTimeLoadingTabsList) {
+            firstTimeLoadingTabsList = false
+
+            scrollToShowCurrentTab()
+        }
+    }
+
+    private fun scrollToShowCurrentTab() {
+        val index = tabsAdapter.adapterPositionForTab(selectedTabId)
+        tabsRecycler.post { tabsRecycler.scrollToPosition(index) }
+    }
+
+    private fun processCommand(command: Command?) {
+        when (command) {
+            is Close -> finishAfterTransition()
+            else -> {}
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_tab_switcher_activity, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.newTab, R.id.newTabOverflow -> onNewTabRequested()
+            R.id.closeAllTabs -> closeAllTabs()
+            R.id.downloads -> showDownloads()
+            R.id.settings -> showSettings()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onNewTabRequested() {
+        clearObserversEarlyToStopViewUpdates()
+        launch { viewModel.onNewTabRequested() }
+    }
+
+    override fun onTabSelected(tab: TabEntity) {
+        selectedTabId = tab.tabId
+        updateTabGridItemDecorator(tab)
+        launch { viewModel.onTabSelected(tab) }
+    }
+
+    private fun updateTabGridItemDecorator(tab: TabEntity) {
+        tabGridItemDecorator.selectedTabId = tab.tabId
+        tabsRecycler.invalidateItemDecorations()
+    }
+
+    override fun onTabDeleted(tab: TabEntity) {
+        launch { viewModel.onMarkTabAsDeletable(tab) }
+    }
+
+    private fun onDeletableTab(tab: TabEntity) {
+        Snackbar.make(toolbar, getString(com.schoolonair.wallet.component.resources.R.string.tabClosed), Snackbar.LENGTH_LONG)
+            .setDuration(3500) // 3.5 seconds
+            .setAction(com.schoolonair.wallet.component.resources.R.string.tabClosedUndo) {
+                // noop, handled in onDismissed callback
+            }
+            .addCallback(object : Snackbar.Callback() {
+                override fun onDismissed(
+                    transientBottomBar: Snackbar?,
+                    event: Int
+                ) {
+                    when (event) {
+                        // handle the UNDO action here as we only have one
+                        BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION -> launch { viewModel.undoDeletableTab(tab) }
+                        BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_SWIPE,
+                        BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_TIMEOUT -> launch { viewModel.purgeDeletableTabs() }
+                        BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_CONSECUTIVE,
+                        BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_MANUAL -> { /* noop */
+                        }
+                    }
+                }
+            })
+            .apply { view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text).maxLines = 1 }
+            .show()
+    }
+
+    private fun closeAllTabs() {
+        launch {
+            viewModel.tabs.value?.forEach {
+                viewModel.onTabDeleted(it)
+            }
+        }
+    }
+
+    private fun showDownloads() {
+        startActivity(DownloadsActivity.intent(this))
+    }
+
+    private fun showSettings() {
+        startActivity(SettingsActivity.intent(this))
+    }
+
+    override fun finish() {
+        clearObserversEarlyToStopViewUpdates()
+        super.finish()
+        overridePendingTransition(com.schoolonair.wallet.component.resources.R.anim.slide_from_bottom_browser, com.schoolonair.wallet.component.resources.R.anim.tab_anim_fade_out)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.deletableTabs.removeObservers(this)
+        // we don't want to purge during device rotation
+        if (isFinishing) {
+            launch { viewModel.purgeDeletableTabs() }
+        }
+    }
+
+    private fun clearObserversEarlyToStopViewUpdates() {
+        viewModel.tabs.removeObservers(this)
+        viewModel.deletableTabs.removeObservers(this)
+    }
+
+    companion object {
+        fun intent(
+            context: Context,
+            selectedTabId: String? = null
+        ): Intent {
+            val intent = Intent(context, TabSwitcherActivity::class.java)
+            intent.putExtra(EXTRA_KEY_SELECTED_TAB, selectedTabId)
+            return intent
+        }
+
+        const val EXTRA_KEY_SELECTED_TAB = "selected"
+
+        private const val TAB_GRID_COLUMN_WIDTH_DP = 180
+        private const val TAB_GRID_MAX_COLUMN_COUNT = 4
+    }
+}

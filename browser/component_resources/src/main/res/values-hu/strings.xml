@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="appName" translatable="false">Mangala</string>
+    <string name="mangalaLogoDescription">Mangala logó</string>
+    <string name="mangalaPrivacySimplified">Adatvédelem, leegyszerűsítve</string>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+    <string name="open">Megnyitás</string>
+    <string name="cancel">Mégsem</string>
+    <string name="search">Keresés</string>
+
+    <!-- Onboarding Activity -->
+    <string name="onboardingDefaultBrowserDescription">A Beállítások oldalon bármikor kereshetsz és böngészhetsz a Mangala segítségével.</string>
+    <string name="onboardingDefaultBrowserTitle">Tedd a DuckDuckGót az alapértelmezett keresőoldaladdá</string>
+
+    <!-- Default Browser -->
+    <string name="cannotLaunchDefaultAppSettings">Az alkalmazás alapértelmezett beállítású képernyője nem indítható el</string>
+    <string name="settingsDefaultBrowserEnabled">Beállítás alapértelmezett böngészőként</string>
+    <string name="defaultBrowserMaybeLater">Talán később</string>
+    <string name="defaultBrowserLetsDoIt">Beállítás alapértelmezett böngészőként</string>
+    <string name="defaultBrowserDescriptionNoDefault">Nyugodtan kattints a linkekre, mindig.</string>
+    <string name="defaultBrowserInstructions">Válaszd ki a DuckDuckGót, majd koppints a <font color="#678fff"> Mindig </font> elemre.</string>
+
+    <!-- Browser Activity -->
+    <string name="browserPopupMenu">Böngészési menü</string>
+    <string name="refresh">Frissítés</string>
+    <string name="back">Vissza</string>
+    <string name="forward">Előre</string>
+
+    <string name="omnibarInputHint">Keresés vagy URL beírása</string>
+    <string name="clearButtonContentDescription">Megadott keresés törlése</string>
+    <string name="no_compatible_third_party_app_installed">Nincs kompatibilis alkalmazás telepítve</string>
+    <string name="addBookmarkMenuTitle">Könyvjelző mentése</string>
+    <string name="editBookmarkMenuTitle">Könyvjelző szerkesztése</string>
+    <string name="addFavoriteMenuTitle">Kedvenc hozzáadása</string>
+    <string name="removeFavoriteMenuTitle">Kedvenc eltávolítása</string>
+    <string name="favoriteAddedMessage">Kedvenc hozzáadva</string>
+    <string name="bookmarkAddedMessage">Könyvjelző hozzáadva</string>
+    <string name="requestDesktopSiteMenuTitle">Weboldal asztali nézete</string>
+    <string name="fireproofWebsiteMenuTitleRemove">Tűzállóság eltávolítása</string>
+    <string name="requestMobileSiteMenuTitle">Weboldal mobil nézete</string>
+    <string name="downloadsMenuTitle">Letöltések</string>
+    <string name="printMenuTitle">Oldal nyomtatása</string>
+    <string name="favoriteDeleteConfirmationMessage">Kedvenc eltávolítva</string>
+    <string name="fireproofDeleteConfirmationMessage">Tűzállóság eltávolítva</string>
+    <string name="privacyProtectionEnabledConfirmationMessage">Adatvédelem engedélyezve a következőhöz: %1$s</string>
+    <string name="privacyProtectionDisabledConfirmationMessage">Adatvédelem letiltva a következőhöz: %1$s</string>
+    <string name="undoSnackbarAction">Visszavonás</string>
+
+    <!-- Downloading files -->
+    <string name="downloadImage">Kép letöltése</string>
+    <string name="permissionRequiredToDownload">A letöltéshez tárolási engedély szükséges</string>
+
+    <!-- Sharing options -->
+    <string name="options">Opciók</string>
+    <string name="shareLink">Link megosztása</string>
+    <string name="shareMenuTitle">Megosztás</string>
+    <string name="copyUrl">Link címének másolása</string>
+
+    <!-- Find in page -->
+    <string name="findInPageMenuTitle">Keresés az oldalon</string>
+    <string name="nextSearchTermDescription">Következő keresése</string>
+    <string name="previousSearchTermDescription">Előző keresése</string>
+    <string name="closeFindInPageButtonDescription">Keresés az oldalon nézet bezárása</string>
+    <string name="findInPageHint">Keresés az oldalon</string>
+    <string name="findInPageMatches" translatable="false">%d/%d</string>
+
+    <!-- AutoComplete Suggestions -->
+    <string name="editQueryBeforeSubmitting">Lekérdezés szerkesztése keresés előtt</string>
+    <string name="settingsAutocompleteEnabled">Automatikus kiegészítési javaslatok megjelenítése</string>
+
+    <!-- Opening external apps -->
+    <string name="openExternalApp">Külső alkalmazás megnyitása</string>
+    <string name="launchingExternalApp">Megnyitás másik alkalmazásban</string>
+    <string name="confirmOpenExternalApp">Szeretnél kilépni a programból a tartalom megtekintéséhez?</string>
+    <string name="unableToOpenLink">Az ilyen típusú hivatkozás megnyitása nem sikerült</string>
+
+    <!-- Tabs -->
+    <string name="homeTab" translatable="false">Mangala</string>
+    <string name="tabActivityTitle">Lapok</string>
+    <string name="tabsMenuItem">Lapok</string>
+    <string name="newTabMenuItem">Új lap</string>
+    <string name="openInNewTab">Megnyitás új lapon</string>
+    <string name="openInNewBackgroundTab">Megnyitás háttérben lévő lapon</string>
+    <string name="openImageInNewTab">Kép megnyitása háttérben lévő lapon</string>
+    <string name="faviconContentDescription">Kedvenc ikon</string>
+    <string name="closeContentDescription">Bezárás</string>
+    <string name="closeAllTabsMenuItem">Összes lap bezárása</string>
+    <string name="closeTab">Lap bezárása</string>
+    <string name="tabClosed">Lap bezárva</string>
+    <string name="tabClosedUndo">Visszavonás</string>
+    <string name="downloadsMenuItemTitle">Letöltések</string>
+
+    <!-- Privacy Dashboard Activities -->
+    <string name="privacyProtectionToggle">A weboldal adatvédelme</string>
+    <string name="privacyProtectionEnabled">WEBOLDAL VÉDELME ENGEDÉLYEZVE</string>
+    <string name="privacyProtectionDisabled">WEBOLDAL VÉDELME LETILTVA</string>
+    <string name="privacyDashboardActivityTitle">Adatvédelmi műszerfal</string>
+    <string name="privacyProtectionUpgraded" tools:ignore="TypographyQuotes">TOVÁBBFEJLESZTETT ETTŐL: &lt;img src=\"%1$d\" /&gt; EDDIG: &lt;img src=\"%2$d\" /&gt;</string>
+    <string name="privacyGradeContentDescription">Adatvédelmi fokozat</string>
+    <string name="privacyProtectionTemporarilyDisabled">Ideiglenesen letiltottuk az adatvédelmet, mert úgy tűnik, hogy kárt okoz ezen a webhelyen.</string>
+
+    <string name="httpsGood">Titkosított kapcsolat</string>
+    <string name="httpsMixed">Vegyes titkosítású kapcsolat</string>
+    <string name="httpsBad">Titkosítatlan kapcsolat</string>
+
+    <string name="networksActivityTitle">Nyomkövető hálózatok</string>
+    <string name="networksContentDescription">Nyomkövető hálózatok</string>
+    <string name="networksOverview">A nyomkövető hálózatok gyűjtik internetes előzményeidet egy rólad szóló adatprofilban. A nagy nyomkövető hálózatok károsabbak, mert az internet több területén képesek téged nyomon követni és megcélozni.</string>
+
+    <plurals name="trackersFound">
+        <item quantity="one">%1$s nyomkövető megtalálva</item>
+        <item quantity="other">%1$s nyomkövető megtalálva</item>
+    </plurals>
+
+    <plurals name="trackerBlocked">
+        <item quantity="one">%1$s nyomkövető letiltva</item>
+        <item quantity="other">%1$s nyomkövető letiltva</item>
+    </plurals>
+
+    <plurals name="majorNetworksFound">
+        <item quantity="one">%1$s nagy nyomkövető-hálózat megtalálva</item>
+        <item quantity="other">%1$s nagy nyomkövető-hálózat megtalálva</item>
+    </plurals>
+
+    <plurals name="majorNetworksBlocked">
+        <item quantity="one">%1$s nagy nyomkövető-hálózat letiltva</item>
+        <item quantity="other">%1$s nagy nyomkövető-hálózat letiltva</item>
+    </plurals>
+
+    <string name="scorecardActivityTitle">Adatvédelmi fokozat</string>
+    <string name="scorecardSiteIsMemberOfMajorNetwork">A weboldal egy nagy nyomkövető-hálózat</string>
+    <string name="scorecardPrivacyGrade">Adatvédelmi fokozat</string>
+    <string name="scorecardEnhancedGrade">Emelt fokozat</string>
+
+    <string name="privacyTermsActivityTitle">Adatvédelmi gyakorlatok</string>
+    <string name="practicesGood">Jó adatvédelmi gyakorlatok</string>
+    <string name="practicesMixed">Vegyes adatvédelmi gyakorlatok</string>
+    <string name="practicesBad">Rossz adatvédelmi gyakorlatok</string>
+    <string name="practicesUnknown">Ismeretlen adatvédelmi gyakorlatok</string>
+    <string name="practicesOverview">Az adatvédelmi gyakorlatok jelzik, hogy a weboldalakkal megosztott személyes adataid védelme mennyire garantált.</string>
+    <string name="practicesTosdrLink">Adatvédelmi gyakorlatok forrása: <b><u>ToS;DR</u></b>.</string>
+    <string name="practicesIconContentGood">Jó gyakorlat ikon</string>
+    <string name="practicesIconContentBad">Hibás gyakorlat ikon</string>
+
+    <string name="networkTrackerSummaryHeader">A NYOMKÖVETŐ-HÁLÓZAT LEGNAGYOBB BŰNELKÖVETŐI</string>
+    <string name="networkTrackerSummaryNotReady">Folyamatosan gyűjtjük az adatokat, hogy bemutathassuk, hány követőt tiltottunk le.</string>
+
+    <!-- Fire -->
+    <string name="fireMenu">Adatok törlése</string>
+    <string name="fireClearAll">Összes lap és adat törlése</string>
+    <string name="fireCancel">Mégse</string>
+    <string name="fireDataCleared">Adatok törölve</string>
+
+    <!-- Settings Activity -->
+    <string name="settingsActivityTitle">Beállítások</string>
+    <string name="settingsMenuItemTitle">Beállítások</string>
+    <string name="settingsHeadingGeneral">Általános</string>
+    <string name="settingsHeadingOther">Egyéb</string>
+    <string name="settingsHeadingPrivacy">Adatvédelem</string>
+    <string name="settingsAboutMangala">A Mangala névjegye</string>
+    <string name="settingsVersion">Változat</string>
+    <string name="leaveFeedback">Visszajelzés megosztása</string>
+    <string name="settingsEmailProtectionTitle">E-mail védelem</string>
+    <string name="settingsEmailProtectionSubtitle">E-mail nyomkövetők letiltása, és a cím elrejtése</string>
+    <string name="settingsHeadingMore">Továbbiak a Mangala-tól</string>
+    <string name="settingsLightTheme">Világos</string>
+    <string name="settingsTheme">Kinézet</string>
+    <string name="settingsDarkTheme">Sötét</string>
+    <string name="settingsSystemTheme">Rendszer alapértelmezés</string>
+    <string name="settingsThemeDialogSave">Téma beállítása</string>
+    <string name="settingsTitleAppLinks">Hivatkozások megnyitása az alkalmazásokban</string>
+    <string name="settingsTitleAppLinksDialog">Hivatkozások megnyitása az alkalmazásokban</string>
+    <string name="settingsAppLinksAskEveryTime">Kérdezzen rá minden alkalommal</string>
+    <string name="settingsAppLinksAlways">Mindig</string>
+    <string name="settingsAppLinksNever">Soha</string>
+
+    <!-- Settings - Automatically clearing data -->
+    <string name="settingsAutomaticallyClearingDialogSave">Mentés</string>
+
+    <string name="settingsAutomaticallyClearWhat">Automatikus törlés…</string>
+    <string name="settingsAutomaticallyClearWhatDialogTitle">Automatikus törlés…</string>
+    <string name="settingsAutomaticallyClearWhatOptionNone">Nincs</string>
+    <string name="settingsAutomaticallyClearWhatOptionTabs">Lapok</string>
+    <string name="settingsAutomaticallyClearWhatOptionTabsAndData">Lapok és adatok</string>
+
+    <string name="settingsAutomaticallyClearWhen">Törlés ideje: …</string>
+    <string name="settingsAutomaticallyClearWhenDialogTitle">Törlés ideje: …</string>
+    <string name="settingsAutomaticallyClearWhenAppExitOnly">Kilépés csak az alkalmazásból</string>
+    <string name="settingsAutomaticallyClearWhenAppExit5Seconds">Kilépés az alkalmazásból 5 másodperc inaktivitás után</string>
+    <string name="settingsAutomaticallyClearWhenAppExit5Minutes">Kilépés az alkalmazásból 5 perc inaktivitás után</string>
+    <string name="settingsAutomaticallyClearWhenAppExit15Minutes">Kilépés az alkalmazásból 15 perc inaktivitás után</string>
+    <string name="settingsAutomaticallyClearWhenAppExit30Minutes">Kilépés az alkalmazásból 30 perc inaktivitás után</string>
+    <string name="settingsAutomaticallyClearWhenAppExit60Minutes">Kilépés az alkalmazásból 1 óra inaktivitás után</string>
+
+    <!-- About Activity -->
+    <string name="aboutActivityTitle">A Mangala</string>
+    <string name="aboutDescription">
+        A Mangala célja egy új online bizalmi szint megteremtése.A Mangala Adatvédelmi Böngésző minden olyan alapvető adatvédelmi elemet tartalmaz, amelyre szükséged lehet ahhoz, hogy megvédd magad az internetes keresés és böngészés során, beleértve a nyomkövetők letiltását, az intelligensebb titkosítást és a Mangala privát keresést.\n\nAz internet végső soron nem feltétlenül kell, hogy ellenséges közeg legyen, és hisszük, hogy az általad megérdemelt adatvédelem olyan egyszerű is lehet, mint a redőny lehúzása.</string>
+    <string name="aboutMoreLink">További információk a Mangala.com/about oldalon</string>
+    <string name="no_suggestions">Nincs javaslat</string>
+
+    <!-- Broken Site Activity -->
+    <string name="brokenSiteReportBrokenSiteMenuItem">Hibás weboldal bejelentése</string>
+    <string name="brokenSiteHeading">Hibás weboldal jelentése</string>
+    <string name="brokenSiteSubmitted">Köszönjük! Visszajelzés elküldve.</string>
+    <string name="brokenSitesCategoriesTitle">Az esemény leírása</string>
+    <string name="brokenSitesCategoriesHint">Az esemény leírása</string>
+    <string name="brokenSiteSubmitButton">Jelentés küldése</string>
+    <string name="brokenSiteDescription">Egy megsérült webhelyről szóló névtelen bejelentés segít a hibakeresésben és az alkalmazás fejlesztésében.</string>
+
+    <string name="brokenSiteCategoryImages">A képek nem töltődtek be</string>
+    <string name="brokenSiteCategoryPaywall">A webhely kérte tőlem a letiltást</string>
+    <string name="brokenSiteCategoryComments">A megjegyzések nem töltődtek be</string>
+    <string name="brokenSiteCategoryVideos">A videót nem játszotta le</string>
+    <string name="brokenSiteCategoryLinks">A hivatkozások vagy a gombok nem működnek</string>
+    <string name="brokenSiteCategoryContent">Hiányzik a tartalom</string>
+    <string name="brokenSiteCategoryLogin">Nem tudok bejelentkezni</string>
+    <string name="brokenSiteCategoryUnsupported">A böngésző nem kompatibilis</string>
+    <string name="brokenSiteCategoryOther">Valami más</string>
+
+    <!-- Bookmarks Activity -->
+    <string name="bookmarksMenuTitle">Könyvjelzők</string>
+    <string name="bookmarksActivityTitle">Könyvjelzők</string>
+    <string name="noBookmarks">Még nincsenek könyvjelzők hozzáadva</string>
+    <string name="bookmarkOverflowContentDescription">%1$s könyvjelző további lehetőségei</string>
+    <string name="bookmarkDeleteConfirmationMessage">Törölve: &lt;b&gt;%1$s&lt;/b&gt;</string>
+    <string name="exportBookmarksMenu">Exportálás</string>
+    <string name="exportBookmarksEmpty">Nincsenek könyvjelzőid, semmi nem kerül exportálásra.</string>
+    <string name="exportBookmarksError">Nem sikerült exportálni egyetlen könyvjelzőt sem, valami hiba történt.</string>
+    <string name="exportBookmarksSuccess">Minden könyvjelző sikeresen exportálva.</string>
+    <string name="importBookmarksMenu">Importálás</string>
+    <string name="importBookmarksFileTitle">Válassz ki egy importálni kívánt könyvjelző fájlt.</string>
+    <string name="importBookmarksError">Nem sikerült importálni egyetlen könyvjelzőt sem, valami hiba történt.</string>
+    <string name="importBookmarksEmpty">A fájlnak nincs importálható könyvjelzője.</string>
+    <string name="importBookmarksSuccess">%1$d könyvjelző sikeresen importálva.</string>
+    <string name="savedSiteDialogTitleHint">Cím</string>
+    <string name="savedSiteDialogUrlHint">URL</string>
+    <string name="savedSiteDialogTitleEdit">Szerkesztés</string>
+    <string name="bookmarksSectionTitle">Könyvjelzők</string>
+    <string name="favoritesSectionTitle">Kedvencek</string>
+    <string name="bookmarksEmptyHint">Még nincsenek könyvjelzők hozzáadva</string>
+    <string name="favoritesEmptyHint">Még nincsenek hozzáadva kedvencek.</string>
+
+    <!-- Dialogs -->
+    <string name="dialogConfirmTitle">Megerősítés</string>
+    <string name="dialogSave">Mentés</string>
+    <string name="delete">Törlés</string>
+    <string name="edit">Szerkesztés</string>
+    <string name="remove">Eltávolítás</string>
+    <string name="removeAll">Összes eltávolítása</string>
+
+    <!-- Widget -->
+    <string name="searchWidgetTextHint">Keresés </string>
+
+    <!-- Favorites widget -->
+    <string name="addFavoriteMenuTitleHighlighted">👋 Kedvenc hozzáadása</string>
+    <string name="widgetConfigurationTitleText">Téma kiválasztása</string>
+    <string name="widgetConfigurationSystemThemeOption">Rendszer alapértelmezés</string>
+    <string name="widgetConfigurationLightThemeOption">Világos</string>
+    <string name="widgetConfigurationDarkThemeOption">Sötét</string>
+    <string name="widgetConfigurationAddWidgetOption">Minialkalmazás hozzáadása</string>
+    <string name="searchWidgetEmtpyFavoritesHint">Még nincsenek hozzáadva kedvencek.</string>
+    <string name="searchWidgetEmtpyFavoritesCta">Kedvenc hozzáadása</string>
+    <string name="daxFavoritesOnboardingCtaText"><![CDATA[Látogasd meg a kedvenc weboldalaidat egy pillanat alatt!<br/><br/>Lépj egy kedvelt weboldalra. Ezután koppints a „ ⠇” ikonra, és válaszd a Kedvenc hozzáadása elemet.]]></string>
+    <string name="daxFavoritesOnboardingCtaContentDescription">Látogasd meg a kedvenc weboldalaidat egy pillanat alatt! Lépj egy kedvelt weboldalra. Ezután koppints a böngészési menü ikonra, és válaszd a Kedvenc hozzáadása elemet.</string>
+    <string name="widgetConfigurationActivityTitle">Minialkalmazás konfigurációja</string>
+    <string name="favoritesWidgetLabel">Kedvencek</string>
+    <string name="searchWidgetLabel">Keresés</string>
+
+    <!-- Home Screen Shortcuts -->
+    <string name="addToHome">Hozzáadás a kezdőlaphoz</string>
+    <string name="shortcutAddedText">Siker! %1$s hozzáadva a kezdőképernyődhöz.</string>
+
+    <!-- User Survey -->
+    <string name="surveyCtaTitle">Segíts nekünk az alkalmazás javításában!</string>
+    <string name="surveyCtaDescription">Töltsd ki rövid kérdőívünket, és mondd el a véleményedet.</string>
+    <string name="surveyCtaLaunchButton">Kérdőív kitöltése</string>
+    <string name="surveyCtaDismissButton">Nem, köszönöm</string>
+    <string name="surveyActivityTitle">Felhasználói kérdőív</string>
+    <string name="surveyTitle">FELHASZNÁLÓI KÉRDŐÍV</string>
+    <string name="surveyDismissContentDescription">Kérdőív elutasítása</string>
+    <string name="surveyLoadingErrorTitle">Jaj, ne!</string>
+    <string name="surveyLoadingErrorText">A kérdőívünk jelenleg nem töltődik be.\nKérjük, próbáld meg később.</string>
+
+    <!-- Add widget -->
+    <string name="addWidgetCtaTitle">Próbáld ki a Keresés minialkalmazást!</string>
+    <string name="addWidgetCtaDescription">A gyors és könnyű hozzáférés érdekében add hozzá kereső minialkalmazásunkat a kezdőképernyődhöz.</string>
+    <string name="addWidgetCtaAutoLaunchButton">Minialkalmazás hozzáadása</string>
+    <string name="addWidgetCtaInstructionsLaunchButton">Mutasd</string>
+    <string name="addWidgetCtaDismissButton">Elutasítás</string>
+    <string name="addWidgetInstructionsActivityTitle">Minialkalmazás hozzáadása</string>
+    <string name="addWidgetInstruction1Label">1</string>
+    <string name="addWidgetInstruction1">Nyomd meg hosszan a kezdőképernyőt, majd nyisd meg a minialkalmazás menüt.</string>
+    <string name="addWidgetInstruction2Label">2</string>
+    <string name="addWidgetInstruction2">Keresd meg a Seven Coin minialkalmazást.</string>
+    <string name="addWidgetInstruction3Label">3</string>
+    <string name="addWidgetInstruction3">Húzd a minialkalmazást a kezdőképernyődre.</string>
+    <string name="addWidgetInstructionsButtonGoHome">Ugrás a kezdőképernyőre</string>
+    <string name="addWidgetInstructionsButtonClose">Bezárás</string>
+
+    <!-- App Enjoyment / Rating / Feedback -->
+    <string name="appEnjoymentDialogTitle">Tetszik a Seven Coin?</string>
+    <string name="appEnjoymentDialogMessage">Szeretnénk hallani a véleményed.</string>
+    <string name="appEnjoymentDialogPositiveButton">Tetszik</string>
+    <string name="appEnjoymentDialogNegativeButton">Még javításra szorul</string>
+
+    <string name="rateAppDialogTitle">Alkalmazás értékelése</string>
+    <string name="rateAppDialogMessage">Számunkra fontos a visszajelzésed. Ha tetszik az alkalmazás, kérjük, ossz meg róla egy pozitív véleményt.</string>
+    <string name="rateAppDialogPositiveButton">Alkalmazás értékelése</string>
+    <string name="rateAppDialogNegativeButton" translatable="false">@string/noThanks</string>
+
+    <string name="giveFeedbackDialogTitle">Sajnálattal halljuk</string>
+    <string name="giveFeedbackDialogMessage">Mondd el, hogyan javíthatunk számodra az alkalmazáson.</string>
+    <string name="giveFeedbackDialogPositiveButton">Visszajelzés megosztása</string>
+    <string name="giveFeedbackDialogNegativeButton" translatable="false">@string/noThanks</string>
+
+    <string name="noThanks">Nem, köszönöm</string>
+
+    <!-- Notification Channel Names -->
+    <string name="notificationChannelTutorials">Útmutatók</string>
+
+    <!-- Clear Notification -->
+    <string name="clearNotificationTitle">Adattörlés manuálisra állítva</string>
+    <string name="clearNotificationDescription">A testreszabása a böngészési adatok automatikus törlésére minden munkamenet után.</string>
+
+    <!-- Privacy Protection Notification -->
+    <string name="privacyProtectionNotificationDefaultTitle">Védjük az adataidat</string>
+    <string name="privacyProtectionNotificationReportTitle">Adatvédelmi jelentésed</string>
+    <string name="privacyProtectionNotificationDefaultDescription">A alkalmazás a nyomkövetők letiltásával és a kapcsolatok titkosításával védi adataidat.</string>
+    <string name="privacyProtectionNotificationUpgadeDescription">A használata során %1$d titkosítatlan kapcsolat biztosításával védted az adataidat.</string>
+    <string name="privacyProtectionNotificationTrackerDescription">A használata során %1$d nyomkövető letiltásával védted az adataidat.</string>
+    <string name="privacyProtectionNotificationBothDescription">A használata során %1$d nyomkövető letiltásával és %2$d titkosítatlan kapcsolat biztosításával védted az adataidat.</string>
+    <string name="privacyProtectionNotificationLaunchButton">Böngészés folytatása</string>
+
+    <!-- Authentication -->
+    <string name="authenticationDialogTitle">Bejelentkezés</string>
+    <string name="authenticationDialogMessage">%1$s felhasználónevet és jelszót igényel.</string>
+    <string name="authenticationDialogPositiveButton">Bejelentkezés</string>
+    <string name="authenticationDialogNegativeButton">Mégse</string>
+    <string name="authenticationDialogUsernameHint">Felhasználónév</string>
+    <string name="authenticationDialogPasswordHint">Jelszó</string>
+
+    <!-- App feedback disambiguation -->
+    <string name="feedbackActivityTitle">Visszajelzés megosztása</string>
+    <string name="missingBrowserFeaturesTitleLong">Hiányzó vagy zavaró böngészőfunkciók</string>
+    <string name="missingBrowserFeaturesTitleShort">Böngésző funkció-problémái</string>
+    <string name="missingBrowserFeaturesSubtitle">Melyik böngészési funkciót vezessük be, vagy melyik meglévőt javítsuk?</string>
+    <string name="missingBrowserFeatureSubReasonNavigation">Navigálás előre, hátra, és/vagy frissítés</string>
+    <string name="missingBrowserFeatureSubReasonTabManagement">Lapok létrehozása és kezelése</string>
+    <string name="missingBrowserFeatureSubReasonAdPopups">Hirdetések és felugró ablakok letiltása</string>
+    <string name="missingBrowserFeatureSubReasonVideos">Videók megtekintése</string>
+    <string name="missingBrowserFeatureSubReasonImages">Képek más programokkal történő egyidejű kezelése</string>
+    <string name="missingBrowserFeatureSubReasonBookmarks">Könyvjelzők létrehozása és kezelése</string>
+    <string name="missingBrowserFeatureSubReasonOther">Ezek közül egyik sem</string>
+
+    <string name="websiteNotLoadingTitleLong">Weboldal betöltésével kapcsolatos problémák</string>
+    <string name="websiteNotLoadingTitleShort">Weboldal betöltésével kapcsolatos problémák</string>
+    <string name="websiteNotLoadingSubtitle">Melyik weboldal nem működik?</string>
+
+    <string name="searchNotGoodEnoughTitleLong">A Mangala keresés nem elég jó</string>
+    <string name="searchNotGoodEnoughTitleShort">Mangala keresési problémák</string>
+    <string name="searchNotGoodEnoughSubtitle">Melyik keresési funkciót vezessük be vagy javítsuk?</string>
+    <string name="searchNotGoodEnoughSubReasonTechnicalSearches">Programozás/műszaki keresés</string>
+    <string name="searchNotGoodEnoughSubReasonGoogleLayout">Az elrendezés hasonlítson jobban a Google elrendezéséhez</string>
+    <string name="searchNotGoodEnoughSubReasonFasterLoadTimes">Gyorsabb betöltési idő</string>
+    <string name="searchNotGoodEnoughSubReasonSpecificLanguage">Keresés egy adott nyelven vagy régióban</string>
+    <string name="searchNotGoodEnoughSubReasonBetterAutocomplete">Jobb automatikus kiegészítés</string>
+    <string name="searchNotGoodEnoughSubReasonOther">Ezek közül egyik sem</string>
+
+    <string name="needMoreCustomizationTitleLong">Az alkalmazás testreszabására nincs elegendő lehetőség</string>
+    <string name="needMoreCustomizationTitleShort">Testreszabási problémák</string>
+    <string name="needMoreCustomizationSubtitle">Melyik testreszabási lehetőséget vezessük be, vagy a meglévők közül melyiken javítsunk?</string>
+    <string name="needMoreCustomizationSubReasonHomeScreenConfiguration">A kezdőképernyő kialakítása</string>
+    <string name="needMoreCustomizationSubReasonTabDisplay">A lapok elrendezésének módja</string>
+    <string name="needMoreCustomizationSubReasonAppLooks">Az alkalmazás kinézete</string>
+    <string name="needMoreCustomizationSubReasonWhichDataIsCleared">A törlendő adatok kiválasztása</string>
+    <string name="needMoreCustomizationSubReasonWhenDataIsCleared">Az adatok törlésének időzítése</string>
+    <string name="needMoreCustomizationSubReasonBookmarksDisplay">A könyvjelzők elrendezésének módja</string>
+    <string name="needMoreCustomizationSubReasonOther">Ezek közül egyik sem</string>
+
+    <string name="appIsSlowOrBuggyTitleLong">Az alkalmazás lassú, hibás, vagy sokszor összeomlik</string>
+    <string name="appIsSlowOrBuggyTitleShort">Teljesítmény-problémák</string>
+    <string name="appIsSlowOrBuggySubtitle">Melyik problémával találkoztál?</string>
+    <string name="appIsSlowOrBuggySubReasonSlowResults">A weboldalak vagy a keresési eredmények lassan töltődnek be</string>
+    <string name="appIsSlowOrBuggySubReasonAppCrashesOrFreezes">Az alkalmazás összeomlik vagy lefagy</string>
+    <string name="appIsSlowOrBuggySubReasonMediaPlayback">Video- vagy médialejátszási hibák</string>
+    <string name="appIsSlowOrBuggySubReasonOther">Ezek közül egyik sem</string>
+
+    <string name="otherMainReasonTitleLong">Ezek közül egyik sem</string>
+    <string name="otherMainReasonTitleShort">Egyéb problémák</string>
+
+    <string name="openEndedInputHint">Kérjük, a lehető legpontosabban írj meg mindent</string>
+    <string name="submitFeedback">KÜLDÉS</string>
+
+    <string name="tellUsHowToImprove">Kérjük, mondd el, min tudunk még javítani.</string>
+    <string name="thanksForTheFeedback">Köszönjük a visszajelzést!</string>
+    <string name="feedbackNegativeMainReasonPageSubtitle">Mi okozta a legtöbb problémát?</string>
+    <string name="feedbackNegativeMainReasonPageTitle">Sajnálattal halljuk</string>
+    <string name="feedbackShareDetails">Részletek megosztása</string>
+    <string name="sharePositiveFeedbackWithTheTeam">Szeretnél valamit megosztani a csapattal?</string>
+    <string name="whatHaveYouBeenEnjoying">Mi tetszett?</string>
+    <string name="awesomeToHear">Örömmel halljuk!</string>
+    <string name="shareTheLoveWithARating">Ha tetszik az alkalmazás, kérjük, oszd meg véleményed a Play Store -on.</string>
+    <string name="rateTheApp">ALKALMAZÁS ÉRTÉKELÉSE</string>
+    <string name="declineFurtherFeedback">NEM, KÖSZÖNÖM, VÉGEZTEM.</string>
+    <string name="whichBrokenSites">Hol látod ezeket a problémákat?</string>
+    <string name="whichBrokenSitesHint">Melyik weboldalon vannak problémák?</string>
+    <string name="feedbackSpecificAsPossible">Kérjük, a lehető legpontosabban írj meg mindent</string>
+    <string name="feedbackInitialDisambiguationTitle">Kezdjünk hozzá!</string>
+    <string name="feedbackInitialDisambiguationSubtitle">Hogyan jellemeznéd a visszajelzésedet?</string>
+    <string name="feedbackInitialDisambiguationHappyButtonContentDescription">Pozitív visszajelzés gomb</string>
+    <string name="feedbackInitialDisambiguationSadButtonContentDescription">Negatív visszajelzés gomb</string>
+    <string name="feedbackIsImportantToUs">Anonim visszajelzésed fontos számunkra.</string>
+
+    <!-- Webview Recovery -->
+    <string name="crashedWebViewErrorMessage">"A weblap nem jeleníthető meg."</string>
+    <string name="crashedWebViewErrorAction">"Újratöltés"</string>
+
+    <!-- System Search-->
+    <string name="systemSearchDeviceAppLabel">Ebből az eszközből</string>
+    <string name="systemSearchOmnibarInputHint"><font size="13">Keresés vagy URL beírása</font></string>
+    <string name="systemSearchAppNotFound">Az alkalmazás nem található</string>
+    <string name="systemSearchOnboardingText">Köszönjük, hogy a Mangala-t választotta!\nMost, amikor a mi keresésünket vagy az alkalmazásunkat használja, a keresései védettek.</string>
+    <string name="systemSearchOnboardingFeaturesIntroText">A Mangala alkalmazás is:</string>
+    <string name="systemSearchOnboardingFeatureOneText">Blokkolja a nem biztonságos nyomkövetőket.</string>
+    <string name="systemSearchOnboardingFeatureTwoText">Kikényszeríti a webhelyeken a titkosítást.</string>
+    <string name="systemSearchOnboardingFeatureThreeText">Egyetlen érintéssel törli az adatokat.</string>
+    <string name="systemSearchOnboardingButtonMore">Többet mutat</string>
+    <string name="systemSearchOnboardingButtonLess">Elrejtés</string>
+    <string name="systemSearchOnboardingButtonOk">Megvan</string>
+
+    <!-- Dax Dialog -->
+    <string name="daxDialogHideButton">ELREJTÉS</string>
+    <string name="daxDialogPhew">Pfuj!</string>
+    <string name="daxDialogNext">Következő</string>
+    <string name="daxDialogHighFive">Pacsi!</string>
+    <string name="daxDialogGotIt">Megvan</string>
+    <string name="hideTipsTitle">Elrejti a többi tippet?</string>
+    <string name="hideTipsText">Csak néhány van, és megpróbáltuk őket informatívvá tenni.</string>
+    <string name="hideTipsButton">Ötletek elrejtése örökre</string>
+
+    <!-- New Onboarding Experience -->
+    <string name="onboardingWelcomeTitle">"Üdvözöljük!"</string>
+    <string name="onboardingDaxText"><![CDATA[Az internet lehet hátborzongató.<br/><br/>Ne aggódjon! A magánjellegű keresés és böngészés könnyebb, mint gondolná.]]></string>
+    <string name="onboardingLetsDoItButton">Rajta, csináljuk!</string>
+    <string name="daxIntroCtaText"><![CDATA[A következő lépésben látogassa meg az egyik kedvenc webhelyét! <br/><br/>Én blokkolom a nyomkövetőket, hogy ne tudjanak kémkedni. Ha lehet, a kapcsolat biztonságát is javítom. 🔒]]></string>
+    <string name="daxEndCtaText"><![CDATA[Megvan, ez az!<br/><br/>Ne feledd: minden alkalommal, amikor velem végzed a böngészést, egy hátborzongató hirdetés elveszíti az erejét. 👍]]></string>
+    <string name="daxSerpCtaText">Keresései névtelenek. Mindig. 🙌</string>
+    <plurals name="daxTrackersBlockedCtaText">
+        <item quantity="one"><![CDATA[ és <b>%1$d másik</b> itt próbált meg követni. <br/><br/>Blokkoltam őket!<br/><br/> ☝️Ellenőrizheted a címsort, hogy megtudd, ki próbál meg követni, amikor új webhelyre látogatsz.]]></item>
+        <item quantity="other"><![CDATA[ és <b>%1$d másik</b> itt próbált meg követni. <br/><br/>Blokkoltam őket!<br/><br/> ☝️Ellenőrizheted a címsort, hogy megtudd, ki próbál meg követni, amikor új webhelyre látogatsz.]]></item>
+    </plurals>
+    <plurals name="daxTrackersBlockedCtaZeroText">
+        <item quantity="one"><![CDATA[ itt próbált meg követni. <br/><br/>Blokkoltam!<br/><br/> ☝️Ellenőrizheted az URL-sávot, hogy megtudd, ki próbál meg követni, amikor új webhelyre látogatsz.]]></item>
+        <item quantity="other"><![CDATA[ itt próbált meg követni. <br/><br/>Blokkoltam!<br/><br/> ☝️Ellenőrizheted az URL-sávot, hogy megtudd, ki próbál meg követni, amikor új webhelyre látogatsz.]]></item>
+    </plurals>
+    <string name="daxNonSerpCtaText"><![CDATA[Ahogy megérinti és görgeti, én blokkolni fogom a bosszantó nyomkövetőket. <br/><br/>Menjen tovább - folytassa a böngészést!]]></string>
+    <string name="daxMainNetworkCtaText">Figyelem! Nem tudom megakadályozni, hogy %1$s láthassa a tevékenységedet itt: %2$s &lt;br/&gt;&lt;br/&gt;Ha azonban velem böngészel, a sok más weboldalon is használt nyomkövetőjük blokkolásával korlátozni tudom azt, amit %3$s megtudhat rólad.</string>
+    <string name="daxMainNetworkOwnedCtaText">Figyelem! Mivel %1$s tulajdonában van a(z) %2$s, nem tudom megakadályozni, hogy lássák az itteni tevékenységedet.&lt;br/&gt;&lt;br/&gt;Ha azonban velem böngészel, a sok más weboldalon is használt nyomkövetőjük blokkolásával korlátozni tudom azt, amit %3$s tud rólad.</string>
+
+    <!-- Download Confirmation -->
+    <string name="downloadConfirmationContinue">Mentés a Letöltések közé</string>
+    <string name="downloadConfirmationSaveFileTitle">%1$s mentése</string>
+    <string name="downloadConfirmationKeepBothFilesText">Mindkettő megtartása</string>
+    <string name="downloadConfirmationReplaceOldFileText">Lecserél</string>
+    <string name="downloadConfirmationOpenFileText">Megnyitás</string>
+    <string name="downloadConfirmationUnableToOpenFileText">Nem sikerült megnyitni a fájlt</string>
+    <string name="downloadConfirmationUnableToDeleteFileText">Nem sikerült törölni a régi fájlt</string>
+
+    <!-- Change Icon Activity -->
+    <string name="changeIconActivityTitle">Alkalmazásikon</string>
+    <string name="changeIconCtaLabel">Alkalmazásikon</string>
+    <string name="changeIconCtaAccept">Alkalmaz</string>
+    <string name="changeIconCtaCancel">Mégsem</string>
+    <string name="changeIconDialogTitle">Alkalmazod az új ikont?</string>
+    <string name="changeIconDialogMessage">A módosítások végrehajtásához az alkalmazás bezárulhat. Térj vissza, miután megcsodáltad a csinos új ikonodat.</string>
+
+    <!-- New dashboard / menu buttons -->
+    <string name="manageWhitelist">Védelem nélküli weboldalak</string>
+    <string name="reportBrokenSite">Hibás weboldal jelentése</string>
+
+    <!-- Dialogs -->
+    <string name="dialogAddTitle">Hozzáadás</string>
+    <string name="dialogEditTitle">Szerkesztés</string>
+    <string name="dialogSaveAction">Mentés</string>
+
+    <!-- Whitelist -->
+    <string name="whitelistActivityTitle">Védelem nélküli weboldalak</string>
+    <string name="enablePrivacyProtection">Adatvédelem engedélyezése</string>
+    <string name="disablePrivacyProtection">Adatvédelem letiltása</string>
+    <string name="whitelistEntryOverflowContentDescription">További lehetőségek az %1$s védelem nélküli weboldalhoz</string>
+    <string name="whitelistEntryDeleteConfirmMessage">Biztosan eltávolítod az &lt;b&gt;%1$s&lt;/b&gt; elemet a védelem nélküli weboldalak közül?</string>
+    <string name="whitelistExplanation">Ezeket az oldalakat nem erősíti adatvédelem.</string>
+    <string name="whitelistNoEntries">Adatvédelem engedélyezve minden weboldalhoz</string>
+    <string name="whitelistDomainHint">www.example.com</string>
+    <string name="whitelistFormatError">Írj be egy tartománynevet, például <b>example.com</b>, és próbáld újra.</string>
+
+    <!-- Settings -->
+    <string name="settingsPrivacyProtectionWhitelist">Védelem nélküli weboldalak</string>
+
+    <!-- Fireproof websites -->
+    <string name="fireproofWebsitesActivityTitle">Tűzálló weboldalak</string>
+    <string name="settingsFireproofWebsites">Tűzálló weboldalak</string>
+    <string name="fireproofWebsiteMenuTitleAdd">Weboldal tűzállóvá tétele</string>
+    <string name="fireproofWebsiteSnackbarConfirmation">A(z) &lt;b&gt;%1$s&lt;/b&gt; most már tűzálló</string>
+    <string name="fireproofWebsiteSnackbarAction">Visszavonás</string>
+    <string name="fireproofWebsiteDeleteConfirmMessage">Biztos, hogy törölni akarod a (z) &lt;b&gt;%1$s&lt;/b&gt; fájlt?</string>
+    <string name="fireproofWebsiteFeatureDescription">A webhelyek sütik segítségével teszik lehetővé, hogy bejelentkezve maradhass. Ha tűzállóvá teszel egy weboldalt, a sütik nem törlődnek, és még a Fire gomb használata után is bejelentkezve maradsz. A tűzálló webhelyeken a külső felek nyomkövetőit azonban blokkoljuk.</string>
+    <string name="fireproofWebsiteOverflowContentDescription">További lehetőségek a %1$s tűzálló weboldalhoz</string>
+    <string name="fireproofWebsiteLoginDialogTitle">Szeretnéd tűzállóvá tenni a következőt: %1$s?</string>
+    <string name="fireproofWebsiteLoginDialogDescription">Ha tűzállóvá teszel egy weboldalt, a Fire gomb használata után is bejelentkezve maradsz.</string>
+    <string name="fireproofWebsiteLoginDialogPositive">Tűzálló</string>
+    <string name="fireproofWebsiteLoginDialogNegative">Most nem</string>
+    <string name="fireproofWebsiteItemsSectionTitle">Tűzálló weboldalak</string>
+    <string name="fireproofWebsiteEmptyListHint">Még nincsenek tűzálló weboldalak</string>
+    <string name="fireproofWebsiteSettingSelectionTitle">Tűzálló weboldalak bejelentkezéskor</string>
+    <string name="fireproofWebsiteRemoveAllConfirmation">Az összes weboldal tűzállósága megszüntetve</string>
+    <string name="fireproofWebsiteRemovalConfirmation">Tűzállóvá tétel törölve a következőhöz: &lt;b&gt;%1$s&lt;/b&gt;</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogAskEveryTime">Kérdezzen rá minden alkalommal</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogAlways">Mindig</string>
+    <string name="fireproofWebsiteSettingsSelectionDialogNever">Soha</string>
+    <string name="disableLoginDetectionDialogTitle">Letiltod a tűzálló emlékeztetőt a weboldalakra történő bejelentkezéskor?</string>
+    <string name="disableLoginDetectionDialogDescription">Ezt a beállítást bármikor megváltoztathatod a Beállításokban.</string>
+    <string name="disableLoginDetectionDialogPositive">LETILT</string>
+    <string name="disableLoginDetectionDialogNegative">MÉGSEM</string>
+    <string name="automaticFireproofWebsiteLoginDialogTitle">Bejelentkezéskor automatikusan legyenek tűzállók a weboldalak?</string>
+    <string name="automaticFireproofWebsiteLoginDialogDescription">Ha tűzállóvá teszel egy weboldalt, a Fire gomb használata után is bejelentkezve maradsz. Ezt a beállításokban később bármikor módosíthatod. </string>
+    <string name="automaticFireproofWebsiteLoginDialogFirstOption">Mindig tűzálló</string>
+    <string name="automaticFireproofWebsiteLoginDialogSecondOption">Weboldal tűzállóvá tétele</string>
+    <string name="automaticFireproofWebsiteLoginDialogThirdOption">Most nem</string>
+
+
+    <!-- Fire Animation settings -->
+    <string name="settingsFireAnimation">Tűz gomb animáció</string>
+    <string name="settingsHeroFireAnimation">Lángnyelvek</string>
+    <string name="settingsHeroWaterAnimation">Örvény</string>
+    <string name="settingsHeroAbstractAnimation">Levegő</string>
+    <string name="settingsNoneAnimation">Nincs</string>
+    <string name="settingsSelectFireAnimationDialog">Tűz gomb animáció</string>
+    <string name="settingsSelectFireAnimationDialogSave">Mentés</string>
+
+    <!-- Dos Attack error-->
+    <string name="dosErrorMessage">Kapcsolat megszakadt. Ez a weboldal káros lehet az eszközödre.</string>
+
+    <!-- Download Manager problems -->
+    <string name="downloadManagerDisabled">Letöltéskezelő letiltva</string>
+    <string name="downloadManagerIncompatible">A letöltéskezelő nem érhető el ezen az eszközön.</string>
+    <string name="enable">Engedélyezés</string>
+
+    <!-- Precise Location -->
+    <string name="preciseLocationSystemDialogTitle">Engedélyezi az eszköz helyének elérését számára?</string>
+    <string name="preciseLocationSystemDialogSubtitle">%1$s az eszközöd helyét kéri. Először engedélyezned kell az alkalmazás számára, hogy elküldje az eszközöd helyét, majd a %2$s engedélyt kérhet.</string>
+    <string name="preciseLocationSystemDialogAllow">Engedélyezés</string>
+    <string name="preciseLocationSystemDialogDeny">Talán később</string>
+    <string name="preciseLocationSystemDialogNeverAllow">Ehhez a webhelyhez ne kérje újra</string>
+    <string name="preciseLocationSiteDialogTitle">Megadod %1$s számára a helyhozzáférési engedélyt?</string>
+    <string name="preciseLocationDDGDialogSubtitle">Csak az anonim helyedet használjuk a jobb, hozzád közelebbi eredmények érdekében. Később bármikor meggondolhatod magad.</string>
+    <string name="preciseLocationSiteDialogSubtitle">Az egyes webhelyeknek megadott helyhozzáférési engedélyeket a Beállításokban kezelheted.</string>
+    <string name="preciseLocationSiteDialogAllowAlways">Mindig</string>
+    <string name="preciseLocationSiteDialogAllowOnce">Csak erre a munkamenetre</string>
+    <string name="preciseLocationSiteDialogDenyAlways">Mindig megtagad</string>
+    <string name="preciseLocationSiteDialogDenyOnce">Megtagad erre a munkamenetre</string>
+    <string name="settingsPreciseLocation">Hely</string>
+    <string name="preciseLocationFeatureDescription">A felkeresett webhelyek hozzáférést kérhetnek az eszközöd helyadataihoz. Addig nem férhetnek hozzá, amíg kifejezetten nem adsz engedélyt. Helyadatait csak névtelenül használjuk fel helyi keresési eredmények biztosítására.</string>
+    <string name="preciseLocationToggleText">A webhelyek kérhetik a tartózkodási helyemet</string>
+    <string name="preciseLocationEmptyListHint">Egyetlen webhely sem kapott helyhozzáférési engedélyt</string>
+    <string name="preciseLocationNoSystemPermission">Az egyes webhelyek számára megadott helyhozzáférési engedélyek kezeléséhez engedélyezd a helyet az alkalmazás számára az Android beállításokban.</string>
+    <string name="preciseLocationActivityTitle">Hely</string>
+    <string name="preciseLocationDeleteConfirmMessage">Biztos, hogy törölni akarod ezt: &lt;b&gt;%1$s&lt;/b&gt;?</string>
+    <string name="preciseLocationDeleteContentDescription">További lehetőségek a helyhozzáférési engedélyekhez a(z) %1$s tartományban</string>
+    <string name="preciseLocationAllowedSitesSectionTitle">Megadva</string>
+    <string name="preciseLocationDeniedSitesSectionTitle">Megtagadva</string>
+    <string name="preciseLocationSnackbarMessage">%1$s számára korábban megadtad az engedélyt az eszközöd helyadatainak hozzáférésére.</string>
+
+    <!--Fire button education-->
+    <string name="daxClearDataCtaText">Személyes adatok halmozódhatnak fel a böngésződben. Fúj. A Tűz gombbal mindet elégetheted. Próbáld ki most! 👇</string>
+
+    <!--  Global Privacy Control-->
+    <string name="globalPrivacyControlActivityTitle">Nemzetközi adatvédelmi szabályozás (Global Privacy Control, GPC)</string>
+    <string name="globalPrivacyControlDescription">
+        <![CDATA[A számos nyomkövetőt automatikusan blokkol. A Global Privacy Control (GPC, Globális Adatvédelmi Ellenőrzés) segítségével arra is megkérheted a részt vevő webhelyeket, hogy korlátozzák személyes adataid eladását vagy megosztását más vállalatokkal. <u><a href="">További részletek</a><u/>]]>
+    </string>
+    <string name="globalPrivacyControlSetting">Nemzetközi adatvédelmi szabályozás (Global Privacy Control, GPC)</string>
+    <string name="globalPrivacyControlToggle">Nemzetközi adatvédelmi szabályozás (Global Privacy Control, GPC)</string>
+    <string name="disabled">Letiltva</string>
+    <string name="enabled">Engedélyezve</string>
+
+    <!-- Opening app links -->
+    <string name="settingTitleOpenLinksInAssociatedApps">Hivatkozások megnyitása társított alkalmazásokban</string>
+    <string name="settingSubtitleOpenLinksInAssociatedApps">Letiltásával megakadályozhatod, hogy a hivatkozások automatikusan megnyíljanak más telepített alkalmazásokban.</string>
+    <string name="appLinkDialogTitle">Megnyitás másik alkalmazásban?</string>
+    <string name="appLinkSnackBarAction">Megnyitás az alkalmazásban</string>
+    <string name="appLinkMultipleSnackBarAction">Alkalmazás kiválasztása</string>
+    <string name="appLinkSnackBarMessage">A hivatkozás a következő alkalmazásban nyitható meg: %1$s.</string>
+    <string name="appLinkMultipleSnackBarMessage">A hivatkozás más alkalmazásokban nyitható meg.</string>
+    <string name="appLinkIntentChooserTitle">Megnyitás ezzel:</string>
+    <string name="appLinkMenuItemTitle">Megnyitás az alkalmazásban</string>
+
+    <!-- Email Autofill -->
+    <string name="aliasToClipboardMessage">Új cím a vágólapra másolva</string>
+    <string name="autofillTooltipUseYourAlias">%1$s használata</string>
+    <string name="autofillTooltipUseYourAliasDescription">Blokkolja az e-mail nyomkövetőket</string>
+    <string name="autofillTooltipGenerateAddress">Privát cím létrehozása</string>
+    <string name="autofillTooltipGenerateAddressDescription">Letiltja az e-mail nyomkövetőket, és elrejti a címedet</string>
+    <string name="newEmailAliasMenuTitle">Duck cím létrehozása</string>
+
+    <!-- Email Sign Out Dialog -->
+    <string name="emailSignOutDialogTitle">Eltávolítod az e-mail védelmet?</string>
+    <string name="emailSignOutDialogText">Megjegyzés: az e-mail védelem eltávolítása erről az eszközről nem törli a Duck címedet.</string>
+    <string name="emailSignOutDialogCancel">Mégsem</string>
+    <string name="emailSignOutDialogDisable">Eltávolítás</string>
+
+    <!-- Waitlist Notification -->
+    <string name="notificationChannelEmailWaitlist">E-mail várólista</string>
+    <string name="waitlistNotificationTitle">Az e-mail-védelem készen áll.</string>
+    <string name="waitlistNotificationDescription">Meghívó megnyitása</string>
+
+    <string name="waitlistNotificationDialogDescription">Szeretnéd, hogy értesítést küldjünk neked, amikor rád kerül a sor?</string>
+    <string name="waitlistNotificationDialogNoThanks">Nem, köszönöm</string>
+    <string name="waitlistNotificationDialogNotifyMe">ÉRTESÍTSETEK</string>
+
+    <!-- Email Protection -->
+    <string name="emailProtectionWebViewActivityTitle">E-mail védelem (béta)</string>
+    <string name="emailProtectionActivityTitle">E-mail védelem (béta)</string>
+    <string name="emailProtectionFooterDescription">Nem kell megosztanod a személyes adataid a várólistához való csatlakozáshoz. A sorban elfoglalt helyedet egy olyan időbélyegző igazolja, amely kizárólag az eszközödön található meg, így értesíteni tudunk, amikor sorra kerülsz.</string>
+    <string name="emailProtectionErrorJoiningWaitlist">Hiba történt a várólistához való csatlakozás közben. Kérjük, próbáld újra később.</string>
+    <string name="emailProtectionDuckAddressCta">Már van Duck címem</string>
+    <string name="emailProtectionInviteCodeCta">Van meghívókódom</string>
+    <string name="emailProtectionWaitlistCta">Csatlakozz a privát várólistához</string>
+    <string name="emailProtectionGetStartedCta">Első lépések</string>
+    <string name="emailNotSupported">Az eszköz nem támogatott</string>
+    <string name="emailNotSupportedExplanation">Az e-mail-védelem lehetővé teszi olyan privát e-mail-címek létrehozását, amelyek eltávolítják az e-mail nyomkövetőket. Ezeket a címeket helyileg az eszközödön kell titkosítanunk és tárolnunk. Mivel az eszközöd nem támogatja a titkosított tárhelyet, az e-mail-védelem nem érhető el.</string>
+
+    <!-- Screen 1-->
+    <string name="emailProtectionStatusTitleJoin">E-mail adatvédelem, egyszerűsítve.</string>
+    <string name="emailProtectionDescriptionJoin"><![CDATA[Tiltsd le az e-mail nyomkövetőket, és rejtsd el a címedet anélkül, hogy e-mail-szolgáltatót váltanál.<br/><a href=""><b>További részletek</b></a>.]]></string>
+
+    <!-- Screen 2 -->
+    <string name="emailProtectionStatusTitleJoined">Rajta vagy a listán!</string>
+    <string name="emailProtectionDescriptionJoinedWithNotification"><![CDATA[Értesítést küldünk, amikor<br/> az e-mail védelem készen áll számodra. <a href=""><b>További részletek</b></a>.]]></string>
+    <string name="emailProtectionDescriptionJoinedWithoutNotification"><![CDATA[Meghívód itt jelenik meg, amikor készen állunk. Szeretnél <a href=""><b>értesítést kapni</b></a>, amikor megérkezik?<br/><a href=""><b>További tudnivalók</b></a> az e-mail védelemről.]]></string>
+
+    <!-- Screen 3 -->
+    <string name="emailProtectionStatusTitleInBeta">Meghívót kaptál!</string>
+    <string name="emailProtectionDescriptionInBeta"><![CDATA[Tiltsd le az e-mail nyomkövetőket, és rejtsd el a címedet<br/>anélkül, hogy e-mail-szolgáltatót váltanál.<br/><a href=""><b>További részletek</b></a>.]]></string>
+
+    <!-- Email Protection Sign Out -->
+    <string name="emailProtectionSignOutTitle">Személyes Duck cím</string>
+    <string name="emailProtectionSignOutFooter">
+        <![CDATA[Az e-mail védelem eltávolítása erről az eszközről megszünteti azt a lehetőséget, hogy a webes böngészés során a rendszer automatikusan beírja a személyes Duck címedet vagy egy újonnan létrehozott privát Duck címet az e-mail mezőkbe.<br/><br/>A Duck címeid teljes törléséhez, vagy bármilyen más kérdés vagy visszajelzés esetén fordulj hozzánk a <a href=\"mailto:support@duck.com\">support@duck.com</a> címen.]]>
+    </string>
+    <string name="emailProtectionSignOutRemoveCta">Eltávolítás az eszközről</string>
+
+    <!-- Bookmark folders -->
+    <string name="bookmarkDialogTitleEdit">Könyvjelző szerkesztése</string>
+    <string name="favoriteDialogTitleEdit">Kedvenc szerkesztése</string>
+    <string name="locationLabel">Hely</string>
+    <string name="folderLocationTitle">Hely kiválasztása</string>
+    <string name="addFolder">Mappa hozzáadása</string>
+    <string name="editFolder">Mappa szerkesztése</string>
+    <string name="bookmarkFolderDeleteDialogMessage">"Biztosan törlöd a(z) "</string>
+    <string name="bookmarkFolderEmpty">Üres</string>
+
+    <plurals name="bookmarkFolderDeleteDialogMessage">
+        <item quantity="one">%1$s%2$s és a(z) %3$d elemet?</item>
+        <item quantity="other">%1$s%2$s és a(z) %3$d elemet?</item>
+    </plurals>
+
+    <plurals name="bookmarkFolderItems">
+        <item quantity="one">%1$d elem</item>
+        <item quantity="other">%1$d elem</item>
+    </plurals>
+
+    <!-- Accessibility-->
+    <string name="settingsAccessibility">Kisegítő lehetőségek</string>
+    <string name="accessibilityActivityTitle">Kisegítő lehetőségek</string>
+    <string name="accessibilityFontSizeTitle">Szövegméret</string>
+    <string name="accessibilityFontSizeHint">Húzd el addig a csúszkát, amíg ezt kényelmesen el nem tudod olvasni. A Mangala ennek használatával jeleníti meg a webhelyeket.</string>
+    <string name="accessibilityForceZoomTitle">Kézi oldalnagyítás kényszerítése</string>
+    <string name="accessibilityForceZoomSubtitle">Használd bármelyik webhelyen a csippentést és nagyítást, még azokon is, amelyek ezt egyébként megakadályozzák</string>
+    <string name="accessibilityTextSizeOverrideTitle">Szövegméret kezelése</string>
+    <string name="accessibilityTextSizeOverrideSubtitle">A Mangala alkalmazásban megtekintett webhelyek szövege az alábbi beállításhoz igazodik</string>
+
+    <!-- Privacy Policy -->
+    <string name="settingsPrivacyPolicyMangala">Adatvédelmi szabályzat</string>
+
+    <!-- Home Screen Widget -->
+    <string name="homeScreenWidgetAdded">%1$s minialkalmazás hozzáadva a kezdőképernyőhöz</string>
+    <string name="settingsAddHomeScreenWidget">Kezdőképernyő-minialkalmazás</string>
+
+    <!-- MacOs Settings -->
+    <string name="macos_settings_description">Privát böngészés Maces alkalmazásunkkal</string>
+    <string name="macos_settings_description_list">Rajta vagy a listán!</string>
+    <string name="macos_settings_description_ready">Letölthető Macre</string>
+    <string name="macos_settings_title">Asztali alkalmazás</string>
+
+    <!-- Downloads -->
+    <string name="downloadsMenuItem">Letöltések</string>
+    <string name="downloadsActivityTitle">Letöltések</string>
+    <string name="downloadsActivityNoItemsDescription">Még nincsenek letöltött fájlok</string>
+    <string name="downloadsShareTitle">Megosztás vele…</string>
+    <string name="downloadsDownloadFinishedActionName">Megnyitás</string>
+    <string name="downloadsCannotOpenFileErrorMessage">A fájl nem nyitható meg. Keress kompatibilis alkalmazást.</string>
+    <string name="downloadsFileNotFoundErrorMessage">A fájl már nem létezik</string>
+    <string name="downloadsItemMenuShare">Megosztás</string>
+    <string name="downloadsItemMenuDelete">Törlés</string>
+    <string name="downloadsItemMenuCancel">Mégsem</string>
+    <string name="downloadsActivityMenuDeleteAll">Összes törlése</string>
+    <string name="downloadsFileDeletedMessage">Törölve: %1$s</string>
+    <string name="downloadsAllFilesDeletedMessage">Összes fájl törölve</string>
+    <string name="downloadsMoreOptionsContentDescription">További lehetőségek a következőhöz: %1$s</string>
+    <string name="downloadsUndoActionName">Visszavonás</string>
+    <string name="downloadsStateInProgress">Folyamatban…</string>
+
+    <!-- App Tracking Protection -->
+    <string name="atp_SettingsTitle">Alkalmazáskövetés elleni védelem</string>
+    <string name="atp_SettingsDeviceShieldNeverEnabled">Alkalmazáskövetők letiltása az eszközödön</string>
+    <string name="atp_SettingsDeviceShieldEnabled">Engedélyezve</string>
+    <string name="atp_SettingsDeviceShieldDisabled">Letiltva</string>
+
+    <!--  =================================  downloads-impl ================================= -->
+
+    <string name="downloadsErrorMessage">A letöltés sikertelen. Ellenőrizd az internetkapcsolatot.</string>
+
+    <string name="notificationChannelFileDownloading">Fájl letöltése folyamatban</string>
+    <string name="notificationChannelFileDownloaded">Fájl letöltve</string>
+
+    <string name="downloadComplete">Letöltés kész</string>
+    <string name="downloadFailed">A letöltés sikertelen volt</string>
+    <string name="downloadInProgress">Letöltés</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Common attributes-->
+    <attr name="settingsOptionColor" format="color"/>
+
+    <!--Settings Option view-->
+    <declare-styleable name="SettingsOption">
+        <attr name="android:text" format="string" />
+        <attr name="android:background"/>
+        <attr name="settingsOptionColor"/>
+    </declare-styleable>
+
+</resources>

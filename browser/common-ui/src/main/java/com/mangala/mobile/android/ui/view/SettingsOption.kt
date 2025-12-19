@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) DuckDuckGo, Inc.
+ * Copyright (c) 2023-2025 Mangala Wallet
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Modified from original source: https://github.com/duckduckgo/Android
+ */
+
+
+
+@file:Suppress("MemberVisibilityCanBePrivate")
+
+package com.mangala.mobile.android.ui.view
+
+import android.content.Context
+import android.util.AttributeSet
+import android.widget.LinearLayout
+import com.mangala.mobile.android.R
+import com.mangala.mobile.android.databinding.ViewSettingsOptionItemBinding
+import com.mangala.mobile.android.ui.viewbinding.viewBinding
+
+class SettingsOption : LinearLayout {
+
+    private val binding: ViewSettingsOptionItemBinding by viewBinding()
+
+    constructor(context: Context) : this(context, null)
+    constructor(
+        context: Context,
+        attrs: AttributeSet?
+    ) : this(context, attrs, R.style.Widget_Mangala_SettingsOption)
+
+    constructor(
+        context: Context,
+        attrs: AttributeSet?,
+        defStyle: Int
+    ) : super(context, attrs, defStyle) {
+        val attributes = context.obtainStyledAttributes(attrs, R.styleable.SettingsOption)
+        binding.root.setBackgroundResource(
+            attributes.getResourceId(
+                R.styleable.SearchBarView_android_background,
+                context.defaultSelectableItemBackground()
+            )
+        )
+
+        binding.title.setTextColor(
+            attributes.getColor(
+                R.styleable.SettingsOption_settingsOptionColor,
+                context.getColorFromAttr(com.schoolonair.wallet.component.resources.R.attr.normalTextColor)
+            )
+        )
+
+        setTitle(attributes.getString(R.styleable.SettingsOption_android_text) ?: "")
+        attributes.recycle()
+    }
+
+    /** Sets the item title */
+    fun setTitle(title: String) {
+        binding.title.text = title
+    }
+
+    /** Sets the item click listener */
+    fun setClickListener(onClick: () -> Unit) {
+        binding.itemContainer.setOnClickListener { onClick() }
+    }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settingsSectionMore"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/settingsMoreTitle"
+        style="@style/SettingsSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsHeadingMore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.mangala.app.settings.SettingsPillWithSubtitle
+        android:id="@+id/emailSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsMoreTitle"
+        app:pillDrawable="@drawable/ic_beta_pill"
+        app:pillSubtitle="@string/settingsEmailProtectionSubtitle"
+        app:pillTitle="@string/settingsEmailProtectionTitle" />
+
+    <com.mangala.app.settings.SettingsPillWithSubtitle
+        android:id="@+id/vpnSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailSetting"
+        app:pillDrawable="@drawable/ic_beta_pill"
+        app:pillSubtitle="@string/atp_SettingsDeviceShieldDisabled"
+        app:pillTitle="@string/atp_SettingsTitle" />
+
+    <com.mangala.app.settings.SettingsPillWithSubtitle
+        android:id="@+id/macOsSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vpnSetting"
+        app:pillDrawable="@drawable/ic_beta_pill"
+        app:pillSubtitle="@string/macos_settings_description"
+        app:pillTitle="@string/macos_settings_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

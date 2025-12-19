@@ -1,0 +1,81 @@
+/*
+ * Copyright (c) DuckDuckGo, Inc.
+ * Copyright (c) 2023-2025 Mangala Wallet
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Modified from original source: https://github.com/duckduckgo/Android
+ */
+
+
+package com.mangala.app.browser.favicon
+
+import android.graphics.Bitmap
+import android.widget.ImageView
+import java.io.File
+
+interface FaviconManager {
+    suspend fun storeFavicon(
+        tabId: String,
+        faviconSource: FaviconSource
+    ): File?
+
+    suspend fun tryFetchFaviconForUrl(
+        tabId: String,
+        url: String
+    ): File?
+
+    suspend fun persistCachedFavicon(
+        tabId: String,
+        url: String
+    )
+
+    suspend fun loadToViewFromLocalOrFallback(
+        tabId: String? = null,
+        url: String,
+        view: ImageView
+    )
+
+    suspend fun loadFromDisk(
+        tabId: String?,
+        url: String
+    ): Bitmap?
+
+    suspend fun loadFromDiskWithParams(
+        tabId: String? = null,
+        url: String,
+        cornerRadius: Int,
+        width: Int,
+        height: Int
+    ): Bitmap?
+
+    suspend fun deletePersistedFavicon(url: String)
+    suspend fun deleteOldTempFavicon(
+        tabId: String,
+        path: String?
+    )
+
+    suspend fun deleteAllTemp()
+}
+
+sealed class FaviconSource {
+    data class ImageFavicon(
+        val icon: Bitmap,
+        val url: String
+    ) : FaviconSource()
+
+    data class UrlFavicon(
+        val faviconUrl: String,
+        val url: String
+    ) : FaviconSource()
+}

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget"/>
+
+    <style name="Widget.Mangala"/>
+
+    <!-- Toolbar -->
+    <style name="Widget.Mangala.ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">?attr/toolbarIconColor</item>
+        <item name="android:textColorPrimary">?attr/toolbarTextColor</item>
+        <item name="colorControlHighlight">@color/subtleGrayTwo</item>
+        <item name="colorAccent">@color/cornflowerBlue</item>
+        <item name="colorControlActivated">@color/cornflowerBlue</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">?attr/settingsSwitchBackgroundColor</item>
+    </style>
+
+    <style name="Widget.Mangala.PopUpOverflowMenu" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/popup_menu_bg</item>
+    </style>
+
+    <!-- Settings -->
+    <style name="Widget.Mangala.SettingsOption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingStart">@dimen/keyline_4</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <!-- List Items -->
+    <style name="Widget.Mangala.SingleLineListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingStart">@dimen/keyline_4</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Mangala.TwoLineListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingStart">@dimen/keyline_4</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Mangala.ListItem"/>
+
+    <style name="Widget.Mangala.ListItem.Description" parent="TextAppearance.Mangala.Body2">
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">?attr/settingsMinorTextColor</item>
+    </style>
+
+    <style name="Widget.Mangala.ListItem.SectionTitle">
+        <item name="android:padding">16dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/cornflowerBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:selectable">false</item>
+    </style>
+
+    <style name="Widget.Mangala.ListItem.EmptyHint">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">@dimen/settingsItemHorizontalPadding</item>
+        <item name="android:paddingEnd">@dimen/settingsItemHorizontalPadding</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?attr/normalTextColor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Widget.Mangala.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="Widget.Mangala.BottomSheet.Model" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="behavior_peekHeight">512dp</item>
+    </style>
+
+    <style name="Widget.Mangala.AutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/text_cursor</item>
+        <item name="android:textColorHint">?attr/omnibarHintColor</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.Mangala.Snackbar" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Widget.Mangala.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:background">@drawable/popup_menu_bg</item>
+    </style>
+
+    <style name="Widget.Mangala.PopupMenuItem" parent="TextAppearance.Mangala.Body1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/popupMenuItemHeight</item>
+        <item name="android:paddingEnd">@dimen/keyline_4</item>
+        <item name="android:paddingStart">@dimen/keyline_4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/browser_menu_text</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Mangala.NavigationalIcon">
+        <item name="android:background">@drawable/ripple_rectangle_rounded</item>
+        <item name="android:layout_width">@dimen/popupMenuNavigationItemSize</item>
+        <item name="android:layout_height">@dimen/popupMenuNavigationItemSize</item>
+        <item name="android:tint">@color/primary_icon_color_selector</item>
+    </style>
+
+    <style name="Widget.Mangala.Switch">
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">?attr/settingsSwitchBackgroundColor</item>
+    </style>
+
+    <style name="Widget.Mangala.Switch.Blue">
+        <item name="colorControlActivated">@color/cornflowerBlue</item>
+    </style>
+
+    <style name="Widget.Mangala.Switch.Green">
+        <item name="colorControlActivated">@color/cornflowerGreen</item>
+    </style>
+
+    <style name="Widget.Mangala.RoundedDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/Widget.Mangala.DialogCorners</item>
+    </style>
+
+    <style name="Widget.Mangala.DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <!-- Styles for App Components -->
+
+    <style name="Widget.Mangala.MenuItemView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">@dimen/keyline_5</item>
+        <item name="android:paddingTop">@dimen/keyline_3</item>
+        <item name="android:paddingBottom">@dimen/keyline_3</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Section Header -->
+    <style name="Widget.Mangala.SectionHeader">
+        <item name="android:paddingTop">32dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:paddingStart">@dimen/settingsItemHorizontalPadding</item>
+        <item name="android:paddingEnd">@dimen/settingsItemHorizontalPadding</item>
+        <item name="android:textAppearance">@style/Widget.Mangala.SectionHeader.TextAppearance</item>
+    </style>
+
+    <style name="Widget.Mangala.SectionHeader.TextAppearance" parent="TextAppearance.Mangala.Body2">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/blue50</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Info Panel -->
+    <style name="Widget.Mangala.InfoPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.Mangala.InfoPanel.Text" parent="TextAppearance.Mangala.Body2">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/almostBlackDark</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Widget.Mangala.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Primary">
+        <item name="android:background">@drawable/background_blue_button_primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Primary.Lowercase">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Secondary">
+        <item name="android:textColor">@color/cornflowerBlue</item>
+        <item name="android:background">@drawable/background_transparent_button_rounded_corners</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Borderless">
+        <item name="android:textColor">@color/cornflowerBlue</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Rounded">
+        <item name="android:background">@drawable/background_blue_button_rounded</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.Mangala.Button.Secondary.Rounded">
+        <item name="android:background">@drawable/background_white_button_secondary_rounded</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/cornflowerBlue</item>
+    </style>
+
+    <style name="Widget.Mangala.IconButton">
+        <item name="android:background">@drawable/background_icon_button</item>
+        <item name="android:padding">@dimen/keyline_5</item>
+    </style>
+
+    <style name="Widget.Mangala.SearchBarView">
+        <item name="android:background">@drawable/omnibar_field_background</item>
+        <item name="android:layout_margin">@dimen/keyline_2</item>
+        <item name="clearActionContentDescription">
+            @string/searchbar_cleartextaction_content_description_default
+        </item>
+        <item name="searchHint">@string/searchbar_searchhint_default</item>
+        <item name="upActionContentDescription">
+            @string/searchbar_upaction_content_description_default
+        </item>
+    </style>
+
+    <!-- MessageCta -->
+    <style name="Widget.Mangala.MessageCta">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_message_cta</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_marginTop">@dimen/keyline_4</item>
+        <item name="android:layout_marginStart">@dimen/keyline_4</item>
+        <item name="android:layout_marginEnd">@dimen/keyline_4</item>
+        <item name="android:layout_marginBottom">@dimen/keyline_1</item>
+    </style>
+
+    <!-- Dialogs -->
+    <style name="Widget.Mangala.Dialog"/>
+    <style name="Widget.Mangala.Dialog.Title">
+        <item name="android:textAppearance">@style/TextAppearance.Mangala.Headline2</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

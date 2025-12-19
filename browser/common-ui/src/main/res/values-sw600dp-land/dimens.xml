@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="feedbackCardHorizontalMargin">96dp</dimen>
+    <dimen name="homeTabDdgLogoTopMargin">100dp</dimen>
+</resources>

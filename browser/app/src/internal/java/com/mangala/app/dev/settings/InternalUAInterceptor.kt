@@ -1,0 +1,52 @@
+/*
+ * Copyright 2023-2024 Mangala Wallet
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This file uses patterns and conventions from eos-jvm
+ * (https://github.com/memtrip/eos-jvm) by memtrip LTD.
+ */
+
+package com.mangala.app.dev.settings
+
+import com.mangala.app.browser.useragent.UserAgentInterceptor
+import com.mangala.app.dev.settings.db.DevSettingsDataStore
+import com.mangala.app.dev.settings.db.UAOverride
+import com.mangala.app.global.device.DeviceInfo
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Provider
+
+class InternalUAInterceptor (
+    private val devSettingsDataStore: DevSettingsDataStore,
+    device: DeviceInfo,
+//    @Named("defaultUserAgent")
+    private val defaultUserAgent: String,
+) : UserAgentInterceptor {
+
+    private val applicationComponent = "Mangala/${device.majorAppVersion}"
+    private val version = Regex("(Version/[^ ]+) *")
+
+    override fun intercept(userAgent: String): String {
+        if (!devSettingsDataStore.overrideUA) return userAgent
+
+        return when (devSettingsDataStore.selectedUA) {
+            UAOverride.NO_APP_ID -> userAgent.replace(applicationComponent, "")
+            UAOverride.NO_VERSION -> userAgent.replace(version, "")
+            UAOverride.DDG -> userAgent
+            UAOverride.CHROME -> userAgent.replace(applicationComponent, "").replace(version, "")
+            UAOverride.FIREFOX -> "Mozilla/5.0 (Android 11; Mobile; rv:94.0) Gecko/94.0 Firefox/94.0"
+            UAOverride.WEBVIEW -> defaultUserAgent
+        }
+    }
+}

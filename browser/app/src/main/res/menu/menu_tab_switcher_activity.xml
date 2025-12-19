@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/newTab"
+        android:icon="@drawable/ic_add_browser"
+        android:title="@string/newTabMenuItem"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/newTabOverflow"
+        android:title="@string/newTabMenuItem"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/closeAllTabs"
+        android:title="@string/closeAllTabsMenuItem"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/downloads"
+        android:title="@string/downloadsMenuItemTitle"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settingsMenuItemTitle"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <activity
+            android:name="com.mangala.app.global.CrashActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:excludeFromRecents="true"
+            android:process=":crash" />
+    </application>
+
+</manifest>

@@ -1,0 +1,381 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    alias(libs.plugins.ksp)
+    id 'maven-publish'
+}
+
+publishing {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.mangala.wallet.browser'
+            artifactId = "browser-app"
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MangalaLabs/mangala-dependencies")
+            credentials {
+                username = properties.getProperty("GITHUB_ACTOR")
+                password = properties.getProperty("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+apply from: "$rootProject.projectDir/gradle/android-library.gradle"
+
+android {
+    namespace 'com.schoolonair.wallet.browser.app'
+    compileSdk project.properties['androidCompileSdk'].toInteger()
+    ndkVersion "27.0.12077973"
+
+    defaultConfig {
+        minSdk project.properties['androidMinSdk'].toInteger()
+        targetSdk project.properties['androidTargetSdk'].toInteger()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                arguments "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,max-page-size=0x4000"
+            }
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        sourceSets {
+            androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+            main {
+                java {
+                    resources {
+                        srcDirs += files("$projectDir/../../node_modules/@duckduckgo/autofill/dist/".toString())
+                        srcDirs += files("$projectDir/../../submodules/".toString())
+                    }
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+//        benchmark {
+//            signingConfig signingConfigs.debug
+//            matchingFallbacks = ['release']
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+//    flavorDimensions "store"
+//    productFlavors {
+//        internal {
+//            dimension "store"
+//            resConfigs ("en", "xxhdpi")
+//        }
+//        play {
+//            dimension "store"
+//        }
+//    }
+    buildFeatures {
+        dataBinding true
+        buildConfig = true
+//        compose true
+    }
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.2.0"
+//    }
+
+    packagingOptions {
+        resources {
+            pickFirsts += ['META-INF/atomicfu.kotlin_module']
+        }
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-ui.version'
+        exclude 'META-INF/androidx.coordinatorlayout_coordinatorlayout.version'
+        exclude 'META-INF/androidx.viewpager_viewpager.version'
+        exclude 'META-INF/androidx.loader_loader.version'
+        exclude 'META-INF/androidx.documentfile_documentfile.version'
+        exclude 'META-INF/androidx.customview_customview.version'
+        exclude 'META-INF/androidx.print_print.version'
+        exclude 'META-INF/androidx.appcompat_appcompat.version'
+        exclude 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
+        exclude 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
+        exclude("META-INF/*.kotlin_module")
+        exclude 'META-INF/androidx.customview_customview.version'
+        exclude 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-ui.version'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-utils.version'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/androidx.slidingpanelayout_slidingpanelayout.version'
+        exclude 'META-INF/androidx.print_print.version'
+        exclude 'META-INF/androidx.documentfile_documentfile.version'
+        exclude 'META-INF/androidx.versionedparcelable_versionedparcelable.version'
+        exclude 'META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version'
+        exclude 'META-INF/androidx.drawerlayout_drawerlayout.version'
+        exclude 'META-INF/androidx.interpolator_interpolator.version'
+        exclude 'META-INF/androidx.appcompat_appcompat.version'
+        exclude 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/androidx.loader_loader.version'
+        exclude 'META-INF/androidx.viewpager_viewpager.version'
+        exclude 'META-INF/androidx.coordinatorlayout_coordinatorlayout.version'
+        exclude 'META-INF/androidx.cursoradapter_cursoradapter.version'
+        exclude 'META-INF/androidx.fragment_fragment.version'
+        exclude 'META-INF/main.kotlin_module'
+        exclude 'META-INF/androidx.vectordrawable_vectordrawable.version'
+        exclude 'META-INF/androidx.core_core.version'
+        exclude 'META-INF/androidx.cursoradapter_cursoradapter.version'
+        exclude 'META-INF/android.vectordrawable-animated.version'
+        exclude 'META-INF/androidx.vectordrawable_vectordrawable-animated.version'
+        exclude 'solidity/ens/build/AbstractENS.bin'
+        exclude 'solidity/ens/build/AbstractENS.abi'
+        exclude 'solidity/ens/build/ENS.bin'
+        exclude 'solidity/ens/build/ENS.abi'
+        exclude 'solidity/ens/build/PublicResolver.bin'
+        exclude 'solidity/ens/build/PublicResolver.abi'
+        exclude 'solidity/ens/ENS.sol'
+        exclude 'solidity/ens/AbstractENS.sol'
+        exclude 'solidity/ens/PublicResolver.sol'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'solidity/build.sh'
+        exclude 'solidity/readme.txt'
+        exclude 'web3j-version.properties'
+    }
+
+    configurations {
+        implementation.exclude module:'proto-google-common-protos'
+        implementation.exclude module:'protolite-well-known-types'
+        implementation.exclude module:'protobuf-lite'
+        implementation.exclude module:'protobuf-java'
+        implementation.exclude module:'protobuf-javalite'
+        implementation.exclude module:'support-compat'
+        implementation.exclude module:'support-vector-drawable'
+        implementation.exclude module:'com.github.bumptech.glide'
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+//        cleanedAnnotations compile.exclude group: 'org.jetbrains', module: 'annotations'
+    }
+
+    externalNativeBuild {
+
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation libs.corektx
+    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "com.google.android.material:material:1.6.1"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Timber
+
+    // Browser
+    implementation "com.mangala.wallet.browser:autofill-api:1.0"
+    implementation "com.mangala.wallet.browser:autofill-impl:1.0"
+    implementation "com.mangala.wallet.browser:autofill-store:1.0"
+
+    implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
+    implementation "com.mangala.wallet.browser:browser-api:1.0"
+    implementation "com.mangala.wallet.browser:statistics:1.0"
+    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:app-store:1.0"
+    implementation "com.mangala.wallet.browser:common-ui:1.0"
+    implementation "com.mangala.wallet.browser:di:1.0"
+
+    implementation "com.mangala.wallet.browser:feature-toggles-api:1.0"
+    implementation "com.mangala.wallet.browser:feature-toggles-impl:1.0"
+    implementation "com.mangala.wallet.browser:privacy-config-api:1.0"
+    implementation "com.mangala.wallet.browser:privacy-config-impl:1.0"
+    implementation "com.mangala.wallet.browser:privacy-config-store:1.0"
+    implementation "com.mangala.wallet.browser:anrs-api:1.0"
+    implementation "com.mangala.wallet.browser:anrs-store:1.0"
+    implementation "com.mangala.wallet.browser:anrs-impl:1.0"
+    implementation "com.mangala.wallet.browser:macos-api:1.0"
+    implementation "com.mangala.wallet.browser:macos-impl:1.0"
+    implementation "com.mangala.wallet.browser:macos-store:1.0"
+
+    implementation "com.mangala.wallet.browser:remote-messaging-api:1.0"
+    implementation "com.mangala.wallet.browser:remote-messaging-impl:1.0"
+    implementation "com.mangala.wallet.browser:remote-messaging-store:1.0"
+
+    implementation "com.mangala.wallet.browser:downloads-api:1.0"
+    implementation "com.mangala.wallet.browser:downloads-impl:1.0"
+    implementation "com.mangala.wallet.browser:downloads-store:1.0"
+
+//    internalimplementation "com.mangala.wallet.browser:traces-api:1.0"
+//    internalimplementation "com.mangala.wallet.browser:traces-impl:1.0"
+
+    implementation "com.mangala.wallet.browser:traces-api:1.0"
+    implementation "com.mangala.wallet.browser:traces-impl:1.0"
+
+    implementation "com.mangala.wallet.browser:bandwidth-impl:1.0"
+    implementation "com.mangala.wallet.browser:bandwidth-store:1.0"
+
+    implementation "com.mangala.wallet.browser:secure-storage-api:1.0"
+    implementation "com.mangala.wallet.browser:secure-storage-impl:1.0"
+    implementation "com.mangala.wallet.browser:secure-storage-store:1.0"
+
+    implementation "com.mangala.wallet.browser:device-auth-api:1.0"
+    implementation "com.mangala.wallet.browser:device-auth-impl:1.0"
+    implementation "com.mangala.wallet.browser:local:1.0"
+    implementation "com.mangala:browser-bridge-api:1.0"
+//    implementation project(":browser:crypto:attestation-crypto")
+    implementation ("com.mangala.wallet.browser:crypto-execute:1.0") {
+        exclude group: 'com.github.bumptech.glide', module:'glide'
+        exclude module: 'core-4.8.8-android'
+    }
+
+//    implementation(project(path: ':browser:dapp')) {
+//        exclude module: 'core-4.8.8-android'
+//    }
+
+//    implementation project(':navigation')
+
+    // Room
+    implementation libs.roomRunTime
+    implementation libs.roomKtx
+    implementation libs.roomRxJava
+    annotationProcessor libs.roomCompiler
+    ksp libs.roomCompiler
+    // optional - ReactiveStreams support for LiveData
+    implementation libs.lifecycleReactiveStreams
+
+    implementation libs.rxAndroid
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 2.x.x version)
+    implementation libs.rxJava
+    implementation libs.retrofit
+    implementation libs.retrofitRxJava2
+    implementation libs.retrofitGson
+    implementation libs.retrofitScalars
+    implementation libs.okhttpLoggingInterceptor
+    implementation libs.gson
+
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+    // Glide
+    implementation libs.glide
+    implementation libs.glideIntegration
+    kapt libs.glideCompiler
+
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation "androidx.work:work-multiprocess:2.7.1"
+//    androidTestImplementation AndroidX.work.testing
+    implementation("androidx.work:work-rxjava2:2.7.1")
+
+    implementation libs.webkit
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation "com.google.android.material:material:1.6.1"
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation libs.swipeRefreshlayout
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation "com.squareup.okhttp3:okhttp-tls:4.10.0"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    implementation libs.rxJava
+    implementation libs.rxAndroid
+    implementation libs.workManager
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+    // Flipper
+//    internalImplementation "com.facebook.flipper:flipper:0.152.0"
+//    internalImplementation "com.facebook.soloader:soloader:0.10.4"
+
+    debugImplementation "com.facebook.flipper:flipper:0.273.0"
+    debugImplementation "com.facebook.soloader:soloader:0.12.1"
+    releaseImplementation "com.facebook.flipper:flipper-noop:0.273.0"
+
+    // ThreeTenABP
+    implementation "com.jakewharton.threetenabp:threetenabp:1.4.0"
+//    testImplementation TestLibraries.threetenbp
+
+    // HTML
+    implementation libs.jsoup
+
+    // Security crypto
+    implementation "androidx.security:security-crypto:1.0.0"
+
+    implementation libs.kotlinCoroutineAndroid
+    implementation libs.kotlinCoroutinesRx2
+
+    // ViewModel and LiveData
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.5.0")
+
+    // RxRelay
+    implementation libs.rxRelay
+
+    // Lottie
+    implementation libs.lottie
+
+    implementation libs.timber
+
+    api libs.bignum
+
+    implementation(project.dependencies.platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
+
+    // Integration with activities
+//    debugImplementation libs.composeUiTool
+//    implementation libs.composeUiToolPreview
+//    implementation libs.composeActivity
+//    // Compose Material Design
+//    implementation libs.composeMaterial
+}

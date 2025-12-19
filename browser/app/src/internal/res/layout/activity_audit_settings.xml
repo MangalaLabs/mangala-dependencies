@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mangala.app.dev.settings.DevSettingsActivity">
+
+    <include
+        android:id="@+id/includeToolbar"
+        layout="@layout/include_default_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/privacyAuditTitle"
+                style="@style/SettingsSectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auditSettingsScreenPrivacyAuditSection" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/auditStep1Title"
+                app:subtitle="@string/auditStep1Subtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/auditStep2Title"
+                app:subtitle="@string/auditStep2Subtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/auditStep3Title"
+                app:subtitle="@string/auditStep3Subtitle" />
+
+            <TextView
+                android:id="@+id/refTestsTitle"
+                style="@style/SettingsSectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auditSettingsScreenRefTestsSection" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/requestBlocking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/requestBlockingTitle"
+                app:subtitle="@string/requestBlockingSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/requestBlockingDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/requestBlockingDisabledTitle"
+                app:subtitle="@string/requestBlockingDisabledSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/httpsUpgrades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/httpsUpgradesTitle"
+                app:subtitle="@string/httpsUpgradesSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/fireButtonStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/fireButtonStoreTitle"
+                app:subtitle="@string/fireButtonStoreSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/fireButtonRetrieve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/fireButtonRetrieveTitle"
+                app:subtitle="@string/fireButtonRetrieveSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/cookies3pStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/cookies3pStoreTitle"
+                app:subtitle="@string/cookies3pStoreSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/cookies3pRetrieve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/cookies3pRetrieveTitle"
+                app:subtitle="@string/cookies3pRetrieveSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/gpc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/gpcTitle"
+                app:subtitle="@string/gpcSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/gpcOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/gpcOtherTitle"
+                app:subtitle="@string/gpcOtherSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/surrogates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/surrogatesTitle"
+                app:subtitle="@string/surrogatesSubtitle" />
+
+            <com.mangala.app.settings.SettingsOptionWithSubtitle
+                android:id="@+id/surrogatesDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/surrogatesDisabledTitle"
+                app:subtitle="@string/surrogatesDisabledSubtitle" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- We'll eventually migrate to this to rely on the platform day / night / system theming
+    The platform theme layer allows us to account for API specific attributes.
+    Using resource qualifiers, we can specify a different platform theme for different versions of Android. -->
+
+    <style name="Platform.Theme.Mangala" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor" tools:ignore="NewApi">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi">?android:attr/colorBackground</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">?attr/colorControlHighlight</item>
+    </style>
+
+    <!--  Our base theme,
+    is where we override or define default styles for views and text appearance attributes. -->
+    <style name="Base.Theme.Mangala" parent="Platform.Theme.Mangala">
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Mangala.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Mangala.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Mangala.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Mangala.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Mangala.Headline5</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Mangala.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Mangala.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Mangala.Button1</item>
+        <item name="textAppearanceButton1">@style/TextAppearance.Mangala.Button1</item>
+        <item name="textAppearanceButton2">@style/TextAppearance.Mangala.Button2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Mangala.Caption</item>
+
+        <!--Component styles-->
+        <item name="bottomSheetDialogTheme">@style/Widget.Mangala.BottomSheetDialog</item>
+        <item name="actionOverflowMenuStyle">@style/PopUpOverflowMenu</item>
+        <item name="snackbarButtonStyle">@style/Widget.Mangala.Snackbar</item>
+        <item name="autoCompleteTextViewStyle">@style/Widget.Mangala.AutoCompleteTextView</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+    </style>
+
+    <!-- The app theme will mostly contain values for colour attributes -->
+    <style name="Theme.Mangala" parent="Base.Theme.Mangala">
+        <!--Material color attributes (light theme) -->
+        <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
+        <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
+        <!--selection controls.-->
+        <item name="colorPrimary">@color/cornflowerBlue</item>
+        <item name="colorPrimaryVariant">@color/cornflowerBlue</item>
+        <item name="colorSecondary">@color/cornflowerBlue</item>
+        <item name="colorSecondaryVariant">@color/cornflowerBlue</item>
+        <!--colorBackground appears behind scrollable content and is used for the default window-->
+        <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+        <!--and menus. colorError is used to indicate an error state for components such as-->
+        <!--text fields.-->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorError">@color/red</item>
+        <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+        <!--on which they appear.-->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/brownishGrayTwo</item>
+        <item name="colorOnBackground">@color/brownishGrayTwo</item>
+        <item name="colorOnSurface">@color/almostBlackDark</item>
+        <item name="colorOnError">@color/white</item>
+    </style>
+
+</resources>
