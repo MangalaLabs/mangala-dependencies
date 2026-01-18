@@ -77,6 +77,6 @@ class GlobalPrivacyControlViewModel(
     }
 
     companion object {
-        const val LEARN_MORE_URL = ""
+        const val LEARN_MORE_URL = "https://example.com/gpc-learn-more"
     }
 }

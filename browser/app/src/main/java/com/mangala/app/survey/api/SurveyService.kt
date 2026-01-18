@@ -25,9 +25,9 @@ import retrofit2.http.GET
 
 interface SurveyService {
 
-    @GET("")
+    @GET("https://example.com/api/survey")
     fun survey(): Call<SurveyGroup?>
 
-    @GET("")
+    @GET("https://example.com/api/surveyAppTp")
     fun surveyAppTp(): Call<SurveyGroup?>
 }

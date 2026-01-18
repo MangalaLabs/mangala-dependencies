@@ -37,7 +37,7 @@ apply from: "$rootProject.projectDir/gradle/android-library.gradle"
 dependencies {
 
     // Dependencies for this Module
-    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common:1.1"
 
     implementation libs.rxAndroid
     implementation libs.rxJava

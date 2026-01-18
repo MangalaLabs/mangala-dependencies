@@ -170,7 +170,7 @@ class SurveyActivity : MangalaBrowserActivity() {
             view: WebView,
             request: WebResourceRequest
         ): WebResourceResponse? {
-            if (request.url.host == "") {
+            if (request.url.host == "example.com") {
                 runOnUiThread {
                     viewModel.onSurveyCompleted()
                 }

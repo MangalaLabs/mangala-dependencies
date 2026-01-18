@@ -28,17 +28,17 @@ import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface EmailService {
-    @POST("")
+    @POST("https://example.com/api/email/address")
     suspend fun newAlias(@Header("Authorization") authorization: String): EmailAlias
 
-    @POST("")
+    @POST("https://example.com/api/auth/waitlist/join")
     suspend fun joinWaitlist(): WaitlistResponse
 
-    @GET("")
+    @GET("https://example.com/api/auth/waitlist/status")
     suspend fun waitlistStatus(): WaitlistStatusResponse
 
     @FormUrlEncoded
-    @POST("")
+    @POST("https://example.com/api/auth/waitlist/code")
     suspend fun getCode(@Field("token") token: String): EmailInviteCodeResponse
 }
 

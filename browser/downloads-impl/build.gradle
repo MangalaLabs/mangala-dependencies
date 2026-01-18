@@ -1,4 +1,3 @@
-
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
@@ -40,7 +39,7 @@ dependencies {
     implementation "com.mangala.wallet.browser:downloads-api:1.0"
     implementation "com.mangala.wallet.browser:browser-api:1.0"
     implementation "com.mangala.wallet.browser:di:1.0"
-    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common:1.1"
     implementation "com.mangala.wallet.browser:statistics:1.0"
     implementation "com.mangala.wallet.browser:downloads-store:1.0"
 

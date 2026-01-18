@@ -24,6 +24,6 @@ import com.mangala.remote.messaging.impl.models.JsonRemoteMessagingConfig
 import retrofit2.http.GET
 
 interface RemoteMessagingService {
-    @GET("")
+    @GET("https://example.com/api/remote-messaging/config")
     suspend fun config(): JsonRemoteMessagingConfig
 }
