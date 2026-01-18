@@ -14,7 +14,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.mangala.wallet.browser'
             artifactId = "browser-app"
-            version = '1.0'
+            version = '1.1'
 
             afterEvaluate {
                 from components.release
@@ -224,7 +224,7 @@ dependencies {
     implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
     implementation "com.mangala.wallet.browser:browser-api:1.0"
     implementation "com.mangala.wallet.browser:statistics:1.0"
-    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common:1.1"
     implementation "com.mangala.wallet.browser:app-store:1.0"
     implementation "com.mangala.wallet.browser:common-ui:1.0"
     implementation "com.mangala.wallet.browser:di:1.0"
@@ -232,17 +232,17 @@ dependencies {
     implementation "com.mangala.wallet.browser:feature-toggles-api:1.0"
     implementation "com.mangala.wallet.browser:feature-toggles-impl:1.0"
     implementation "com.mangala.wallet.browser:privacy-config-api:1.0"
-    implementation "com.mangala.wallet.browser:privacy-config-impl:1.0"
+    implementation "com.mangala.wallet.browser:privacy-config-impl:1.1"
     implementation "com.mangala.wallet.browser:privacy-config-store:1.0"
     implementation "com.mangala.wallet.browser:anrs-api:1.0"
     implementation "com.mangala.wallet.browser:anrs-store:1.0"
     implementation "com.mangala.wallet.browser:anrs-impl:1.0"
     implementation "com.mangala.wallet.browser:macos-api:1.0"
-    implementation "com.mangala.wallet.browser:macos-impl:1.0"
+    implementation "com.mangala.wallet.browser:macos-impl:1.1"
     implementation "com.mangala.wallet.browser:macos-store:1.0"
 
     implementation "com.mangala.wallet.browser:remote-messaging-api:1.0"
-    implementation "com.mangala.wallet.browser:remote-messaging-impl:1.0"
+    implementation "com.mangala.wallet.browser:remote-messaging-impl:1.1"
     implementation "com.mangala.wallet.browser:remote-messaging-store:1.0"
 
     implementation "com.mangala.wallet.browser:downloads-api:1.0"

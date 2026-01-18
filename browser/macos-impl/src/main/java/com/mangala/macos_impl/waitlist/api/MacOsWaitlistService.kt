@@ -40,5 +40,5 @@ data class MacOsWaitlistStatusResponse(val timestamp: Int)
 data class MacOsInviteCodeResponse(val code: String)
 
 object Url {
-    const val API = ""
+    const val API = "https://example.com"
 }

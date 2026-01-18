@@ -198,6 +198,6 @@ class DefaultBrowserPageViewModel(
 
     companion object {
         const val MAX_DIALOG_ATTEMPTS = 2
-        const val DEFAULT_URL = ""
+        const val DEFAULT_URL = "https://example.com"
     }
 }

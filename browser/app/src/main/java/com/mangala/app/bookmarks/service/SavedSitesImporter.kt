@@ -46,7 +46,7 @@ class RealSavedSitesImporter(
 ) : SavedSitesImporter {
 
     companion object {
-        private const val BASE_URI = ""
+        private const val BASE_URI = "example.com"
     }
 
     override suspend fun import(uri: Uri): ImportSavedSitesResult {

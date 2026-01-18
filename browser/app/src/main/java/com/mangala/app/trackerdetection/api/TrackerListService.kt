@@ -26,9 +26,9 @@ import retrofit2.http.GET
 
 interface TrackerListService {
 
-    @GET("")
+    @GET("https://example.com/api/tds")
     fun tds(): Call<TdsJson>
 
-    @GET("")
+    @GET("/contentblocking/trackers-unprotected-temporary.txt")
     fun temporaryWhitelist(): Call<String>
 }

@@ -24,11 +24,11 @@ package com.mangala.app.global
 class AppUrl {
 
     object Url {
-        const val HOST = ""
-        const val API = ""
-        const val HOME = ""
-        const val COOKIES = ""
-        const val ABOUT = ""
+        const val HOST = "example.com"
+        const val API = "https://$HOST"
+        const val HOME = "https://$HOST"
+        const val COOKIES = "https://$HOST"
+        const val ABOUT = "https://$HOST/about"
         const val TOSDR = "https://tosdr.org"
         const val PIXEL = ""
         const val EMAIL_SEGMENT = "email"

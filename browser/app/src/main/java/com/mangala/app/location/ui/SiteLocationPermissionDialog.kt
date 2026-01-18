@@ -201,7 +201,7 @@ class SiteLocationPermissionDialog : DialogFragment(), KoinComponent {
         private const val KEY_EDITING_PERMISSION = "KEY_SCREEN_FROM"
         private const val KEY_TAB_ID = "TAB_ID"
 
-        private const val DDG_DOMAIN = ""
+        private const val DDG_DOMAIN = "example.com"
 
         fun instance(
             origin: String,

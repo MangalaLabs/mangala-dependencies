@@ -26,6 +26,6 @@ import retrofit2.http.GET
 
 interface ResourceSurrogateListService {
 
-    @GET("")
+    @GET("https://example.com/api/surrogates")
     fun surrogates(): Call<ResponseBody>
 }

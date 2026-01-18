@@ -30,12 +30,12 @@ import retrofit2.http.GET
 
 interface HttpsUpgradeService {
 
-    @GET("")
+    @GET("https://example.com/api/https/bloomfilter/spec")
     fun httpsBloomFilterSpec(): Observable<HttpsBloomFilterSpec>
 
-    @GET("")
+    @GET("https://example.com/api/https/bloomfilter")
     fun httpsBloomFilter(): Call<ResponseBody>
 
-    @GET("")
+    @GET("https://example.com/api/https/falsepositives")
     fun falsePositives(): Call<List<HttpsFalsePositiveDomain>>
 }

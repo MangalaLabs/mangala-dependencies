@@ -52,7 +52,7 @@ class ApiDevTdsInterceptor @Inject constructor(
     }
 
     companion object {
-        private const val TDS_URL = ""
+        private const val TDS_URL = "https://example.com/tds/"
         private const val NEXT_TDS = "tds-next.json"
         private const val TDS = "tds.json"
     }

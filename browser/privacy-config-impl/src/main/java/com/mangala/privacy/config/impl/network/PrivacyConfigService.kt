@@ -25,6 +25,6 @@ import com.mangala.privacy.config.impl.models.JsonPrivacyConfig
 import retrofit2.http.GET
 
 interface PrivacyConfigService {
-    @GET("")
+    @GET("https://example.com/api/privacy/config")
     suspend fun privacyConfig(): JsonPrivacyConfig
 }

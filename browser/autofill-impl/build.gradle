@@ -1,4 +1,3 @@
-
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
@@ -39,7 +38,7 @@ apply from: "$rootProject.projectDir/gradle/android-library.gradle"
 dependencies {
     implementation "com.mangala.wallet.browser:app-build-config-api:1.0"
     implementation "com.mangala.wallet.browser:di:1.0"
-    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common:1.1"
     implementation "com.mangala.wallet.browser:common-ui:1.0"
     implementation "com.mangala.wallet.browser:autofill-api:1.0"
     implementation "com.mangala.wallet.browser:secure-storage-api:1.0"

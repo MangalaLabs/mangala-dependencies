@@ -35,7 +35,7 @@ publishing {
 apply from: "$rootProject.projectDir/gradle/android-library.gradle"
 
 dependencies {
-    implementation "com.mangala.wallet.browser:common:1.0"
+    implementation "com.mangala.wallet.browser:common:1.1"
     implementation "com.mangala.wallet.browser:autofill-api:1.0"
     implementation "com.mangala.wallet.browser:secure-storage-api:1.0"
 
